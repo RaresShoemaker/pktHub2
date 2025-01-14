@@ -25,9 +25,11 @@ const MenuCategory: React.FC = () => {
 				})}
 			</div>
 			<div className='mt-auto'>
-				<button className='rounded-full bg-primary text-white font-medium w-full h-12'>
-					<Link to='/submission'>Submit Channel</Link>
-				</button>
+				<Link to='/submission'>
+					<button className='rounded-full bg-primary text-white font-medium w-full h-12'>
+						Submit Channel
+					</button>
+				</Link>
 			</div>
 		</div>
 	);
