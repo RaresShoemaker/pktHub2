@@ -18,6 +18,7 @@ import SlingLogoRegular from './SlingLogoRegular.svg?react';
 import TubiLogoRegular from './TubiLogoRegular.svg?react';
 import VabbleLogoRegular from './VabbleLogoRegular.svg?react';
 import YtbLogoRegular from './YtbLogoRegular.svg?react';
+import ApeflixLogoRegular from './ApeflixLogoRegular.svg?react';
 
 
 import AcornLogoWhite from './AcornLogoWhite.svg?react';
@@ -45,6 +46,7 @@ export {
   AcornLogoRegular,
   AmzPrimeLogoRegular,
   AppleTvLogoRegular,
+  ApeflixLogoRegular,
   DisneyLogoRegular,
   FiresideLogoRegular,
   FuboTvLogoRegular,

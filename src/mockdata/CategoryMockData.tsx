@@ -48,6 +48,11 @@ export const CategoryData: CategoryDataType = {
 				logoWhite: <MediaIcons.MonsterChildrenTvLogoWhite />
 			},
 			{
+				alt: 'Apeflix',
+				href: 'https://www.apeflix.io/',
+				logo: <MediaIcons.ApeflixLogoRegular />
+			},
+			{
 				alt: 'Disney Plus',
 				href: 'https://www.disneyplus.com',
 				logo: <MediaIcons.DisneyLogoRegular />,
