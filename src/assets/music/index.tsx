@@ -7,7 +7,6 @@ import EmusicLogoRegular from './EmusicLogoRegular.svg?react';
 import MeshLogoRegular from './MeshLogoRegular.svg?react';
 import MusiLogoRegular from './MusiLogoRegular.svg?react';
 import MyceliaLogoRegular from './MyceliaLogoRegular.svg?react';
-import PaperLogoRegular from './PaperchainLogoRegular.svg?react';
 import ResonateLogoRegular from './ResonateLogoRegular.svg?react';
 import RoyalLogoRegular from './RoyalLogoRegular.svg?react';
 import SoundLogoRegular from './SoundLogoRegular.svg?react';
@@ -29,7 +28,6 @@ import EmusicLogoWhite from './EmusicLogoWhite.svg?react';
 import MeshLogoWhite from './MeshLogoWhite.svg?react';
 import MusiLogoWhite from   './MusiLogoWhite.svg?react';
 import MyceliaLogoWhite from './MyceliaLogoWhite.svg?react';
-import PaperLogoWhite from './PaperchainLogoWhite.svg?react';
 import ResonateLogoWhite from './ResonateLogoWhite.svg?react';
 import RoyalLogoWhite from './RoyalLogoWhite.svg?react';
 import SoundLogoWhite from './SoundLogoWhite.svg?react';
@@ -51,7 +49,6 @@ export {
     MeshLogoRegular,
     MusiLogoRegular,
     MyceliaLogoRegular,
-    PaperLogoRegular,
     ResonateLogoRegular,
     RoyalLogoRegular,
     SoundLogoRegular,
@@ -70,7 +67,6 @@ export {
     MeshLogoWhite,
     MusiLogoWhite,
     MyceliaLogoWhite,
-    PaperLogoWhite,
     ResonateLogoWhite,
     RoyalLogoWhite,
     SoundLogoWhite,

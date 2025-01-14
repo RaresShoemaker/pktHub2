@@ -12,8 +12,6 @@ import KingBillyLogoRegular  from './KingBillyLogoRegular.svg?react';
 import PlayojoLogoRegular from './PlayojoLogoRegular.svg?react';
 import SlotsMillionLogoRegular from './SlotsMillionLogoRegular.svg?react';
 import SpiniaLogoRegular from './SpiniaLogoRegular.svg?react';
-import TenexLogoRegular from './TenexLogoRegular.svg?react';
-import VideoSlotsLogoRegular from './VideoSlotsLogoRegular.svg?react';
 
 import BettleLogoWhite from './24BettleLogoWhite.svg?react';
 import BitkingzLogoWhite from './BitkingzLogoWhite.svg?react';
@@ -36,8 +34,6 @@ export {
   PlayojoLogoRegular,
   SlotsMillionLogoRegular,
   SpiniaLogoRegular,
-  TenexLogoRegular,
-  VideoSlotsLogoRegular,
 
   BettleLogoWhite,
   BitkingzLogoWhite,

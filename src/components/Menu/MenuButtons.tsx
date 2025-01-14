@@ -20,19 +20,19 @@ const MenuButton: React.FC<MenuButtonProps> = ({ title, icon, query }) => {
 	const getImagesByCategory = useCallback((category: string | null): string[] => {
 		switch (category) {
 			case 'home':
-				return ['/Home1.svg', '/Home2.svg', '/Home3.svg'];
+				return ['/Home1.jpg', '/Home2.jpg', '/Home3.jpg'];
 			case 'media':
-				return ['/Media1.svg', '/Media2.svg', '/Media3.svg'];
+				return ['/Media1.jpg', '/Media2.jpg', '/Media3.jpg'];
 			case 'music':
-				return ['/Music1.svg', '/Music2.svg', '/Music3.svg'];
+				return ['/Music1.jpg', '/Music2.jpg', '/Music3.jpg'];
 			case 'games':
-				return ['/Games1.svg', '/Games2.svg', '/Games3.svg'];
+				return ['/Games1.jpg', '/Games2.jpg', '/Games3.jpg'];
 			case 'casino':
-				return ['/Casino1.svg', '/Casino2.svg', '/Casino3.svg', '/Casino4.svg'];
+				return ['/Casino1.jpg', '/Casino2.jpg', '/Casino3.jpg', '/Casino4.jpg'];
 			case 'technology':
-				return ['/Technology1.svg', '/Technology2.svg', '/Technology3.svg'];
+				return ['/Technology1.jpg', '/Technology2.jpg', '/Technology3.jpg'];
 			default:
-				return ['/Home1.svg', '/Home2.svg', '/Home3.svg'];
+				return ['/Home1.jpg', '/Home2.jpg', '/Home3.jpg'];
 		}
 	}, []);
 

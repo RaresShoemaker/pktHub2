@@ -31,7 +31,9 @@ const CategoryContainer: React.FC<CategoryContainerProps> = React.memo(
 			<div className='flex flex-col gap-4 w-full'>
 				{/* Title section */}
 				<div className='flex items-center gap-1 text-white'>
-					<p className='font-bold'>{title}</p>
+					<Link to={`/?category=${title.toLowerCase()}`} className='flex items-center gap-1 text-white'>
+						<p className='font-bold'>{title}</p>
+					</Link>
 					<ChevronRight className='w-5 h-5' />
 				</div>
 

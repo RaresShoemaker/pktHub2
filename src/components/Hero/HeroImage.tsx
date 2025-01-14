@@ -23,28 +23,23 @@ const HeroImage: React.FC = () => {
 
 		switch (category) {
 			case 'home':
-				return [`/Home1${mobileSuffix}.svg`, `/Home2${mobileSuffix}.svg`, `/Home3${mobileSuffix}.svg`];
+				return [`/Home1${mobileSuffix}.jpg`, `/Home2${mobileSuffix}.jpg`, `/Home3${mobileSuffix}.jpg`];
 			case 'media':
-				return [`/Media1${mobileSuffix}.svg`, `/Media2${mobileSuffix}.svg`, `/Media3${mobileSuffix}.svg`];
+				return [`/Media1${mobileSuffix}.jpg`, `/Media2${mobileSuffix}.jpg`, `/Media3${mobileSuffix}.jpg`];
 			case 'music':
-				return [`/Music1${mobileSuffix}.svg`, `/Music2${mobileSuffix}.svg`, `/Music3${mobileSuffix}.svg`];
+				return [`/Music1${mobileSuffix}.jpg`, `/Music2${mobileSuffix}.jpg`, `/Music3${mobileSuffix}.jpg`];
 			case 'games':
-				return [`/Games1${mobileSuffix}.svg`, `/Games2${mobileSuffix}.svg`, `/Games3${mobileSuffix}.svg`];
+				return [`/Games1${mobileSuffix}.jpg`, `/Games2${mobileSuffix}.jpg`, `/Games3${mobileSuffix}.jpg`];
 			case 'casino':
-				return [
-					`/Casino1${mobileSuffix}.svg`,
-					`/Casino2${mobileSuffix}.svg`,
-					`/Casino3${mobileSuffix}.svg`,
-					`/Casino4${mobileSuffix}.svg`
-				];
+				return [`/Casino1${mobileSuffix}.jpg`, `/Casino2${mobileSuffix}.jpg`, `/Casino3${mobileSuffix}.jpg`];
 			case 'technology':
 				return [
-					`/Technology1${mobileSuffix}.svg`,
-					`/Technology2${mobileSuffix}.svg`,
-					`/Technology3${mobileSuffix}.svg`
+					`/Technology1${mobileSuffix}.jpg`,
+					`/Technology2${mobileSuffix}.jpg`,
+					`/Technology3${mobileSuffix}.jpg`
 				];
 			default:
-				return [`/Home1${mobileSuffix}.svg`, `/Home2${mobileSuffix}.svg`, `/Home3${mobileSuffix}.svg`];
+				return [`/Home1${mobileSuffix}.jpg`, `/Home2${mobileSuffix}.jpg`, `/Home3${mobileSuffix}.jpg`];
 		}
 	};
 
