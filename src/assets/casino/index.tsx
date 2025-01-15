@@ -21,6 +21,9 @@ import CasinoLogoWhite from './CasinoLogoWhite.svg?react';
 import LuckiLogoWhite from './iLuckiLogoWhite.svg?react';
 import KingBillyLogoWhite from './KingBillyLogoWhite.svg?react';
 
+import TenexLogoRegular from './TenexLogoRegular.png';
+import VideoSlotsLogoRegular from './VideoSlotsLogoRegular.png';
+
 export {
   BettleLogoRegular,
   BetRebelsLogoRegular,
@@ -43,5 +46,8 @@ export {
   BitkingzLogoWhite,
   CasinoLogoWhite,
   LuckiLogoWhite,
-  KingBillyLogoWhite
+  KingBillyLogoWhite,
+
+  TenexLogoRegular,
+  VideoSlotsLogoRegular
 }

@@ -26,6 +26,9 @@ import SandboxLogoWhite from './SandboxLogoWhite.svg?react';
 import SharpnelLogoWhite from './SharpnelLogoWhite.svg?react';
 import StarAtlasLogoWhite from './StarAtlasLogoWhite.svg?react';
 
+import DefiKingdomsLogoRegular from './DefiKingdomsLogoRegular.png'
+import NeighborAliceLogoRegular from './NeighborAliceLogoRegular.png'
+
 export {
     AxieInfinityLogoRegular,
     BigTimeLogoRegular,
@@ -53,5 +56,8 @@ export {
     IlluviumLogoWhite,
     SandboxLogoWhite,
     SharpnelLogoWhite,
-    StarAtlasLogoWhite
+    StarAtlasLogoWhite,
+
+    DefiKingdomsLogoRegular,
+    NeighborAliceLogoRegular
 }

@@ -39,7 +39,7 @@ export const CategoryData: CategoryDataType = {
 			{
 				alt: 'Tenex',
 				href: 'https://tenexcasino.io/',
-				logo: 'src/assets/casino/TenexLogoRegular.png'
+				logo: CasinoIcons.TenexLogoRegular
 			},
 			{
 				alt: 'Monster Children Tv',
@@ -381,7 +381,7 @@ export const CategoryData: CategoryDataType = {
 			{
 				alt: 'Defi Kingdoms',
 				href: 'https://defikingdoms.com/',
-				logo: 'src/assets/games/DefiKingdomsLogoRegular.png'
+				logo: GamesIcons.DefiKingdomsLogoRegular
 			},
 			{
 				alt: 'Ember Sword',
@@ -420,7 +420,7 @@ export const CategoryData: CategoryDataType = {
 			{
 				alt: 'Neighbor Alice',
 				href: 'https://www.myneighboralice.com/',
-				logo: 'src/assets/games/NeighborAliceLogoRegular.png'
+				logo: GamesIcons.NeighborAliceLogoRegular
 			},
 			{
 				alt: 'Sandbox',
@@ -463,7 +463,7 @@ export const CategoryData: CategoryDataType = {
 			{
 				alt: 'Tenex',
 				href: 'https://tenexcasino.io/',
-				logo: 'src/assets/casino/TenexLogoRegular.png'
+				logo: CasinoIcons.TenexLogoRegular
 			},
 			{
 				alt: 'N1 Casino',
@@ -499,7 +499,7 @@ export const CategoryData: CategoryDataType = {
 			{
 				alt: 'Videoslots Casino',
 				href: 'https://www.videoslots.com',
-				logo: '/src/assets/casino/VideoSlotsLogoRegular.png'
+				logo: CasinoIcons.VideoSlotsLogoRegular
 			},
 			{
 				alt: 'Moon Poker',
