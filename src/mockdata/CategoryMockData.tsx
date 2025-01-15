@@ -390,10 +390,9 @@ export const CategoryData: CategoryDataType = {
 				logoWhite: <GamesIcons.EmberSwordLogoWhite />
 			},
 			{
-				alt: 'Flokilogo',
+				alt: 'Floki',
 				href: 'https://floki.com/',
-				logo: <GamesIcons.FlokilogoRegular />,
-				logoWhite: <GamesIcons.FlokilogoWhite />
+				logo: <GamesIcons.FlokiLogoRegular />
 			},
 			{
 				alt: 'Gala Games',

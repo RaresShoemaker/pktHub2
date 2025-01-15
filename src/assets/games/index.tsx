@@ -5,7 +5,7 @@ import ChainMonstersLogoRegular from './ChainMonstersLogoRegular.svg?react';
 import CryptoKittiesLogoRegular from './CryptoKittiesLogoRegular.svg?react';
 import DecentralandLogoRegular from './DecentralandLogoRegular.svg?react';
 import EmberSwordLogoRegular from './EmberSwordLogoRegular.svg?react';
-import FlokilogoRegular from './FlokilogoRegular.svg?react';
+import FlokiLogoRegular from './FlokilogoRegular.svg?react';
 import GalaGamesLogoRegular from './GalaGamesLogoRegular.svg?react';
 import GasWizardLogoRegular from './GasWizardLogoRegular.svg?react';
 import GodUnchainedLogoRegular from './GodUnchainedLogoRegular.svg?react';
@@ -19,7 +19,6 @@ import SuperverseLogoRegular from './SuperverseLogoRegular.svg?react';
 import AxieInfinityLogoWhite from './AxieInfinityLogoWhite.svg?react';
 import CryptoKittiesLogoWhite from './CryptoKittiesLogoWhite.svg?react';
 import EmberSwordLogoWhite from './EmberSwordLogoWhite.svg?react';
-import FlokilogoWhite from './FlokilogoWhite.svg?react';
 import GalaGamesLogoWhite from './GalaGamesLogoWhite.svg?react';
 import GasWizardLogoWhite from './GasWizardLogoWhite.svg?react';
 import IlluviumLogoWhite from './IlluviumLogoWhite.svg?react';
@@ -35,7 +34,7 @@ export {
     CryptoKittiesLogoRegular,
     DecentralandLogoRegular,
     EmberSwordLogoRegular,
-    FlokilogoRegular,
+    FlokiLogoRegular,
     GalaGamesLogoRegular,
     GasWizardLogoRegular,
     GodUnchainedLogoRegular,
@@ -49,7 +48,6 @@ export {
     AxieInfinityLogoWhite,
     CryptoKittiesLogoWhite,
     EmberSwordLogoWhite,
-    FlokilogoWhite,
     GalaGamesLogoWhite,
     GasWizardLogoWhite,
     IlluviumLogoWhite,
