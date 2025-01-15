@@ -18,6 +18,7 @@ import TronLogoRegular from './TronLogoRegular.svg?react';
 import UniswapLogoRegular from './UniswapLogoRegular.svg?react';
 import VechainLogoRegular from './VechainLogoRegular.svg?react';
 import CosmosLogoRegular from './CosmosLogoRegular.svg?react';
+import BaseLogoRegular from './BaseLogoRegular.svg?react';
 
 //white version
 import AkashLogoWhite from './AkashLogoWhite.svg?react';
@@ -57,6 +58,8 @@ export {
   UniswapLogoRegular,
   VechainLogoRegular,
   CosmosLogoRegular,
+  BaseLogoRegular,
+
   AkashLogoWhite,
   ArbitrumLogoWhite,
   AvalancheLogoWhite,

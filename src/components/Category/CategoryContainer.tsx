@@ -9,10 +9,11 @@ interface CategoryContainerProps {
 	title: string;
 	cards: CategoryCardProps[];
 	isFullPage?: boolean;
+	isViewOnly?: boolean;
 }
 
 const CategoryContainer: React.FC<CategoryContainerProps> = React.memo(
-	({ title, cards, isFullPage = false }) => {
+	({ title, cards, isFullPage = false, isViewOnly = false }) => {
 		if (isFullPage) {
 			return (
 				<div className='container mx-auto px-4'>
@@ -31,9 +32,12 @@ const CategoryContainer: React.FC<CategoryContainerProps> = React.memo(
 			<div className='flex flex-col gap-4 w-full'>
 				{/* Title section */}
 				<div className='flex items-center gap-1 text-white'>
-					<Link to={`/?category=${title.toLowerCase()}`} className='flex items-center gap-1 text-white'>
+					{!isViewOnly &&  <Link to={`/?category=${title.toLowerCase()}`} className='flex items-center gap-1 text-white'>
 						<p className='font-bold'>{title}</p>
-					</Link>
+					</Link>}
+					{
+						isViewOnly && <p className='font-bold'>{title}</p>
+					}
 					<ChevronRight className='w-5 h-5' />
 				</div>
 
@@ -47,10 +51,10 @@ const CategoryContainer: React.FC<CategoryContainerProps> = React.memo(
 								</div>
 							))}
 							<div className='flex text-white max-h-[120px] max-w-[224.5px] w-[120px] h-[100px] md:h-[120px] items-center'>
-								<Link to={`/?category=${title.toLowerCase()}`} className='flex gap-1 items-center'>
+								{!isViewOnly && <Link to={`/?category=${title.toLowerCase()}`} className='flex gap-1 items-center'>
 									<p className='font-semibold underline underline-offset-4'>See more</p>
 									<ChevronRight />
-								</Link>
+								</Link>}
 							</div>
 						</div>
 					</div>

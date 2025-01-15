@@ -16,10 +16,84 @@ type CategoryDataType = Record<
 	{
 		title: string;
 		data: CategoryCardDataType[];
+		isViewOnly?: boolean;
 	}
 >;
 
 export const CategoryData: CategoryDataType = {
+	hot: {
+		title: `What's Hot`,
+		data: [
+			{
+				alt: 'Gala Games',
+				href: 'https://www.gala.games/',
+				logo: <GamesIcons.GalaGamesLogoRegular />,
+				logoWhite: <GamesIcons.GalaGamesLogoWhite />
+			},
+			{
+				alt: 'Audius',
+				href: 'https://www.audius.co',
+				logo: <MusicIcons.AudiusLogoRegular />,
+				logoWhite: <MusicIcons.AudiusLogoWhite />
+			},
+			{
+				alt: 'Tenex',
+				href: 'https://tenexcasino.io/',
+				logo: 'src/assets/casino/TenexLogoRegular.png'
+			},
+			{
+				alt: 'Monster Children Tv',
+				href: 'https://monsterchildren.tv/',
+				logo: <MediaIcons.MonsterChildrenTvLogoRegular />,
+				logoWhite: <MediaIcons.MonsterChildrenTvLogoWhite />
+			},
+		],
+		isViewOnly: true
+	},
+	discover: {
+		title: `What's New`,
+		data: [
+			{
+				alt: 'Sharpnel',
+				href: 'https://www.shrapnel.com/',
+				logo: <GamesIcons.SharpnelLogoRegular />,
+				logoWhite: <GamesIcons.SharpnelLogoWhite />
+			},
+			{
+				alt: 'Vabble',
+				href: 'https://www.vabble.com/',
+				logo: <MediaIcons.VabbleLogoRegular />,
+				logoWhite: <MediaIcons.VabbleLogoWhite />
+			},
+			{
+				alt: 'Ritestream',
+				href: 'https://www.ritestream.io/',
+				logo: <MediaIcons.RitestreamLogoRegular />,
+				logoWhite: <MediaIcons.RitestreamLogoWhite />
+			},
+			{
+				alt: 'Apeflix',
+				href: 'https://www.apeflix.io/',
+				logo: <MediaIcons.ApeflixLogoRegular />
+			},
+			{
+				alt: 'Base',
+				href: 'https://www.base.org/',
+				logo: <TechnologyIcons.BaseLogoRegular />,
+			},
+			{
+				alt: 'Moon Poker',
+				href: 'https://www.moonpoker.com/',
+				logo: <CasinoIcons.MoonPokerLogoRegular />
+			},
+			{
+				alt: 'Monkey Tilt',
+				href: 'https://www.monkeytilt.com/',
+				logo: <CasinoIcons.MonkeyTiltLogoRegular />
+			},
+		],
+		isViewOnly: true
+	},
 	media: {
 		title: 'Media',
 		data: [
@@ -413,6 +487,11 @@ export const CategoryData: CategoryDataType = {
 				logo: <CasinoIcons.SpiniaLogoRegular />
 			},
 			{
+				alt: 'Monkey Tilt',
+				href: 'https://www.monkeytilt.com/',
+				logo: <CasinoIcons.MonkeyTiltLogoRegular />
+			},
+			{
 				alt: 'SlotsMillion Casino',
 				href: 'https://www.slotsmillion.com/',
 				logo: <CasinoIcons.SlotsMillionLogoRegular />
@@ -421,6 +500,11 @@ export const CategoryData: CategoryDataType = {
 				alt: 'Videoslots Casino',
 				href: 'https://www.videoslots.com',
 				logo: '/src/assets/casino/VideoSlotsLogoRegular.png'
+			},
+			{
+				alt: 'Moon Poker',
+				href: 'https://www.moonpoker.com/',
+				logo: <CasinoIcons.MoonPokerLogoRegular />
 			},
 			{
 				alt: 'Energy Casino',
@@ -579,6 +663,11 @@ export const CategoryData: CategoryDataType = {
 				href: 'https://uniswap.org/',
 				logo: <TechnologyIcons.UniswapLogoRegular />,
 				logoWhite: <TechnologyIcons.UniswapLogoWhite />
+			},
+			{
+				alt: 'Base',
+				href: 'https://www.base.org/',
+				logo: <TechnologyIcons.BaseLogoRegular />,
 			},
 			{
 				alt: 'VeChain (VET)',

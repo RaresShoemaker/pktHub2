@@ -65,7 +65,7 @@ const HeroImage: React.FC = () => {
 	};
 
 	return (
-		<div className='relative h-full w-full overflow-hidden'>
+		<div className='relative md:h-[120%] h-full w-full overflow-hidden'>
 			{/* Next image (bottom layer) */}
 			<img
 				key={`next-${nextImageIndex}`}

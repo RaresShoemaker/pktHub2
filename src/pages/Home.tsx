@@ -32,6 +32,7 @@ const Home: React.FC = () => {
 						title={categoryInfo.title}
 						cards={categoryInfo.data}
 						isFullPage={false}
+						isViewOnly={categoryInfo.isViewOnly}
 					/>
 				))}
 			</div>

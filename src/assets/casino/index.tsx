@@ -12,6 +12,8 @@ import KingBillyLogoRegular  from './KingBillyLogoRegular.svg?react';
 import PlayojoLogoRegular from './PlayojoLogoRegular.svg?react';
 import SlotsMillionLogoRegular from './SlotsMillionLogoRegular.svg?react';
 import SpiniaLogoRegular from './SpiniaLogoRegular.svg?react';
+import MonkeyTiltLogoRegular from './MonkeyTiltLogoRegular.svg?react';
+import MoonPokerLogoRegular from './MoonPokerLogoRegular.svg?react';
 
 import BettleLogoWhite from './24BettleLogoWhite.svg?react';
 import BitkingzLogoWhite from './BitkingzLogoWhite.svg?react';
@@ -34,6 +36,8 @@ export {
   PlayojoLogoRegular,
   SlotsMillionLogoRegular,
   SpiniaLogoRegular,
+  MonkeyTiltLogoRegular,
+  MoonPokerLogoRegular,
 
   BettleLogoWhite,
   BitkingzLogoWhite,
