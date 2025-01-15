@@ -80,6 +80,7 @@ export const CategoryData: CategoryDataType = {
 				alt: 'Base',
 				href: 'https://www.base.org/',
 				logo: <TechnologyIcons.BaseLogoRegular />,
+				logoWhite: <TechnologyIcons.BaseLogoWhite />
 			},
 			{
 				alt: 'Moon Poker',
@@ -668,6 +669,7 @@ export const CategoryData: CategoryDataType = {
 				alt: 'Base',
 				href: 'https://www.base.org/',
 				logo: <TechnologyIcons.BaseLogoRegular />,
+				logoWhite: <TechnologyIcons.BaseLogoWhite />
 			},
 			{
 				alt: 'VeChain (VET)',

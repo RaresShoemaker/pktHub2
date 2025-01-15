@@ -36,6 +36,7 @@ import StellarLogoWhite from './StellarLogoWhite.svg?react';
 import TronLogoWhite from './TronLogoWhite.svg?react';
 import UniswapLogoWhite from './UniswapLogoWhite.svg?react';
 import CosmosLogoWhite from './CosmosLogoWhite.svg?react';
+import BaseLogoWhite from './BaseLogoWhite.svg?react';
 
 export {
   AkashLogoRegular,
@@ -74,5 +75,6 @@ export {
   StellarLogoWhite,
   TronLogoWhite,
   UniswapLogoWhite,
-  CosmosLogoWhite
+  CosmosLogoWhite,
+  BaseLogoWhite,
 }
