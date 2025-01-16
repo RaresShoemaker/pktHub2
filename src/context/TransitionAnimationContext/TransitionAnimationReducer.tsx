@@ -12,7 +12,7 @@ export type TransitionAction =
   | { type: typeof TRANSITION_ACTIONS.RESET_STATE; payload: { category: string | null } };
 
 export const initialState: TransitionState = {
-  activeIndex: 0,
+  activeIndex: 1,
   isTransitioning: false,
   category: null,
 };

@@ -5,30 +5,47 @@ type CustomInputProps = {
   type?: string;
   id: string;
   value: string;
+  infoText?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const CustomInput: React.FC<CustomInputProps> = ({ label, type = "text", id, value, onChange, ...props }) => {
+const CustomInput: React.FC<CustomInputProps> = ({ 
+  label, 
+  type = "text", 
+  id, 
+  value, 
+  infoText,
+  onChange, 
+  ...props 
+}) => {
   const [isFocused, setIsFocused] = useState(false);
-  
-  // Remove the separate hasValue state and derive it from value
   const hasValue = value.length > 0;
 
   return (
     <div className="relative">
-      <input
-        id={id}
-        type={type}
-        value={value}
-        name={id}
-        className="peer w-full h-12 rounded-full border-2 border-white bg-transparent text-white px-6 pt-2 
-                 focus:outline-none focus:border-white transition-all placeholder-transparent outline-none"
-        placeholder={label}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
-        onChange={onChange}
-        {...props}
-      />
+      <div className="relative flex items-center">
+        <input
+          id={id}
+          type={type}
+          value={value}
+          name={id}
+          className="peer w-full h-12 rounded-full border-2 border-white bg-transparent text-white px-6 pt-2 
+                   focus:outline-none focus:border-white transition-all placeholder-transparent outline-none
+                   pr-12"
+          placeholder={label}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          onChange={onChange}
+          {...props}
+        />
+      </div>
+      {
+          infoText && (
+            <div className='flex justify-center items-center mt-2 '>
+              <span className='text-white text-xs ml-1'>{infoText}</span>
+            </div>
+          )
+        }
       <label
         htmlFor={id}
         className={`absolute left-6 transition-all duration-200 pointer-events-none

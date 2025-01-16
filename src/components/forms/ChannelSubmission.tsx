@@ -5,16 +5,26 @@ import CustomInput from '../CustomInput';
 import CustomDropdown from '../CustomDropDown';
 import ImgUploader from '../ImageUploader';
 
+interface FormData {
+  company_name: string;
+  email: string;
+  platform_description: string;
+  platform_link: string;
+  category: string;
+  pkt_domain: string;
+}
+
 const ChannelSubmissionForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const jotformRef = useRef<HTMLFormElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     company_name: '',
     email: '',
     platform_description: '',
     platform_link: '',
-    category: ''
+    category: '',
+    pkt_domain: ''
   });
   const [file, setFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -49,7 +59,8 @@ const ChannelSubmissionForm = () => {
       email: '',
       platform_description: '',
       platform_link: '',
-      category: ''
+      category: '',
+      pkt_domain: ''
     });
     setFile(null);
     setResetKey(prev => prev + 1);
@@ -58,22 +69,55 @@ const ChannelSubmissionForm = () => {
     }
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
+  const validateForm = (): boolean => {
     if (
       !formData.company_name ||
       !formData.email ||
       !formData.platform_description ||
       !formData.platform_link ||
-      !formData.category
+      !formData.category ||
+      !formData.pkt_domain
     ) {
       showToast('Please fill in all fields', TOASTER_TYPES.ERROR, 3000);
-      return;
+      return false;
+    }
+
+    if (!validateEmail(formData.email)) {
+      showToast('Please enter a valid email address', TOASTER_TYPES.ERROR, 3000);
+      return false;
     }
 
     if (!file) {
       showToast('Please upload a file', TOASTER_TYPES.ERROR, 3000);
+      return false;
+    }
+
+    // Validate file type and size
+    const allowedTypes = ['application/pdf', 'image/jpeg', 'image/jpg', 'image/png'];
+    const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+
+    if (!allowedTypes.includes(file.type)) {
+      showToast('Only PDF, JPG, JPEG, and PNG files are allowed', TOASTER_TYPES.ERROR, 3000);
+      return false;
+    }
+
+    if (file.size > maxSize) {
+      showToast('File size must not exceed 5MB', TOASTER_TYPES.ERROR, 3000);
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
       return;
     }
 
@@ -87,8 +131,8 @@ const ChannelSubmissionForm = () => {
         form.q7_typeA7.value = formData.platform_description;
         form.q8_typeA8.value = formData.platform_link;
         form.q14_verifiedEmail.value = '';
+        form.q16_pktDomain.value = formData.pkt_domain;
         
-        // Set category value
         if (formData.category) {
           form.q15_category.value = formData.category;
         }
@@ -155,6 +199,14 @@ const ChannelSubmissionForm = () => {
           options={categoryOptions}
           onChange={handleInputChange}
         />
+        <CustomInput
+          type="text"
+          label="PKT Domain Name"
+          id="pkt_domain"
+          value={formData.pkt_domain}
+          onChange={handleInputChange}
+          infoText={`You must claim a PKT Domain to be listed: https://docs.pkt.cash/domains/claim-domain/`}
+        />
         <ImgUploader
           onFileSelect={(file: File | null) => setFile(file)}
           resetKey={resetKey}
@@ -190,6 +242,7 @@ const ChannelSubmissionForm = () => {
         <input type="text" name="q7_typeA7" />
         <input type="text" name="q8_typeA8" />
         <input type="text" name="q14_verifiedEmail" />
+        <input type="text" name="q16_pktDomain" />
         <select name="q15_category" id="input_15" className="form-dropdown">
           <option value="">Please Select</option>
           {categoryOptions.map(option => (

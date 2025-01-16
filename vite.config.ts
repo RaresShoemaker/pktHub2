@@ -4,6 +4,10 @@ import svgr from "vite-plugin-svgr";
 import path from 'path';
 
 export default defineConfig({
+  server: {
+    host: true, // This will allow network access
+    port: 5173
+  },
   plugins: [svgr(), react()],
   build: {
     rollupOptions: {

@@ -20,11 +20,11 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
 
                 {/* Overflow wrapper */}
                 <div className="relative z-10">
-                    <div className="p-4 mb-24">
+                    <div className="pl-4 mb-24">
                         <div className="grid md:grid-cols-[300px_1fr] gap-10">
                             {/* Menu section */}
                             <div className="md:block">
-                                <div className='md:hidden flex justify-end mt-8'>
+                                <div className='md:hidden  p-4 md:p-0 flex justify-end mt-8'>
                                     <MobileMenu />
                                 </div>
                                 <div className="md:sticky md:top-4 md:max-h-[800px] max-h-[380px] h-screen">
@@ -36,7 +36,7 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                             <div className="overflow-x-hidden">
                                 <div className="flex flex-col">
                                     {/* Spacer */}
-                                    <div className="md:h-[500px]" />
+                                    <div className="md:h-[550px]" />
 
                                     {/* Content */}
                                     <div className="w-full">
