@@ -41,7 +41,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
       </div>
       {
           infoText && (
-            <div className='flex justify-center items-center mt-2 '>
+            <div className='flex justify-center text-center mt-2 '>
               <span className='text-white text-xs ml-1'>{infoText}</span>
             </div>
           )

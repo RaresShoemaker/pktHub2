@@ -23,7 +23,6 @@ const SubmissionPage: React.FC = () => {
 				</div>
 				<div className='flex flex-col gap-5 md:self-center'>
 					<h1 className='text-3xl md:text-4xl font-semibold text-center'>Onboarding Form</h1>
-
 					<p className='text-center font-medium lg:text-2xl md:w-[80%] lg:w-[58%] self-center'>
 					If you would like to list your platform on the Packet Hub Hub, please submit the form below.
 					</p>
