@@ -64,7 +64,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
         zIndex: 1,
         left: '50%',
         transform: 'translateX(-50%)',
-        width: '120%',
+        width: '180%',
         transition: 'all 1000ms ease-in-out',
     };
 

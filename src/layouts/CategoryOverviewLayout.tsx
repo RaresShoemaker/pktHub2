@@ -21,7 +21,7 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                 {/* Overflow wrapper */}
                 <div className="relative z-10">
                     <div className="pl-4 mb-24">
-                        <div className="grid md:grid-cols-[300px_1fr] gap-10">
+                        <div className="grid md:grid-cols-[300px_1fr] md:gap-10">
                             {/* Menu section */}
                             <div className="md:block">
                                 <div className='md:hidden  p-4 md:p-0 flex justify-end mt-8'>

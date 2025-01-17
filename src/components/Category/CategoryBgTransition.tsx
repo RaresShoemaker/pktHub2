@@ -60,16 +60,16 @@ const CategoryBgTransition: React.FC<CategoryBgTransitionProps> = ({ children })
 	const gradients = getGradientsByCategory(category);
 
 	return (
-		<div className='relative min-h-screen isolate'>
+		<div className='relative min-h-dvh isolate'>
 			<div className='fixed inset-0 isolate -z-10'>
 				<div className='absolute inset-0 bg-[#090D23]' />
 
-				<div className='absolute inset-0 w-full h-full'>
+				<div className='absolute inset-0 w-full h-dvh'>
 					{/* Current gradient */}
 					<div
 						key={activeIndex}
 						className={cn(
-							'absolute inset-0 w-full h-full',
+							'absolute inset-0 w-full h-dvh',
 							gradients[activeIndex],
 							'transition-opacity duration-1000 ease-in-out'
 						)}
@@ -79,7 +79,7 @@ const CategoryBgTransition: React.FC<CategoryBgTransitionProps> = ({ children })
 					<div
 						key={`next-${nextIndex}`}
 						className={cn(
-							'absolute inset-0 w-full h-full',
+							'absolute inset-0 w-full h-dvh',
 							gradients[nextIndex],
 							'transition-opacity duration-1000 ease-in-out'
 						)}
@@ -90,7 +90,7 @@ const CategoryBgTransition: React.FC<CategoryBgTransitionProps> = ({ children })
 				</div>
 			</div>
 
-			<div className='relative flex flex-col min-h-screen'>
+			<div className='relative flex flex-col min-h-dvh'>
 				{children}
 				<Footer />
 			</div>
