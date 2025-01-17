@@ -28,6 +28,7 @@ import StarAtlasLogoWhite from './StarAtlasLogoWhite.svg?react';
 
 import DefiKingdomsLogoRegular from './DefiKingdomsLogoRegular.png'
 import NeighborAliceLogoRegular from './NeighborAliceLogoRegular.png'
+import SpongeV2LogoRegular from './SpongeV2LogoRegular.png';
 
 export {
     AxieInfinityLogoRegular,
@@ -59,5 +60,6 @@ export {
     StarAtlasLogoWhite,
 
     DefiKingdomsLogoRegular,
-    NeighborAliceLogoRegular
+    NeighborAliceLogoRegular,
+    SpongeV2LogoRegular,
 }

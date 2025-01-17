@@ -448,7 +448,7 @@ export const CategoryData: CategoryDataType = {
 			{
 				alt: 'Sponge V2',
 				href: 'https://sponge.vip/en',
-				logo: 'src/assets/games/SpongeV2LogoRegular.png'
+				logo: <GamesIcons.SpongeV2LogoRegular />
 			},
 			{
 				alt: 'Star Atlas',
