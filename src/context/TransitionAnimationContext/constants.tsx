@@ -5,4 +5,4 @@ export const TRANSITION_ACTIONS = {
 } as const;
 
 export const TRANSITION_DURATION = 1000;
-export const INTERVAL_DURATION = 10000;
+export const INTERVAL_DURATION = 20000; // 20 seconds

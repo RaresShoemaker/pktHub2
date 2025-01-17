@@ -31,6 +31,17 @@ export const CategoryData: CategoryDataType = {
 				logoWhite: <GamesIcons.GalaGamesLogoWhite />
 			},
 			{
+				alt: 'Monkey Tilt',
+				href: 'https://www.monkeytilt.com/',
+				logo: <CasinoIcons.MonkeyTiltLogoRegular />
+			},
+			{
+				alt: 'Base',
+				href: 'https://www.base.org/',
+				logo: <TechnologyIcons.BaseLogoRegular />,
+				logoWhite: <TechnologyIcons.BaseLogoWhite />
+			},
+			{
 				alt: 'Audius',
 				href: 'https://www.audius.co',
 				logo: <MusicIcons.AudiusLogoRegular />,
@@ -42,7 +53,7 @@ export const CategoryData: CategoryDataType = {
 				logo: CasinoIcons.TenexLogoRegular
 			},
 			{
-				alt: 'Monster Children Tv',
+				alt: 'Monster Children TV',
 				href: 'https://monsterchildren.tv/',
 				logo: <MediaIcons.MonsterChildrenTvLogoRegular />,
 				logoWhite: <MediaIcons.MonsterChildrenTvLogoWhite />
@@ -51,7 +62,7 @@ export const CategoryData: CategoryDataType = {
 		isViewOnly: true
 	},
 	discover: {
-		title: `What's New`,
+		title: `Discover`,
 		data: [
 			{
 				alt: 'Sharpnel',
@@ -77,20 +88,15 @@ export const CategoryData: CategoryDataType = {
 				logo: <MediaIcons.ApeflixLogoRegular />
 			},
 			{
-				alt: 'Base',
-				href: 'https://www.base.org/',
-				logo: <TechnologyIcons.BaseLogoRegular />,
-				logoWhite: <TechnologyIcons.BaseLogoWhite />
+				alt: 'Tune.fm',
+				href: 'https://tune.fm/home',
+				logo: <MusicIcons.TuneFmLogoRegular />,
+				logoWhite: <MusicIcons.TuneFmLogoWhite />
 			},
 			{
 				alt: 'Moon Poker',
 				href: 'https://www.moonpoker.com/',
 				logo: <CasinoIcons.MoonPokerLogoRegular />
-			},
-			{
-				alt: 'Monkey Tilt',
-				href: 'https://www.monkeytilt.com/',
-				logo: <CasinoIcons.MonkeyTiltLogoRegular />
 			},
 		],
 		isViewOnly: true
@@ -117,7 +123,7 @@ export const CategoryData: CategoryDataType = {
 				logoWhite: <MediaIcons.AmzPrimeLogoWhite />
 			},
 			{
-				alt: 'Monster Children Tv',
+				alt: 'Monster Children TV',
 				href: 'https://monsterchildren.tv/',
 				logo: <MediaIcons.MonsterChildrenTvLogoRegular />,
 				logoWhite: <MediaIcons.MonsterChildrenTvLogoWhite />
@@ -134,13 +140,13 @@ export const CategoryData: CategoryDataType = {
 				logoWhite: <MediaIcons.DisneyLogoWhite />
 			},
 			{
-				alt: 'Acorn Tv',
+				alt: 'Acorn TV',
 				href: 'https://www.acorn.tv',
 				logo: <MediaIcons.AcornLogoRegular />,
 				logoWhite: <MediaIcons.AcornLogoWhite />
 			},
 			{
-				alt: 'Apple Tv',
+				alt: 'Apple TV',
 				href: 'https://tv.apple.com/',
 				logo: <MediaIcons.AppleTvLogoRegular />,
 				logoWhite: <MediaIcons.AppleTvLogoWhite />
@@ -158,7 +164,7 @@ export const CategoryData: CategoryDataType = {
 				logoWhite: <MediaIcons.YtbLogoWhite />
 			},
 			{
-				alt: 'Fubo Tv',
+				alt: 'Fubo TV',
 				href: 'https://www.fubo.tv',
 				logo: <MediaIcons.FuboTvLogoRegular />,
 				logoWhite: <MediaIcons.FuboTvLogoWhite />
@@ -348,6 +354,11 @@ export const CategoryData: CategoryDataType = {
 		title: 'Games',
 		data: [
 			{
+				alt: 'Floki',
+				href: 'https://floki.com/',
+				logo: <GamesIcons.FlokiLogoRegular />
+			},
+			{
 				alt: 'Axie Infinity (AXS)',
 				href: 'https://axieinfinity.com/',
 				logo: <GamesIcons.AxieInfinityLogoRegular />
@@ -388,11 +399,6 @@ export const CategoryData: CategoryDataType = {
 				href: 'https://embersword.com/',
 				logo: <GamesIcons.EmberSwordLogoRegular />,
 				logoWhite: <GamesIcons.EmberSwordLogoWhite />
-			},
-			{
-				alt: 'Floki',
-				href: 'https://floki.com/',
-				logo: <GamesIcons.FlokiLogoRegular />
 			},
 			{
 				alt: 'Gala Games',
@@ -600,6 +606,16 @@ export const CategoryData: CategoryDataType = {
 				href: 'https://offchainlabs.com/',
 				logo: <TechnologyIcons.ArbitrumLogoRegular />,
 				logoWhite: <TechnologyIcons.ArbitrumLogoWhite />
+			},
+			{
+				alt: 'Sui',
+				href: 'https://sui.io//',
+				logo: <TechnologyIcons.SuiLogoRegular />,
+			},
+			{
+				alt: 'Polygon (MATIC)',
+				href: 'https://polygon.technology/',
+				logo: <TechnologyIcons.PolygonLogoRegular />,
 			},
 			{
 				alt: 'Avalanche (AVAX)',

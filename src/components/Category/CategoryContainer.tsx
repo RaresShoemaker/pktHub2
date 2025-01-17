@@ -2,8 +2,9 @@ import React from 'react';
 import { CategoryCardProps } from './CategoryCard';
 import { ChevronRight } from 'lucide-react';
 import CategoryCard from './CategoryCard';
-import GradientDivider from './GradientDivider';
+import CustomHr from './CustomHr';
 import { Link } from 'react-router-dom';
+import { cn } from '../../lib/utils';
 
 interface CategoryContainerProps {
 	title: string;
@@ -29,16 +30,17 @@ const CategoryContainer: React.FC<CategoryContainerProps> = React.memo(
 		}
 
 		return (
-			<div className='flex flex-col gap-4 w-full'>
+			<div className={cn('flex flex-col gap-4 w-full', isViewOnly ? 'glass pl-5 py-5' : '')}>
 				{/* Title section */}
 				<div className='flex items-center gap-1 text-white'>
 					{!isViewOnly &&  <Link to={`/?category=${title.toLowerCase()}`} className='flex items-center gap-1 text-white'>
 						<p className='font-bold'>{title}</p>
 					</Link>}
 					{
-						isViewOnly && <p className='font-bold'>{title}</p>
+						isViewOnly &&
+						 <p className={cn('font-bold text-gradient', title === "Discover" ? 'bg-gradient-text-discover': 'bg-gradient-text-hot')}>{title}</p>
 					}
-					<ChevronRight className='w-5 h-5' />
+					<ChevronRight className={cn('w-5 h-5', title === "Discover" ? 'text-[#3CADEF]': 'text-[#F79422]')} />
 				</div>
 
 				{/* Scrollable container with width constraints */}
@@ -61,9 +63,9 @@ const CategoryContainer: React.FC<CategoryContainerProps> = React.memo(
 				</div>
 
 				{/* Divider */}
-				<div className='w-full'>
-					<GradientDivider />
-				</div>
+				{!isViewOnly && <div className='w-full'>
+					<CustomHr />
+				</div>}
 			</div>
 		);
 	}
