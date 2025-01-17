@@ -7,7 +7,7 @@ import PacketHubLogoMobile from '../assets/PacketHubMobile.svg?react';
 
 const SubmissionPage: React.FC = () => {
 	return (
-		<section className='flex flex-col mt-12 md:mt-20'>
+		<section className='flex flex-col mt-12 md:mt-20 h-screen pb-48 md:pb-0 overflow-auto no-scrollbar'>
 			<div className='text-white flex flex-col gap-10'>
 				<div className='font-semibold flex'>
 					<Link to='/' className='flex'>
@@ -15,7 +15,7 @@ const SubmissionPage: React.FC = () => {
 						<p className='hidden md:block'>Back</p>
 					</Link>
 					<div className='w-full hidden md:flex justify-center -ml-6'>
-							<PacketHubLogoWhite />
+						<PacketHubLogoWhite />
 					</div>
 					<div className='w-full flex justify-center -ml-6 md:hidden'>
 						<PacketHubLogoMobile />
@@ -24,7 +24,7 @@ const SubmissionPage: React.FC = () => {
 				<div className='flex flex-col gap-5 md:self-center'>
 					<h1 className='text-3xl md:text-4xl font-semibold text-center'>Onboarding Form</h1>
 					<p className='text-center font-medium lg:text-2xl md:w-[80%] lg:w-[58%] self-center'>
-					If you would like to list your platform on the Packet Hub Hub, please submit the form below.
+						If you would like to list your platform on the Packet Hub Hub, please submit the form below.
 					</p>
 				</div>
 
