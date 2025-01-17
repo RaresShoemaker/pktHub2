@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import MenuCategory from '../components/Menu/Menu';
 import HeroContainer from '../components/Hero/HeroContainer';
 import MobileMenu from '../components/Menu/MobileMenu';
@@ -9,8 +9,37 @@ interface CategoryOverviewLayout {
 }
 
 const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) => {
+    const [hasScrolled, setHasScrolled] = useState(false);
+
+    const handleScroll = useCallback(() => {
+        // Only execute on md screens and above (768px is Tailwind's md breakpoint)
+        if (window.innerWidth < 800) return;
+
+        const scrollPosition = window.scrollY;
+
+        // Reset states when user scrolls back to top
+        if (scrollPosition === 0) {
+            setHasScrolled(false);
+            return;
+        }
+
+        // Trigger scroll down when user starts scrolling
+        if (!hasScrolled && scrollPosition > 50) {
+            setHasScrolled(true);
+            window.scrollTo({
+                top: 500,
+                behavior: 'smooth'
+            });
+        }
+    }, [hasScrolled]);
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [handleScroll]);
+
     return (
-        <CategoryBgTransition >
+        <CategoryBgTransition>
             {/* Main scrollable container */}
             <div className="flex-grow relative">
                 {/* Hero Container */}
@@ -24,10 +53,12 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                         <div className="grid md:grid-cols-[300px_1fr] md:gap-10">
                             {/* Menu section */}
                             <div className="md:block">
-                                <div className='md:hidden  p-4 md:p-0 flex justify-end mt-8'>
+                                <div className="md:hidden p-4 md:p-0 flex justify-end mt-8">
                                     <MobileMenu />
                                 </div>
-                                <div className="md:sticky md:top-4 md:max-h-[800px] max-h-[380px] h-screen">
+                                <div 
+                                    className={`md:sticky md:top-4 md:max-h-[800px] max-h-[380px] h-screen transition-transform duration-1000 ease-in-out`}
+                                >
                                     <MenuCategory />
                                 </div>
                             </div>

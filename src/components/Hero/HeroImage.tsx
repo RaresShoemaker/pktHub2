@@ -8,7 +8,7 @@ const HeroImage: React.FC = () => {
 
     useEffect(() => {
         const checkMobile = () => {
-            setIsMobile(window.innerWidth < 450);
+            setIsMobile(window.innerWidth < 500);
         };
 
         checkMobile();
@@ -41,7 +41,18 @@ const HeroImage: React.FC = () => {
         }
     };
 
+    const preloadImages = (images: string[]) => {
+        images.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+    };
+
     const images = getImagesByCategory(category);
+
+    useEffect(() => {
+        preloadImages(images);
+    }, [images]);
 
     if (!images || images.length === 0) return null;
 
@@ -61,8 +72,8 @@ const HeroImage: React.FC = () => {
     const nextImageIndex = nextIndex % images.length;
 
     const transitionStyle = {
-        transition: `opacity ${TRANSITION_DURATION}ms ease-in-out`
-    };
+		transition: `opacity ${TRANSITION_DURATION}ms ease-in-out`
+	};
 
     return (
         <div className="relative h-[460px] md:h-full w-full">

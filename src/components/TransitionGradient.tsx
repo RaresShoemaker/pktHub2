@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTransitionAnimation } from '../context/TransitionAnimationContext/TransitionAnimationContext';
 
 interface TransitionGradientProps {
@@ -7,6 +7,30 @@ interface TransitionGradientProps {
 
 const TransitionGradient: React.FC<TransitionGradientProps> = () => {
     const { activeIndex, isTransitioning, nextIndex, category } = useTransitionAnimation();
+    const [isInitialized, setIsInitialized] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsInitialized(true);
+        }, 100);
+        return () => clearTimeout(timer);
+    }, [category]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        // Initial check
+        handleResize();
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const getGradientsByCategory = (category: string | null): string[][] => {
         switch (category) {
@@ -50,8 +74,8 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
             default:
                 return [
                     ['#090D23', '#090D23', '#090D23'],
-                    ['#611113', '#611113', '#611113'],
-                    ['#177CCF', '#177CCF', '#177CCF']
+                    ['#621916', '#621916', '#621916'],
+                    ['#122C7D', '#122C7D', '#122C7D']
                 ];
         }
     };
@@ -60,12 +84,23 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
     const currentGradient = gradients[activeIndex];
     const nextGradient = gradients[nextIndex];
 
+    const getTransformValue = () => {
+        const translateY = isMobile ? '50%' : '20%';
+        const scale = isInitialized ? 1.2 : 0.8;
+        return `translateX(-50%) translateY(${translateY}) scale(${scale})`;
+    };
+
+
     const baseStyle = {
+        position: 'absolute' as const,
         zIndex: 1,
         left: '50%',
-        transform: 'translateX(-50%)',
-        width: '180%',
-        transition: 'all 1000ms ease-in-out',
+        transform: getTransformValue(),
+        width: '150%',
+        transition: isInitialized ? 'all 800ms ease-in-out' : 'none',
+        borderRadius: '50%',
+        mixBlendMode: 'normal' as const,
+        willChange: 'transform, opacity, filter',
     };
 
     return (
@@ -125,7 +160,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
             />
             <div
                 key={`next-3-${nextIndex}`}
-                className='absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px] h-[200px] bottom-[0px]'
+                className='absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px] h-[400px] bottom-[0px]'
                 style={{
                     ...baseStyle,
                     background: nextGradient[2],
