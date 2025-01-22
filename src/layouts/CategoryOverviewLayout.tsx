@@ -3,6 +3,8 @@ import MenuCategory from '../components/Menu/Menu';
 import HeroContainer from '../components/Hero/HeroContainer';
 import MobileMenu from '../components/Menu/MobileMenu';
 import CategoryBgTransition from '../components/Category/CategoryBgTransition';
+import { useSearchParams } from 'react-router-dom';
+import { cn } from '../lib/utils';
 
 interface CategoryOverviewLayout {
     children: React.ReactNode;
@@ -10,6 +12,8 @@ interface CategoryOverviewLayout {
 
 const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) => {
     const [hasScrolled, setHasScrolled] = useState(false);
+        const [searchParams] = useSearchParams();
+        const category = React.useMemo(() => searchParams.get('category'), [searchParams]);
 
     const handleScroll = useCallback(() => {
         // Only execute on md screens and above (768px is Tailwind's md breakpoint)
@@ -27,11 +31,11 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
         if (!hasScrolled && scrollPosition > 50) {
             setHasScrolled(true);
             window.scrollTo({
-                top: 500,
+                top: category !== 'creators' ? 500 : 430,
                 behavior: 'smooth'
             });
         }
-    }, [hasScrolled]);
+    }, [category, hasScrolled]);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -67,7 +71,7 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                             <div className="overflow-x-hidden">
                                 <div className="flex flex-col">
                                     {/* Spacer */}
-                                    <div className="md:h-[550px]" />
+                                    <div className={cn(category !== 'creators' ? "md:h-[550px]" : "md:h-[430px]" )} />
 
                                     {/* Content */}
                                     <div className="w-full">

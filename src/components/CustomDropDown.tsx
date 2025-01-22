@@ -30,14 +30,13 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
         id={id}
         value={value}
         name={id}
-        className="peer w-full h-12 rounded-full border-2 border-white bg-transparent text-white px-6 pt-2 
+        className="peer w-full h-12 rounded-full border-2 border-white bg-transparent text-white px-6 pt-1
                    focus:outline-none focus:border-white transition-all outline-none appearance-none"
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         onChange={onChange}
         {...props}
       >
-        {/* <option value="" disabled className="bg-blue-700">Please Select</option> */}
         {options.map((option) => (
           <option key={option.value} value={option.value} className="bg-blue-700">
             {option.label}

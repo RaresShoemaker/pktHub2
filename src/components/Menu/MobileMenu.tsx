@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 import MenuButton from './MenuButtons';
-import { HomeIcon, MediaIcon, MusicIcon, GamesIcon, CasinoIcon, TechnologyIcon } from '../../assets/icons';
+import { HomeIcon, MediaIcon, MusicIcon, GamesIcon, CasinoIcon, TechnologyIcon, CreatorsIcon } from '../../assets/icons';
 
 const MobileMenu = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +23,7 @@ const MobileMenu = () => {
 
 	const menuItems = [
 		{ title: 'Home', icon: <HomeIcon />, query: 'home' },
+		{ title: 'Creator Hub', icon: <CreatorsIcon />, query: 'creators'},
 		{ title: 'Media', icon: <MediaIcon />, query: 'media' },
 		{ title: 'Music', icon: <MusicIcon />, query: 'music' },
 		{ title: 'Games', icon: <GamesIcon />, query: 'games' },

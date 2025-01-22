@@ -22,7 +22,7 @@ const CreatorsCard: React.FC<CreatorsCardProps> = ({
       {/* Image Container */}
       <div className="relative w-64 h-60">
         {/* Image */}
-        <div className="rounded-3xl overflow-hidden">
+        <div className="rounded-4xl overflow-hidden">
           {typeof img === 'string' && (
             <img 
               src={img}

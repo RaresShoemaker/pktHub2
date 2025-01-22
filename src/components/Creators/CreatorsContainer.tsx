@@ -1,23 +1,39 @@
 import React from 'react';
+import { CreatorsCardDataType } from '../../mockdata/CreatorsMockData';
 import CreatorsCard from './CreatorsCard';
 
+interface CreatorsCategoryContainerProps {
+  title: string;
+  cards: CreatorsCardDataType[];
+}
 
+const CreatorsCategoryContainer: React.FC<CreatorsCategoryContainerProps> = React.memo(
+  ({ title, cards }) => {
+    return (
+      <div className="flex flex-col gap-4 w-full pr-4 md:pr-0">
+        {/* Title section */}
+        <div className="flex items-center gap-1">
+          <p className="font-semibold text-2xl text-white">{title}</p>
+        </div>
 
-const CreatorsContainer: React.FC = () => {
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
-      {data.map((movie, index) => (
-        <CreatorsCard
-          key={`${movie.title}-${index}`}
-          title={movie.title}
-          description={movie.description}
-          img={movie.img}
-          genre={movie.genre}
-          alt={movie.alt}
-        />
-      ))}
-    </div>
-  );
-};
+        {/* Scrollable container */}
+        <div className="w-full">
+          <div className="max-w-full overflow-x-auto no-scrollbar">
+            <div className="inline-flex gap-4">
+              {cards.map((card, index) => (
+                <div key={index} className="shrink-0">
+                  <CreatorsCard {...card} />
+                </div>
+              ))}
+              <div className='h-60 w-4'>
 
-export default CreatorsContainer;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+);
+
+export default CreatorsCategoryContainer;

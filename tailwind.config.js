@@ -35,6 +35,19 @@ export default {
 					'backdrop-filter': 'blur(22px)',
 					'-webkit-backdrop-filter': 'blur(22px)'
 				},
+				'.glass-white': {
+					background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.16) 0%, rgba(0, 0, 0, 0.00) 76.61%)',
+					'border-radius': '24px',
+					'backdrop-filter': 'blur(22px)',
+					'-webkit-backdrop-filter': 'blur(22px)'
+        },
+				'.glass-black': {
+          'background': 'rgba(0,0,0,0.2)',
+          'box-shadow': '0 4px 30px rgba(0, 0, 0, 0.1)',
+          'backdrop-filter': 'blur(7.7px)',
+          '-webkit-backdrop-filter': 'blur(7.7px)',
+        },
+
 				'.text-gradient': {
 					'background-clip': 'text',
 					'-webkit-background-clip': 'text',

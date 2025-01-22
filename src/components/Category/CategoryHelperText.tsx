@@ -18,7 +18,7 @@ const CategoryHelperText: React.FC<CategoryHelperTextProps> = ({
     <div className={cn(
       'flex text-white items-center',
       squareView 
-        ? 'h-60 w-64' 
+        ? 'h-60 w-32' 
         : 'max-h-[120px] max-w-[224.5px] w-[120px] h-[100px] md:h-[120px]'
     )}>
       {!isViewOnly && (
