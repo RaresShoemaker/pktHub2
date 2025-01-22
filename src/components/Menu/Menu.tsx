@@ -2,12 +2,13 @@ import React, { useMemo } from 'react';
 import MenuButton from './MenuButtons';
 import { Link } from 'react-router-dom';
 
-import { HomeIcon, MediaIcon, MusicIcon, GamesIcon, CasinoIcon, TechnologyIcon } from '../../assets/icons';
+import { HomeIcon, MediaIcon, MusicIcon, GamesIcon, CasinoIcon, TechnologyIcon, CreatorsIcon } from '../../assets/icons';
 
 const MenuCategory: React.FC = () => {
 	const menuItems = useMemo(
 		() => [
 			{ title: 'Home', icon: <HomeIcon />, query: 'home' },
+			{title: 'Creator Hub', icon: <CreatorsIcon />, query: 'creators'},
 			{ title: 'Media', icon: <MediaIcon />, query: 'media' },
 			{ title: 'Music', icon: <MusicIcon />, query: 'music' },
 			{ title: 'Games', icon: <GamesIcon />, query: 'games' },

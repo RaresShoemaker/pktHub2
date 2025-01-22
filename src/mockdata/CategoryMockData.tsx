@@ -9,6 +9,9 @@ type CategoryCardDataType = {
 	href: string;
 	logo: React.ReactNode;
 	logoWhite?: React.ReactNode;
+	genre?: string;
+	description?: string;
+	title?: string;
 };
 
 type CategoryDataType = Record<
@@ -17,6 +20,7 @@ type CategoryDataType = Record<
 		title: string;
 		data: CategoryCardDataType[];
 		isViewOnly?: boolean;
+		squareView?: boolean;
 	}
 >;
 
@@ -100,6 +104,13 @@ export const CategoryData: CategoryDataType = {
 			},
 		],
 		isViewOnly: true
+	},
+	creators: {
+		title: 'Creators Hub',
+		data: [
+
+		],
+		squareView: true
 	},
 	media: {
 		title: 'Media',

@@ -40,7 +40,7 @@ const CategoryContainer: React.FC<CategoryContainerProps> = React.memo(
 						isViewOnly &&
 						 <p className={cn('font-bold text-gradient', title === "Discover" ? 'bg-gradient-text-discover': 'bg-gradient-text-hot')}>{title}</p>
 					}
-					<ChevronRight className={cn('w-5 h-5', title === "Discover" ? 'text-[#3CADEF]': 'text-[#F79422]')} />
+					<ChevronRight className={cn('w-5 h-5', isViewOnly ? (title === "Discover" ? 'text-[#3CADEF]' : 'text-[#F79422]') : '')} />
 				</div>
 
 				{/* Scrollable container with width constraints */}
