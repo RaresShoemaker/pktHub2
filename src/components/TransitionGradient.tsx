@@ -46,6 +46,12 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
                     ['#621916', '#621916', '#621916'],
                     ['#177CCF', '#177CCF', '#177CCF']
                 ];
+            case 'creators':
+                return [
+                    ['#090D23', '#090D23', '#090D23'],
+                    ['#090D23', '#090D23', '#090D23'],
+                    ['#090D23', '#090D23', '#090D23'],
+                ];
             case 'music':
                 return [
                     ['#124C7B', '#124C7B', '#124C7B'],
@@ -82,7 +88,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
 
     const gradients = getGradientsByCategory(category);
     const currentGradient = gradients[activeIndex];
-    const nextGradient = gradients[nextIndex];
+    const nextGradient = gradients.length === 1 ? gradients[0] : gradients[nextIndex];
 
     const getTransformValue = () => {
         const translateY = isMobile ? '50%' : '20%';
@@ -108,7 +114,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
             {/* Current gradient layers */}
             <div
                 key={`current-1-${activeIndex}`}
-                className='absolute w-screen flex-shrink-0 md:bottom-[-215px] md:h-[429px] h-[200px] bottom-[100px]'
+                className='absolute w-screen flex-shrink-0 md:bottom-[-215px] md:h-[429px] h-[400px] bottom-[100px]'
                 style={{
                     ...baseStyle,
                     background: currentGradient[0],
@@ -118,7 +124,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
             />
             <div
                 key={`current-2-${activeIndex}`}
-                className='absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px] h-[200px] bottom-[50px]'
+                className='absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px] h-[400px] bottom-[50px]'
                 style={{
                     ...baseStyle,
                     background: currentGradient[1],
@@ -128,7 +134,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
             />
             <div
                 key={`current-3-${activeIndex}`}
-                className='absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px] h-[200px] bottom-[0px]'
+                className='absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px] h-[400px] bottom-[0px]'
                 style={{
                     ...baseStyle,
                     background: currentGradient[2],
@@ -138,9 +144,11 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
             />
 
             {/* Next gradient layers */}
+            {nextGradient && nextGradient.length > 0 && (
+                <>
             <div
                 key={`next-1-${nextIndex}`}
-                className='absolute w-screen flex-shrink-0 md:bottom-[-215px] md:h-[429px] h-[200px] bottom-[100px]'
+                className='absolute w-screen flex-shrink-0 md:bottom-[-215px] md:h-[429px] h-[400px] bottom-[100px]'
                 style={{
                     ...baseStyle,
                     background: nextGradient[0],
@@ -150,7 +158,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
             />
             <div
                 key={`next-2-${nextIndex}`}
-                className='absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px] h-[200px] bottom-[50px]'
+                className='absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px] h-[400px] bottom-[50px]'
                 style={{
                     ...baseStyle,
                     background: nextGradient[1],
@@ -168,6 +176,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
                     opacity: isTransitioning ? 1 : 0,
                 }}
             />
+        </>)}
         </>
     );
 };

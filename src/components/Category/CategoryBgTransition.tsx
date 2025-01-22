@@ -23,6 +23,8 @@ const CategoryBgTransition: React.FC<CategoryBgTransitionProps> = ({ children })
 					'bg-gradient-to-b from-[#621816] to-[#1D2343]',
 					'bg-gradient-to-b from-[#008CFF] to-[#3278D4]'
 				];
+			case 'creators':
+				return ['bg-gradient-to-b from-[#090D23] to-[#1D2343]'];
 			case 'music':
 				return [
 					'bg-gradient-to-b from-[#0A4677] to-[#3278D4]',
@@ -65,28 +67,34 @@ const CategoryBgTransition: React.FC<CategoryBgTransitionProps> = ({ children })
 				<div className='absolute inset-0 bg-[#090D23]' />
 
 				<div className='absolute inset-0 w-full h-dvh'>
-					{/* Current gradient */}
-					<div
-						key={activeIndex}
-						className={cn(
-							'absolute inset-0 w-full h-dvh',
-							gradients[activeIndex],
-							'transition-opacity duration-1000 ease-in-out'
-						)}
-					/>
+					{gradients.length === 1 ? (
+						<div className={cn('absolute inset-0 w-full h-dvh', gradients[0])} />
+					) : (
+						<>
+							{/* Current gradient */}
+							<div
+								key={activeIndex}
+								className={cn(
+									'absolute inset-0 w-full h-dvh',
+									gradients[activeIndex],
+									'transition-opacity duration-1000 ease-in-out'
+								)}
+							/>
 
-					{/* Next gradient */}
-					<div
-						key={`next-${nextIndex}`}
-						className={cn(
-							'absolute inset-0 w-full h-dvh',
-							gradients[nextIndex],
-							'transition-opacity duration-1000 ease-in-out'
-						)}
-						style={{
-							opacity: isTransitioning ? 1 : 0
-						}}
-					/>
+							{/* Next gradient */}
+							<div
+								key={`next-${nextIndex}`}
+								className={cn(
+									'absolute inset-0 w-full h-dvh',
+									gradients[nextIndex],
+									'transition-opacity duration-1000 ease-in-out'
+								)}
+								style={{
+									opacity: isTransitioning ? 1 : 0
+								}}
+							/>
+						</>
+					)}
 				</div>
 			</div>
 

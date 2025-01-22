@@ -4,6 +4,7 @@ import GamesIcon from './GamesIcon.svg?react';
 import MediaIcon from './MediaIcon.svg?react';
 import MusicIcon from './MusicIcon.svg?react';
 import TechnologyIcon from './TechnologyIcon.svg?react';
+import CreatorsIcon from './CreatorsIcon.svg?react';
 
 export {
   HomeIcon,
@@ -11,5 +12,6 @@ export {
   GamesIcon,
   MediaIcon,
   MusicIcon,
-  TechnologyIcon
+  TechnologyIcon,
+  CreatorsIcon
 }

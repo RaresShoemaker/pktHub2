@@ -3,12 +3,21 @@ import * as TechnologyIcons from '../assets/technology/index';
 import * as MediaIcons from '../assets/media/index';
 import * as GamesIcons from '../assets/games/index';
 import * as CasinoIcons from '../assets/casino/index';
+import {
+	FilmImg,
+	MusicImg,
+	PodcastImg,
+	TvImg,
+} from '../assets/creators/index'
 
 type CategoryCardDataType = {
 	alt: string;
-	href: string;
+	href?: string;
 	logo: React.ReactNode;
 	logoWhite?: React.ReactNode;
+	genre?: string;
+	description?: string;
+	title?: string;
 };
 
 type CategoryDataType = Record<
@@ -17,6 +26,7 @@ type CategoryDataType = Record<
 		title: string;
 		data: CategoryCardDataType[];
 		isViewOnly?: boolean;
+		squareView?: boolean;
 	}
 >;
 
@@ -100,6 +110,103 @@ export const CategoryData: CategoryDataType = {
 			},
 		],
 		isViewOnly: true
+	},
+	creators: {
+		title: 'Creators Hub',
+		data: [
+			{
+        alt: 'Hercules-IMG',
+        title: 'Hercules',
+        logo: FilmImg.HerculesImg,
+        description: 'Dwayne "The Rock" Johnson delivers an unforgettable performance.',
+        genre: 'Action'
+      },
+			{
+        alt: 'EveryoneIsDoingGreat-IMG',
+        title: 'Everyone Is Doing Great',
+        logo: TvImg.EveryoneIsDoingGreatImg,
+        description: 'A Drama Series',
+				genre: 'TV'
+      },
+			{
+        alt: 'CrookCounty-IMG',
+        title: 'Crook County',
+        logo: PodcastImg.CrookCountyImg,
+        description: 'A True-Crime Podcast',
+				genre: 'Podcasts'
+      },
+			{
+        alt: 'WHAM-IMG',
+        title: 'WHAM (Extended Version)',
+        logo: MusicImg.WhamImg,
+        description: 'Lil Baby',
+				genre: 'Music'
+      },
+			{
+        alt: 'ParadiseStateofMind-IMG',
+        title: 'Paradise State of Mind',
+        logo: MusicImg.ParadiseStateOfMindImg,
+        description: 'Foster the People',
+				genre: 'Music'
+      },
+			{
+        alt: 'DenofThieves-IMG',
+        title: 'Den of Thieves',
+        logo: FilmImg.DenOfThievesImg,
+        description: 'Gerard Butler',
+        genre: 'Crime Thriller'
+      },
+			{
+				alt: 'WishYouWereHere-IMG',
+        title: 'Wish You Were Here',
+        logo: FilmImg.WishYouWereHereImg,
+        description: 'Directed by Julia Stiles',
+        genre: 'Drama'
+			},
+			{
+				alt: 'Oblivion-IMG',
+        title: 'Oblivion',
+        logo: FilmImg.OblivionImg,
+        description: 'Tom Cruise & Morgan Freeman',
+        genre: 'Sci-Fi'
+			},
+			{
+        alt: 'JimmyShin-IMG',
+        title: 'Jimmy Shin',
+        logo: TvImg.JimmyShinImg,
+        description: 'Wok this way...',
+				genre: 'TV'
+      },
+			{
+        alt: 'ThePatMcAfeeShow-IMG',
+        title: 'The Pat McAfee Show',
+        logo: TvImg.ThePatMcAffeImg,
+        description: 'Live weekdays 12-3PM EST',
+				genre: 'TV'
+      },
+			{
+        alt: 'ThePenguin-IMG',
+        title: 'The Penguin',
+        logo: TvImg.ThePenguinImg,
+        description: 'Drama TV Series',
+				genre: 'TV'
+      },
+			{
+        alt: 'LongevityJunky-IMG',
+        title: 'Longevity Junky',
+        logo: PodcastImg.LongevityJunkyImg,
+        description: 'Wellness Podcast',
+				genre: 'Podcasts'
+      },
+			{
+        alt: 'DeBìTiRARMáSFOTos-IMG',
+        title: 'DeBì TiRAR MáS FOTos',
+        logo: MusicImg.DebiTirarMasFotoImg,
+        description: 'Bad Bunny',
+				genre: 'Music'
+      },
+		],
+		squareView: true
 	},
 	media: {
 		title: 'Media',
@@ -448,7 +555,7 @@ export const CategoryData: CategoryDataType = {
 			{
 				alt: 'Sponge V2',
 				href: 'https://sponge.vip/en',
-				logo: <GamesIcons.SpongeV2LogoRegular />
+				logo: GamesIcons.SpongeLogoRegular
 			},
 			{
 				alt: 'Star Atlas',

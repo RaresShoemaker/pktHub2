@@ -30,6 +30,8 @@ const HeroImage: React.FC = () => {
                 return [`/Games1${mobileSuffix}.jpg`, `/Games2${mobileSuffix}.jpg`, `/Games3${mobileSuffix}.jpg`];
             case 'casino':
                 return [`/Casino1${mobileSuffix}.jpg`, `/Casino2${mobileSuffix}.jpg`, `/Casino3${mobileSuffix}.jpg`];
+            case 'creators':
+                return ['/Creators1.jpg']
             case 'technology':
                 return [
                     `/Technology1${mobileSuffix}.jpg`,
@@ -74,6 +76,18 @@ const HeroImage: React.FC = () => {
     const transitionStyle = {
 		transition: `opacity ${TRANSITION_DURATION}ms ease-in-out`
 	};
+
+    if (images.length === 1) {
+        return (
+            <div className="relative h-[460px] md:h-full w-full">
+                <img
+                    src={images[0]}
+                    alt="Hero Background"
+                    className="absolute inset-0 h-[460px] md:h-full w-full object-cover"
+                />
+            </div>
+        );
+    }
 
     return (
         <div className="relative h-[460px] md:h-full w-full">

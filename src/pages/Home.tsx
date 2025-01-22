@@ -2,7 +2,9 @@ import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 import CategoryOverviewLayout from '../layouts/CategoryOverviewLayout';
 import CategoryContainer from '../components/Category/CategoryContainer';
+import CreatorsCategoryContainer from '../components/Creators/CreatorsContainer';
 import { CategoryData } from '../mockdata/CategoryMockData';
+import { CreatorsData } from '../mockdata/CreatorsMockData';
 
 const Home: React.FC = () => {
 	const [searchParams] = useSearchParams();
@@ -15,7 +17,14 @@ const Home: React.FC = () => {
 		return null;
 	}, [category]);
 
-	if (categoryData) {
+	const creatorsData = React.useMemo(() => {
+		if (category === "creators" && CreatorsData) {
+			return CreatorsData;
+		}
+		return null;
+	}, [category]);
+
+	if (categoryData && !categoryData.squareView) {
 		return (
 			<CategoryOverviewLayout>
 				<CategoryContainer title={categoryData.title} cards={categoryData.data} isFullPage={true} />
@@ -23,9 +32,25 @@ const Home: React.FC = () => {
 		);
 	}
 
+	if (category === "creators" && creatorsData) {
+    return (
+      <CategoryOverviewLayout>
+        <div className="flex flex-col gap-8">
+          {Object.entries(creatorsData).map(([key, section]) => (
+            <CreatorsCategoryContainer 
+              key={key}
+              title={section.title}
+              cards={section.data}
+            />
+          ))}
+        </div>
+      </CategoryOverviewLayout>
+    );
+  }
+
 	return (
 		<CategoryOverviewLayout>
-			<div className='flex flex-col gap-4'>
+			<div className='flex flex-col gap-8'>
 				{Object.entries(CategoryData).map(([key, categoryInfo]) => (
 					<CategoryContainer
 						key={key}
@@ -33,6 +58,7 @@ const Home: React.FC = () => {
 						cards={categoryInfo.data}
 						isFullPage={false}
 						isViewOnly={categoryInfo.isViewOnly}
+						squareView={categoryInfo.squareView}
 					/>
 				))}
 			</div>
