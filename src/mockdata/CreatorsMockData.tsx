@@ -1,6 +1,6 @@
 import {FilmImg, TvImg, PodcastImg, MusicImg} from '../assets/creators/index'
 
-type CreatorsCardDataType = {
+export type CreatorsCardDataType = {
   alt: string;
   title: string;
   img: React.ReactNode;
@@ -42,42 +42,42 @@ export const CreatorsData: CreatorsDataType = {
       {
         alt: 'LastDaysofAmericanCrime-IMG',
         title: 'Last Days of American Crime',
-        img: FilmImg.HerculesImg,
+        img: FilmImg.LastDayOfAmericanCrimeImg,
         description: 'Netflix',
         genre: 'Crime Thriller'
       },
       {
         alt: 'DenofThieves-IMG',
         title: 'Den of Thieves',
-        img: FilmImg.HerculesImg,
+        img: FilmImg.DenOfThievesImg,
         description: 'Gerard Butler',
         genre: 'Crime Thriller'
       },
       {
         alt: 'BabyGirl-IMG',
         title: 'Baby Girl',
-        img: FilmImg.HerculesImg,
+        img: FilmImg.BabyGirlImg,
         description: 'Nicole Kidman, Harris Dickinson',
         genre: 'Crime Thriller'
       },
       {
         alt: 'EmiliaPérez-IMG',
         title: 'Emilia Pérez',
-        img: FilmImg.HerculesImg,
+        img: FilmImg.EmiliaPerezImg,
         description: 'Zoe Saldana, Karla Sofía Gascón',
         genre: 'Crime Thriller'
       },
       {
         alt: 'Ragamuffin-IMG',
         title: 'Ragamuffin',
-        img: FilmImg.HerculesImg,
+        img: FilmImg.RagamuffinImg,
         description: 'Sundance Short Film',
         genre: 'Crime Thriller'
       },
       {
         alt: 'OnFire-IMG',
         title: 'On Fire',
-        img: FilmImg.HerculesImg,
+        img: FilmImg.OnFireImg,
         description: 'Peter Facinelli',
         genre: 'Crime Thriller'
       },
@@ -107,13 +107,13 @@ export const CreatorsData: CreatorsDataType = {
       {
         alt: 'ThePatMcAfeeShow-IMG',
         title: 'The Pat McAfee Show',
-        img: TvImg.JimmyShinImg,
+        img: TvImg.ThePatMcAffeImg,
         description: 'Live weekdays 12-3PM EST',
       },
       {
         alt: 'ThePenguin-IMG',
         title: 'The Penguin',
-        img: TvImg.JimmyShinImg,
+        img: TvImg.ThePenguinImg,
         description: 'Drama TV Series',
       }
     ]
@@ -142,13 +142,13 @@ export const CreatorsData: CreatorsDataType = {
       {
         alt: 'HODLMyBeerPodcast-IMG',
         title: 'HODL My Beer Podcast',
-        img: PodcastImg.LongevityJunkyImg,
+        img: PodcastImg.HodlMyBearImg,
         description: 'Crypto Podcast'
       },
       {
         alt: 'TheEightQuestions-IMG',
         title: 'The Eight Questionst',
-        img: PodcastImg.LongevityJunkyImg,
+        img: PodcastImg.TheEightQuestions,
         description: 'Consciousness Podcast Series'
       }
     ]
@@ -171,21 +171,27 @@ export const CreatorsData: CreatorsDataType = {
       {
         alt: 'DeBìTiRARMáSFOTos-IMG',
         title: 'DeBì TiRAR MáS FOTos',
-        img: MusicImg.ParadiseStateOfMindImg,
+        img: MusicImg.DebiTirarMasFotoImg,
         description: 'Bad Bunny'
       },
       {
         alt: 'TheHumanFear-IMG',
         title: 'The Human Fear',
-        img: MusicImg.ParadiseStateOfMindImg,
+        img: MusicImg.TheHumaFearImg,
         description: 'Franz Ferdinand'
       },
       {
         alt: 'MoCityFlexologist-IMG',
         title: 'MO CITY FLEXOLOGIST',
-        img: MusicImg.ParadiseStateOfMindImg,
+        img: MusicImg.TravisScottImg,
         description: 'Travis Scott'
       },
+      {
+        alt: 'RastaPhil-IMG',
+        title: 'Jesus Crist',
+        img:  MusicImg.RastaPhilImg,
+        description: 'Rasta Phil'
+      }
     ]
   }
 }

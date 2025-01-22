@@ -33,6 +33,7 @@ const Home: React.FC = () => {
 						cards={categoryInfo.data}
 						isFullPage={false}
 						isViewOnly={categoryInfo.isViewOnly}
+						squareView={categoryInfo.squareView}
 					/>
 				))}
 			</div>

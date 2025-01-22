@@ -10,6 +10,10 @@ export default {
 				secondary: '#848484',
 				bg: '#1b215d'
 			},
+			borderRadius: {
+				'4xl': '2rem',
+				'5xl': '2.5rem'
+			},
 			backgroundImage: {
 				'gradient-custom': 'linear-gradient(180deg, rgba(9, 13, 35, 0.79), rgba(29, 35, 67, 0.79))',
 				'gradient-blur':

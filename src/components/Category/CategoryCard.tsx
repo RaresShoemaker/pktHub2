@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export interface CategoryCardProps {
   alt: string;
-  href: string;
+  href?: string;
   logo: React.ReactNode | string;
   logoWhite?: React.ReactNode | string;
 }
@@ -24,7 +24,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ alt, logo, logoWhite, href 
 
   return (
     <div className="flex flex-col gap-4">
-      <Link to={href} target="_blank" className="w-full transition-all duration-200">
+      <Link to={href || '/'} target="_blank" className="w-full transition-all duration-200">
         <div
           className="w-full h-[100px] md:h-[120px] bg-white rounded-2xl transition-all duration-200 group relative overflow-hidden"
           style={
