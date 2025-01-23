@@ -32,12 +32,12 @@ const MobileMenu = () => {
 	];
 
 	const MenuContent = () => (
-		<div className='fixed inset-0 bg-[#1B1B1B] z-50 md:hidden pt-8'>
+		<div className='fixed inset-0 bg-[#1B1B1B] z-50 md:hidden pt-7'>
 			<div className='flex flex-col h-full'>
-				<div className='flex pt-7 justify-end'>
+				<div className='flex justify-end'>
 					<button
 						onClick={() => setIsOpen(false)}
-						className='pr-7 text-white hover:text-gray-300 transition-colors'
+						className='pr-5 text-white hover:text-gray-300 transition-colors'
 						aria-label='Close menu'
 					>
 						<X size={24} />
@@ -67,7 +67,7 @@ const MobileMenu = () => {
 
 	return (
 		<>
-			<div className='fixed h-12 w-12 bg-white/25 rounded-full p-1 backdrop-blur-md z-40'>
+			<div className='h-12 w-12 bg-white/25 rounded-full p-1 glass-black z-40'>
 				<button
 					onClick={() => setIsOpen(true)}
 					className='p-2 text-white hover:text-gray-300 transition-colors md:hidden'

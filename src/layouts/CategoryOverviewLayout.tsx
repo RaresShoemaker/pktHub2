@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import MenuCategory from '../components/Menu/Menu';
 import HeroContainer from '../components/Hero/HeroContainer';
-import MobileMenu from '../components/Menu/MobileMenu';
+import NavbarMobile from '../components/NavbarMobile';
+import Footer from '../components/Footer';
 import CategoryBgTransition from '../components/Category/CategoryBgTransition';
 import { useSearchParams } from 'react-router-dom';
 import { cn } from '../lib/utils';
@@ -47,19 +48,20 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
             {/* Main scrollable container */}
             <div className="flex-grow relative">
                 {/* Hero Container */}
-                <div className="absolute inset-0 overflow-x-hidden">
+                <div className="hidden md:block absolute inset-0 overflow-x-hidden">
                     <HeroContainer />
                 </div>
 
                 {/* Overflow wrapper */}
-                <div className="relative z-10">
+                <div className="relative z-10 overflow-y-auto h-screen md:overflow-y-hidden md:h-auto">
+                    <NavbarMobile />
+                    <div className="md:hidden absolute inset-0 overflow-x-hidden">
+                    <HeroContainer />
+                </div>
                     <div className="pl-4 mb-24">
                         <div className="grid md:grid-cols-[300px_1fr] md:gap-10">
                             {/* Menu section */}
                             <div className="md:block">
-                                <div className="md:hidden p-4 md:p-0 flex justify-end mt-8">
-                                    <MobileMenu />
-                                </div>
                                 <div 
                                     className={`md:sticky md:top-4 md:max-h-[800px] max-h-[380px] h-screen transition-transform duration-1000 ease-in-out`}
                                 >
@@ -68,7 +70,7 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                             </div>
 
                             {/* Main content with overflow control */}
-                            <div className="overflow-x-hidden">
+                            <div className="overflow-x-hidden z-10 md:z-0 mt-14 md:mt-0">
                                 <div className="flex flex-col">
                                     {/* Spacer */}
                                     <div className={cn(category !== 'creators' ? "md:h-[550px]" : "md:h-[430px]" )} />
@@ -80,7 +82,9 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                                 </div>
                             </div>
                         </div>
+    
                     </div>
+                    <Footer />
                 </div>
             </div>
         </CategoryBgTransition>
