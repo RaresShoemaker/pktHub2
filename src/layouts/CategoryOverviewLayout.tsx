@@ -53,7 +53,7 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                 </div>
 
                 {/* Overflow wrapper */}
-                <div className="relative z-10 overflow-y-auto h-screen md:overflow-y-hidden md:h-auto">
+                <div className="relative z-10 overflow-y-auto h-screen md:overflow-y-visible md:h-auto">
                     <NavbarMobile />
                     <div className="md:hidden absolute inset-0 overflow-x-hidden">
                     <HeroContainer />

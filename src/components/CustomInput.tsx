@@ -5,7 +5,7 @@ type CustomInputProps = {
   type?: string;
   id: string;
   value: string;
-  infoText?: string;
+  infoText?: string | React.ReactNode;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 

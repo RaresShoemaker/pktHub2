@@ -14,7 +14,7 @@ export const TransitionAnimationProvider: React.FC<TransitionProviderProps> = ({
 	const category = searchParams.get('category');
 
 	// Calculate next index
-	const nextIndex = category === 'creators' ? 0 : (state.activeIndex + 1) % 3;
+	const nextIndex = category === 'creators' ? (state.activeIndex + 1) % 5 : (state.activeIndex + 1) % 3;
 
 	const transition = useCallback(() => {
 		dispatch({ type: TRANSITION_ACTIONS.SET_IS_TRANSITIONING, payload: true });
@@ -27,11 +27,8 @@ export const TransitionAnimationProvider: React.FC<TransitionProviderProps> = ({
 
 	// Handle automatic transitions
 	useEffect(() => {
-		let intervalId: NodeJS.Timeout | undefined;
-		
-		if (category !== 'creators') {
-			intervalId = setInterval(transition, INTERVAL_DURATION);
-		}
+		const intervalId = setInterval(transition, INTERVAL_DURATION);
+
 		
 		return () => {
 			if (intervalId) clearInterval(intervalId);

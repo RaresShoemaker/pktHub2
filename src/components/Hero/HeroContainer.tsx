@@ -5,30 +5,66 @@ import HeroText from './HeroText';
 import PktHubLogo from '../../assets/PktHubLogo.svg';
 import { Link } from 'react-router-dom';
 import { useTransitionAnimation } from '../../context/TransitionAnimationContext/TransitionAnimationContext';
-import CreatorsHubLogo from '../../assets/CreatorHubLogoWhite.svg?react';
+import { cn } from '../../lib/utils';
 
 const HeroContainer: React.FC = () => {
-	const { category } = useTransitionAnimation();
+	const { category, activeIndex, isTransitioning } = useTransitionAnimation();
+	const hrefCta = [
+		'https://www.youtube.com/watch?v=pr_nVsfoUm8',
+		'https://podcasts.apple.com/us/podcast/the-charlie-shrem-show/id1462346183',
+		'https://www.amazon.com/gp/video/detail/amzn1.dv.gti.7d23bc05-bf4e-4427-ac47-79d0d3c0142e?autoplay=0&ref_=atv_cf_strg_wb',
+		'https://watch.amazon.com/detail?gti=amzn1.dv.gti.ef87b53e-6595-4fc4-b949-3789a8a39672',
+		'https://www.amazon.com/Fire-Peter-Facinelli/dp/B0CHJK71MQ'
+	];
 
 	return (
 		<>
 			{category !== 'creators' && (
-				<div className='absolute top-0 left-0 right-0 h-[550px] md:h-[700px] w-full'>
+				<div
+					className={cn(
+						'absolute top-0 left-0 right-0 md:h-[700px] w-full',
+						!category ? 'h-[550px]' : category !== "home" ? 'h-[470px]' : 'h-[550px]'
+					)}
+				>
 					<HeroImage />
 					<TransitionGradient />
 				</div>
 			)}
 			{category === 'creators' && (
-				<div className='md:h-[890px] h-[100px] -ml-[550px] md:ml-0'>
-					<HeroImage />
-					<div className='hidden md:block absolute top-0 left-0 right-0 h-[470px] md:h-[570px] w-full'>
-						<TransitionGradient />
+				<>
+					<div className='md:h-[900px]'>
+						<HeroImage />
+						<div className='md:block absolute top-0 left-0 right-0 h-[670px] md:h-[600px] w-full'>
+							<TransitionGradient />
+						</div>
+						<div
+							className={cn(
+								'hidden md:block absolute w-64 left-[40%] transition-opacity duration-1000 z-40',
+								isTransitioning ? 'opacity-0' : activeIndex === 0 ? 'opacity-0 hidden' : 'opacity-100',
+								activeIndex === 2 ? 'top-[350px]' : activeIndex === 4 ? 'top-[335px]' : 'top-[300px]'
+							)}
+						>
+							<Link to={hrefCta[activeIndex]} target='_blank'>
+								<button className='rounded-full bg-primary text-white font-medium w-full h-10'>
+									{activeIndex === 1 ? 'Listen Now' : 'Watch Now'}
+								</button>
+							</Link>
+						</div>
 					</div>
-					<div className='absolute top-[400px] -right-10 h-[130px] bg-[#090D23] blur-[24px] w-[600px]' />
-					<div className='md:hidden h-20 inset-0 absolute top-[440px] justify-center flex items-center'>
-						<CreatorsHubLogo />
+
+					<div
+						className={cn(
+							' md:hidden absolute flex justify-center w-full transition-opacity duration-1000 z-40 mt-2',
+							isTransitioning ? 'opacity-0' : 'opacity-100'
+						)}
+					>
+						<Link to={hrefCta[activeIndex]} target='_blank'>
+							<button className='rounded-full bg-primary text-white font-medium w-64 h-10'>
+								{activeIndex === 1 ? 'Listen Now' : 'Watch Now'}
+							</button>
+						</Link>
 					</div>
-				</div>
+				</>
 			)}
 			<div
 				className={`z-50 absolute top-0 md:left-auto md:right-10 left-10 transition-all duration-500 ease-in-out transform`}

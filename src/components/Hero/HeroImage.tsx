@@ -8,7 +8,7 @@ const HeroImage: React.FC = () => {
 
     useEffect(() => {
         const checkMobile = () => {
-            setIsMobile(window.innerWidth < 500);
+            setIsMobile(window.innerWidth < 700);
         };
 
         checkMobile();
@@ -31,7 +31,7 @@ const HeroImage: React.FC = () => {
             case 'casino':
                 return [`/Casino1${mobileSuffix}.jpg`, `/Casino2${mobileSuffix}.jpg`, `/Casino3${mobileSuffix}.jpg`];
             case 'creators':
-                return [`/Creators1${mobileSuffix}.jpg`]
+                return [`/Creators1${mobileSuffix}.jpg`, `Creators2${mobileSuffix}.jpg`, `Creators3${mobileSuffix}.jpg`, `Creators4${mobileSuffix}.jpg`, `Creators5${mobileSuffix}.jpg`];
             case 'technology':
                 return [
                     `/Technology1${mobileSuffix}.jpg`,
@@ -90,13 +90,13 @@ const HeroImage: React.FC = () => {
     }
 
     return (
-        <div className="relative h-[460px] md:h-full w-full">
+        <div className="md:relative h-[460px] md:h-full w-full">
             {/* Next image (bottom layer) */}
             <img
                 key={`next-${nextImageIndex}`}
                 src={images[nextImageIndex]}
                 alt="Hero Background Next"
-                className="absolute inset-0 h-[460px] md:h-full w-full object-cover"
+                className="absolute md:inset-0 md:h-full w-full object-cover"
             />
 
             {/* Current image (top layer) */}
@@ -104,7 +104,7 @@ const HeroImage: React.FC = () => {
                 key={`active-${currentImageIndex}`}
                 src={images[currentImageIndex]}
                 alt="Hero Background Current"
-                className="absolute inset-0 h-[460px] md:h-full w-full object-cover"
+                className="absolute md:inset-0 md:h-full w-full object-cover"
                 style={{
                     ...transitionStyle,
                     opacity: isTransitioning ? 0 : 1

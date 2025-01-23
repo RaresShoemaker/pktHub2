@@ -9,7 +9,7 @@ interface CreatorsCategoryContainerProps {
 
 const CreatorsCategoryContainer: React.FC<CreatorsCategoryContainerProps> = React.memo(({ title, cards }) => {
 	return (
-		<div className='flex flex-col gap-4 w-full pr-4 md:pr-0'>
+		<div className='flex flex-col gap-4 w-full md:pr-0'>
 			{/* Title section */}
 			<div className='flex items-center gap-1'>
 				<p className='font-semibold text-2xl text-white'>{title}</p>
