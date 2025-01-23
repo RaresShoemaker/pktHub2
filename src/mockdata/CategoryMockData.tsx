@@ -3,12 +3,21 @@ import * as TechnologyIcons from '../assets/technology/index';
 import * as MediaIcons from '../assets/media/index';
 import * as GamesIcons from '../assets/games/index';
 import * as CasinoIcons from '../assets/casino/index';
+import {
+	FilmImg,
+	MusicImg,
+	PodcastImg,
+	TvImg,
+} from '../assets/creators/index'
 
 type CategoryCardDataType = {
 	alt: string;
-	href: string;
+	href?: string;
 	logo: React.ReactNode;
 	logoWhite?: React.ReactNode;
+	genre?: string;
+	description?: string;
+	title?: string;
 };
 
 type CategoryDataType = Record<
@@ -17,6 +26,7 @@ type CategoryDataType = Record<
 		title: string;
 		data: CategoryCardDataType[];
 		isViewOnly?: boolean;
+		squareView?: boolean;
 	}
 >;
 
@@ -100,6 +110,117 @@ export const CategoryData: CategoryDataType = {
 			},
 		],
 		isViewOnly: true
+	},
+	creators: {
+		title: 'Creators Hub',
+		data: [
+			{
+        alt: 'Hercules-IMG',
+        title: 'Hercules',
+        logo: FilmImg.HerculesImg,
+        description: "Dwyane Johnson's Hercules aids Thrace's king against a ruthless warlord.",
+        genre: 'Action',
+				href: "https://www.amazon.com/Hercules-Dwayne-Johnson/dp/B00OPX5M9M",
+      },
+			{
+        alt: 'EveryoneIsDoingGreat-IMG',
+        title: 'Everyone Is Doing Great',
+        logo: TvImg.EveryoneIsDoingGreatImg,
+        description: "Former TV stars Seth and Jeremy struggle to reclaim their past fame - Lafferty & Colletti",
+				genre: 'TV',
+				href: "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.7d23bc05-bf4e-4427-ac47-79d0d3c0142e?autoplay=0&ref_=atv_cf_strg_wb",
+      },
+			{
+        alt: 'CrookCounty-IMG',
+        title: 'Crook County',
+        logo: PodcastImg.CrookCountyImg,
+        description: "A true crime series about a firefighter's secret life as a hitman which shatters his family's world.",
+				genre: 'Podcasts',
+				href: "https://www.crookcountypodcast.com/",
+
+      },
+			{
+        alt: 'WHAM-IMG',
+        title: 'WHAM (Extended Version)',
+        logo: MusicImg.WhamImg,
+        description: 'Lil Baby',
+				genre: 'Music',
+				href: "https://open.spotify.com/artist/5f7VJjfbwm532GiveGC0ZK?si=uaBoW58jRPakwGXdT5NlHQ",
+      },
+			{
+        alt: 'ParadiseStateofMind-IMG',
+        title: 'Paradise State of Mind',
+        logo: MusicImg.ParadiseStateOfMindImg,
+        description: 'Foster the People',
+				genre: 'Music',
+				href: "https://open.spotify.com/album/27ynHS80OjICdw3qLNMgQP?si=BatcmiqAQTeAKiREl8M4Dg"
+      },
+			{
+        alt: 'DenofThieves-IMG',
+        title: 'Den of Thieves',
+        logo: FilmImg.DenOfThievesImg,
+        description: "Gerard Butler's back as Big Nick hunting Donnie in Europe as he faces the mafia.",
+        genre: 'Crime Thriller',
+				href: "https://tv.apple.com/us/movie/den-of-thieves-2-pantera/umc.cmc.1bzf87ht24ikuj5dbmjjoaqpi,"
+      },
+			{
+				alt: 'WishYouWereHere-IMG',
+        title: 'Wish You Were Here',
+        logo: FilmImg.WishYouWereHereImg,
+        description: "A woman finds romance with a man, learns he's ill, and helps him live fully. Directed by Julia Stiles.",
+        genre: 'Drama',
+				href: "https://www.youtube.com/watch?v=pr_nVsfoUm8"
+			},
+			{
+				alt: 'Oblivion-IMG',
+        title: 'Oblivion',
+        logo: FilmImg.OblivionImg,
+        description: "Tom Cruise stars as a drone repairman who questions his past after a rescue.",
+        genre: 'Sci-Fi',
+				href: "https://www.amazon.com/Oblivion-Tom-Cruise/dp/B00DP3IESY/ref=sr_1_1?crid=3MA1ETH25A07C&dib=eyJ2IjoiMSJ9.Cshda2CJ-DipnndbDOGRYRIeccedzlv4ShYeXnzEc8VsT3A7d0r5rTaH08pldgyYGDvNNu1-FtXbreJdwSbfueKa8HLE6EcX3sxG9c5B6LX1Bc9PC1TQBUKuUcYY0qS035IXxbUyQ7rh0sLfr7-ZZUtPxC6Jv_s5guQFvjdVKrA6KMSNjuYFZE1Am3buu0JhadK3_C9H9xNJ5JB-pwCxbyANDP0nM6mdjT8nGPPsmMo.cskmCSuYiHMDFs6SGCE29SJvE7bxaXoggOwVfzBBIFQ&dib_tag=se&keywords=oblivion&qid=1737078811&s=instant-video&sprefix=oblivion%2Cinstant-video%2C154&sr=1-1"
+			},
+			{
+        alt: 'JimmyShin-IMG',
+        title: 'Jimmy Shin',
+        logo: TvImg.JimmyShinImg,
+        description: 'Comedy Special starring Jimmy Shin about life as a first generation Korean in America.',
+				genre: 'TV',
+				href: "https://watch.amazon.com/detail?gti=amzn1.dv.gti.ef87b53e-6595-4fc4-b949-3789a8a39672",
+      },
+			{
+        alt: 'ThePatMcAfeeShow-IMG',
+        title: 'The Pat McAfee Show',
+        logo: TvImg.ThePatMcAffeImg,
+        description: "Pat McAfee brings his humor and candor to the microphone to highlight the day's top stories.",
+				href: "https://www.patmcafeeshow.com/listentopat",
+				genre: 'TV'
+      },
+			{
+        alt: 'ThePenguin-IMG',
+        title: 'The Penguin',
+        logo: TvImg.ThePenguinImg,
+        description: "The Penguin fights for control of Gotham's crime world after The Batman (2022).",
+				genre: 'TV',
+				href: "https://www.max.com/shows/penguin/5756c2bf-36f8-4890-b1f9-ef168f1d8e9c",
+      },
+			{
+        alt: 'LongevityJunky-IMG',
+        title: 'Longevity Junky',
+        logo: PodcastImg.LongevityJunkyImg,
+        description: 'Dr. Buck Joffrey and Nikki Leigh exploring the latest in longevity science and wellness.',
+				href: "https://open.spotify.com/show/5fy2a9TnVA1fkX0BVdncTg",
+				genre: 'Podcasts'
+      },
+			{
+        alt: 'DeBìTiRARMáSFOTos-IMG',
+        title: 'DeBì TiRAR MáS FOTos',
+        logo: MusicImg.DebiTirarMasFotoImg,
+        description: 'Bad Bunny',
+				href: "https://open.spotify.com/album/5K79FLRUCSysQnVESLcTdb?si=4lujrLrjSFe7p32c1MmqNQ",
+				genre: 'Music'
+      },
+		],
+		squareView: true
 	},
 	media: {
 		title: 'Media',
