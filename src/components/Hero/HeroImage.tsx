@@ -31,7 +31,7 @@ const HeroImage: React.FC = () => {
             case 'casino':
                 return [`/Casino1${mobileSuffix}.jpg`, `/Casino2${mobileSuffix}.jpg`, `/Casino3${mobileSuffix}.jpg`];
             case 'creators':
-                return ['/Creators1.jpg']
+                return [`/Creators1${mobileSuffix}.jpg`]
             case 'technology':
                 return [
                     `/Technology1${mobileSuffix}.jpg`,
@@ -64,7 +64,7 @@ const HeroImage: React.FC = () => {
                 <img
                     src={images[0]}
                     alt="Hero Background"
-                    className="absolute inset-0 h-[460px] md:h-full w-full object-cover"
+                    className="absolute h-[460px] md:h-full w-full object-cover"
                 />
             </div>
         );
