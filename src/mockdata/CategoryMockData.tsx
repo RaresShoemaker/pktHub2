@@ -112,13 +112,13 @@ export const CategoryData: CategoryDataType = {
 		isViewOnly: true
 	},
 	creators: {
-		title: 'Creators Hub',
+		title: 'Creator Hub',
 		data: [
 			{
         alt: 'Hercules-IMG',
         title: 'Hercules',
         logo: FilmImg.HerculesImg,
-        description: "Dwyane Johnson's Hercules aids Thrace's king against a ruthless warlord.",
+        description: "Dwayne Johnson's Hercules leads a rebellion against a ruthless warlord.",
         genre: 'Action',
 				href: "https://www.amazon.com/Hercules-Dwayne-Johnson/dp/B00OPX5M9M",
       },
@@ -126,7 +126,7 @@ export const CategoryData: CategoryDataType = {
         alt: 'EveryoneIsDoingGreat-IMG',
         title: 'Everyone Is Doing Great',
         logo: TvImg.EveryoneIsDoingGreatImg,
-        description: "Former TV stars Seth and Jeremy struggle to reclaim their past fame - Lafferty & Colletti",
+        description: "TV stars Seth and Jeremy (Lafferty and Colletti) try to reclaim their fame.",
 				genre: 'TV',
 				href: "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.7d23bc05-bf4e-4427-ac47-79d0d3c0142e?autoplay=0&ref_=atv_cf_strg_wb",
       },
@@ -134,7 +134,7 @@ export const CategoryData: CategoryDataType = {
         alt: 'CrookCounty-IMG',
         title: 'Crook County',
         logo: PodcastImg.CrookCountyImg,
-        description: "A true crime series about a firefighter's secret life as a hitman which shatters his family's world.",
+        description: "A true crime series about a firefighter's secret life as a hitman.",
 				genre: 'Podcasts',
 				href: "https://www.crookcountypodcast.com/",
 
@@ -159,7 +159,7 @@ export const CategoryData: CategoryDataType = {
         alt: 'DenofThieves-IMG',
         title: 'Den of Thieves',
         logo: FilmImg.DenOfThievesImg,
-        description: "Gerard Butler's back as Big Nick hunting Donnie in Europe as he faces the mafia.",
+        description: "Gerard Butler stars in this sequel set in Europe as he faces the mafia.",
         genre: 'Crime Thriller',
 				href: "https://tv.apple.com/us/movie/den-of-thieves-2-pantera/umc.cmc.1bzf87ht24ikuj5dbmjjoaqpi,"
       },
@@ -167,7 +167,7 @@ export const CategoryData: CategoryDataType = {
 				alt: 'WishYouWereHere-IMG',
         title: 'Wish You Were Here',
         logo: FilmImg.WishYouWereHereImg,
-        description: "A woman finds romance with a man, learns he's ill, and helps him live fully. Directed by Julia Stiles.",
+        description: "Julia Stiles directorial debut based on the best selling novel.",
         genre: 'Drama',
 				href: "https://www.youtube.com/watch?v=pr_nVsfoUm8"
 			},
@@ -191,7 +191,7 @@ export const CategoryData: CategoryDataType = {
         alt: 'ThePatMcAfeeShow-IMG',
         title: 'The Pat McAfee Show',
         logo: TvImg.ThePatMcAffeImg,
-        description: "Pat McAfee brings his humor and candor to the microphone to highlight the day's top stories.",
+        description: "A candid sports show highlighting the day's top stories with Pat McAfee.",
 				href: "https://www.patmcafeeshow.com/listentopat",
 				genre: 'TV'
       },
@@ -199,7 +199,7 @@ export const CategoryData: CategoryDataType = {
         alt: 'ThePenguin-IMG',
         title: 'The Penguin',
         logo: TvImg.ThePenguinImg,
-        description: "The Penguin fights for control of Gotham's crime world after The Batman (2022).",
+        description: "The Penguin strives to control Gotham's crime world after The Batman.",
 				genre: 'TV',
 				href: "https://www.max.com/shows/penguin/5756c2bf-36f8-4890-b1f9-ef168f1d8e9c",
       },
@@ -207,7 +207,7 @@ export const CategoryData: CategoryDataType = {
         alt: 'LongevityJunky-IMG',
         title: 'Longevity Junky',
         logo: PodcastImg.LongevityJunkyImg,
-        description: 'Dr. Buck Joffrey and Nikki Leigh exploring the latest in longevity science and wellness.',
+        description: 'Dr. Buck Joffrey and Nikki Leigh explore the latest in wellness and longevity.',
 				href: "https://open.spotify.com/show/5fy2a9TnVA1fkX0BVdncTg",
 				genre: 'Podcasts'
       },

@@ -203,20 +203,28 @@ const CreatorsSubmissionForm = () => {
           value={formData.pkt_domain}
           onChange={handleInputChange}
           infoText={
-            <div className='flex justify-center text-center mt-2 '>
-              <span className='text-white text-xs ml-1'>
-              You must claim a PKT Domain to be listed:{' '}
-              <a href="https://docs.pkt.cash/domains/claim-domain/" target="_blank" rel="noreferrer">
-                https://docs.pkt.cash/domains/claim-domain/
-                </a>
+						<div className='flex justify-center text-center mt-2 '>
+							<span className='text-white text-base ml-1'>
+								You must claim a PKT Domain to be listed:{' '}
                 <br />
-                <br />
-                <a href="https://youtu.be/z6TpwHFE1AM" target="_blank" rel="noreferrer">
-                  How to claim a PKT Domain
-                </a>
-  
-              </span>
-            </div>}
+								<span>
+									Click{' '}
+									<a href='https://docs.pkt.cash/domains/claim-domain/' target='_blank' rel='noreferrer' className='underline underline-offset-2'>
+										HERE
+									</a>
+									{' '}text instructions
+								</span>
+								<br />
+								<span>
+									Click{' '}
+									<a href='https://youtu.be/z6TpwHFE1AM' target='_blank' rel='noreferrer'  className='underline underline-offset-2'>
+										HERE
+									</a>
+									{' '}for video instructions
+								</span>
+							</span>
+						</div>
+					}
         />
         <ImgUploader
           onFileSelect={(file: File | null) => setFile(file)}

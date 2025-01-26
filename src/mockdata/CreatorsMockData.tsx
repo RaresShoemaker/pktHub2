@@ -26,7 +26,7 @@ export const CreatorsData: CreatorsDataType = {
 				alt: 'WishYouWereHere-IMG',
 				title: 'Wish You Were Here',
 				img: FilmImg.WishYouWereHereImg,
-				description: `A woman finds romance with a man, learns he's ill, and helps him live fully. Directed by Julia Stiles.`,
+				description: `Julia Stiles directorial debut based on the best selling novel.`,
 				genre: 'Drama',
 				href: 'https://www.youtube.com/watch?v=pr_nVsfoUm8'
 			},
@@ -42,7 +42,7 @@ export const CreatorsData: CreatorsDataType = {
 				alt: 'Hercules-IMG',
 				title: 'Hercules',
 				img: FilmImg.HerculesImg,
-				description: `Dwyane Johnson's Hercules aids Thrace's king against a ruthless warlord.`,
+				description: `Dwayne Johnson's Hercules leads a rebellion against a ruthless warlord.`,
 				genre: 'Action',
 				href: 'https://www.amazon.com/Hercules-Dwayne-Johnson/dp/B00OPX5M9M'
 			},
@@ -50,7 +50,7 @@ export const CreatorsData: CreatorsDataType = {
 				alt: 'LastDaysofAmericanCrime-IMG',
 				title: 'Last Days of American Crime',
 				img: FilmImg.LastDayOfAmericanCrimeImg,
-				description: 'In the future, a U.S. signal will prevent crime by blocking unlawful acts - Netflix',
+				description: 'Edgar Ramírez stars in heist when a signal will prevent crime in U.S.',
 				genre: 'Crime Thriller',
 				href: 'https://www.netflix.com/title/80198975'
 			},
@@ -58,7 +58,7 @@ export const CreatorsData: CreatorsDataType = {
 				alt: 'DenofThieves-IMG',
 				title: 'Den of Thieves',
 				img: FilmImg.DenOfThievesImg,
-				description: `Gerard Butler's back as Big Nick hunting Donnie in Europe as he faces the mafia.`,
+				description: `Gerard Butler stars in this sequel set in Europe as he faces the mafia.`,
 				genre: 'Crime Thriller',
 				href: 'https://tv.apple.com/us/movie/den-of-thieves-2-pantera/umc.cmc.1bzf87ht24ikuj5dbmjjoaqpi'
 			},
@@ -67,7 +67,7 @@ export const CreatorsData: CreatorsDataType = {
 				title: 'Baby Girl',
 				img: FilmImg.BabyGirlImg,
 				description:
-					'Nicole Kidman as powerful CEO who risks it all for a passionate affair with her young intern.',
+					'Nicole Kidman is powerful CEO who risks it all for an affair with her intern.',
 				genre: 'Crime Thriller',
 				href: 'https://tv.apple.com/us/movie/babygirl/umc.cmc.5d51mnarv52adwnk1mhas3sfp'
 			},
@@ -106,7 +106,7 @@ export const CreatorsData: CreatorsDataType = {
 				title: 'Everyone Is Doing Great',
 				img: TvImg.EveryoneIsDoingGreatImg,
 				description:
-					'Former TV stars Seth and Jeremy struggle to reclaim their past fame - Lafferty & Colletti',
+					'TV stars Seth and Jeremy (Lafferty and Colletti) try to reclaim their fame.',
 				href: 'https://www.amazon.com/gp/video/detail/amzn1.dv.gti.7d23bc05-bf4e-4427-ac47-79d0d3c0142e?autoplay=0&ref_=atv_cf_strg_wb',
 				genre: 'TV'
 			},
@@ -115,7 +115,7 @@ export const CreatorsData: CreatorsDataType = {
 				title: 'Beast Games',
 				img: TvImg.BeastGamesImg,
 				description:
-					'A reality-competition, where over 1,000 contestants play for a single $5 million cash prize.',
+					'A reality-competition, where over 1,000 contestants play for $5m cash.',
 				href: 'https://watch.amazon.com/detail?gti=amzn1.dv.gti.ef87b53e-6595-4fc4-b949-3789a8a39672',
 				genre: 'TV'
 			},
@@ -123,7 +123,7 @@ export const CreatorsData: CreatorsDataType = {
 				alt: 'JimmyShin-IMG',
 				title: 'Jimmy Shin',
 				img: TvImg.JimmyShinImg,
-				description: 'Comedy Special starring Jimmy Shin about life as a first generation Korean in America',
+				description: 'A comedy special starring Jimmy Shin about life as a Korean in the US.',
 				href: 'https://www.amazon.com/Jimmy-Shins-Wok-Shame-Shin/dp/B07RJ2FJ5N',
 				genre: 'TV'
 			},
@@ -132,7 +132,7 @@ export const CreatorsData: CreatorsDataType = {
 				title: 'The Pat McAfee Show',
 				img: TvImg.ThePatMcAffeImg,
 				description:
-					"Pat McAfee brings his humor and candor to the microphone to highlight the day's top stories.",
+					"A candid sports show highlighting the day's top stories with Pat McAfee.",
 				href: 'https://www.patmcafeeshow.com/listentopat',
 				genre: 'TV'
 			},
@@ -140,8 +140,24 @@ export const CreatorsData: CreatorsDataType = {
 				alt: 'ThePenguin-IMG',
 				title: 'The Penguin',
 				img: TvImg.ThePenguinImg,
-				description: "The Penguin fights for control of Gotham's crime world after The Batman (2022).",
+				description: "The Penguin strives to control Gotham's crime world after The Batman.",
 				href: 'https://www.max.com/shows/penguin/5756c2bf-36f8-4890-b1f9-ef168f1d8e9c',
+				genre: 'TV'
+			},
+			{
+				alt: 'AmericanPrimeval-IMG',
+				title: 'American Primeval',
+				img: TvImg.AmericanPrimevalImg,
+				description: "A mother and son's journey through the violent American West in 1857.",
+				href: 'https://www.netflix.com/title/81457507',
+				genre: 'TV'
+			},
+			{
+				alt: 'TheBear-IMG',
+				title: 'The Bear',
+				img: TvImg.TheBearImg,
+				description: "A young fine dining chef returns to Chicago to run his family’s sandwich shop.",
+				href: 'https://www.fxnetworks.com/shows/the-bear',
 				genre: 'TV'
 			}
 		]
@@ -154,7 +170,7 @@ export const CreatorsData: CreatorsDataType = {
 				title: 'Crook County',
 				img: PodcastImg.CrookCountyImg,
 				description:
-					"A true crime series about a firefighter's secret life as a hitman which shatters his family's world.",
+					"A true crime series about a firefighter's secret life as a hitman.",
 				href: 'https://www.crookcountypodcast.com/',
 				genre: 'Podcasts'
 			},
@@ -171,7 +187,7 @@ export const CreatorsData: CreatorsDataType = {
 				title: 'Longevity Junky',
 				img: PodcastImg.LongevityJunkyImg,
 				description:
-					'Dr. Buck Joffrey and Nikki Leigh exploring the latest in longevity science and wellness.',
+					'Dr. Buck Joffrey and Nikki Leigh explore the latest in wellness and longevity.',
 				href: 'https://open.spotify.com/show/5fy2a9TnVA1fkX0BVdncTg',
 				genre: 'Podcasts'
 			},
@@ -179,7 +195,7 @@ export const CreatorsData: CreatorsDataType = {
 				alt: 'HODLMyBeerPodcast-IMG',
 				title: 'HODL My Beer Podcast',
 				img: PodcastImg.HodlMyBearImg,
-				description: 'A deep dive into the latest cryptocurrency tokens and trends for newbies',
+				description: 'Dives into the latest cryptocurrency tokens and trends for newbies.',
 				href: 'https://youtube.com/playlist?list=PL5cCc3vm8K_P9o3PwPNGiqhDm_8nsNQpD&si=q8_UFI6miiJlUV43',
 				genre: 'Podcasts'
 			},
@@ -187,8 +203,24 @@ export const CreatorsData: CreatorsDataType = {
 				alt: 'TheEightQuestions-IMG',
 				title: 'The Eight Questionst',
 				img: PodcastImg.TheEightQuestions,
-				description: 'Sebastian Siegel explores love, purpose, and spirituality in 50 episodes.',
+				description: 'Sebastian Siegel explores spirituality, love, and life purpose.',
 				href: 'https://www.youtube.com/playlist?list=PLrsuqkj6LGLWyYzTyceEsjJoVeeJMl_qJ',
+				genre: 'Podcasts'
+			},
+			{
+				alt: 'JoeRoganExperience-IMG',
+				title: 'Joe Rogan Experience',
+				img: PodcastImg.JoeRoganExperience,
+				description: 'A long form conversation hosted by comedian Joe Rogan with friends and guests.',
+				href: 'https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk?si=bddcdd494d53425f',
+				genre: 'Podcasts'
+			},
+			{
+				alt: 'CallHerDaddy-IMG',
+				title: 'Call Her Daddy',
+				img: PodcastImg.CallHerDaddyImg,
+				description: 'Alex Cooper’s Call Her Daddy has been creating conversation since 2018.',
+				href: 'https://www.youtube.com/channel/UCyGi3eCuxko37WB6uUr7LjA',
 				genre: 'Podcasts'
 			}
 		]
@@ -238,17 +270,25 @@ export const CreatorsData: CreatorsDataType = {
 			},
 			{
 				alt: 'RastaPhil-IMG',
-				title: 'Jesus Crist',
+				title: 'Jesus Christ',
 				img: MusicImg.RastaPhilImg,
 				description: 'Rasta Phil',
 				href: 'https://open.spotify.com/track/1vqqoDde4lDfRRzCpcGrCO?si=54fe3d07663e4769',
 				genre: 'Music'
 			},
 			{
+				alt: 'Jinco-IMG',
+				title: 'We Live And We Learn',
+				img: MusicImg.JincoImg,
+				description: 'Jinco',
+				href: 'https://open.spotify.com/track/1Kz9YvJS3n09Om0aWHKlXP?si=6fea329b5cf54513',
+				genre: 'Music'
+			},
+			{
 				alt: 'HenriMin-IMG',
-				title: "What's the Move (feat. General Degree)",
+				title: "What's the Move",
 				img: MusicImg.HenryFongImg,
-				description: 'Henry Fong',
+				description: 'Henry Fong, Knock2, General Degree',
 				href: 'https://open.spotify.com/artist/3nALc9PyUfe6CO3EY9bNhH',
 				genre: 'Music'
 			}

@@ -5,6 +5,7 @@ import TheHumaFearImg from './TheHumanFear.jpg';
 import TravisScottImg from './TravisScott.jpg';
 import DebiTirarMasFotoImg from './DebiTirarMasFoto.jpg'
 import HenryFongImg from './HenryFong.jpg';
+import JincoImg from './Jinco.jpg';
 
 export {
   ParadiseStateOfMindImg,
@@ -14,4 +15,5 @@ export {
   TravisScottImg,
   DebiTirarMasFotoImg,
   HenryFongImg,
+  JincoImg
 }

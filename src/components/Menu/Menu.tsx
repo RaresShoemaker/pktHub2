@@ -11,7 +11,7 @@ const MenuCategory: React.FC = () => {
 	const currentCategory = searchParams.get('category');
 	const menuItems = useMemo(
 		() => [
-			{ title: 'Home', icon: <HomeIcon />, query: 'home' },
+			{ title: 'Packet Hub', icon: <HomeIcon />, query: 'home' },
 			{ title: 'Creator Hub', icon: <CreatorsIcon />, query: 'creators'},
 			{ title: 'Media', icon: <MediaIcon />, query: 'media' },
 			{ title: 'Music', icon: <MusicIcon />, query: 'music' },

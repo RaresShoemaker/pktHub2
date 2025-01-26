@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useTransitionAnimation } from '../../context/TransitionAnimationContext/TransitionAnimationContext';
 import { TRANSITION_DURATION } from '../../context/TransitionAnimationContext/constants';
+import { debounce } from 'lodash';
 
 const HeroImage: React.FC = () => {
     const { activeIndex, isTransitioning, nextIndex, category } = useTransitionAnimation();
@@ -11,9 +12,10 @@ const HeroImage: React.FC = () => {
             setIsMobile(window.innerWidth < 700);
         };
 
+        const debouncedCheckMobile = debounce(checkMobile, 200);
         checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
+        window.addEventListener('resize', debouncedCheckMobile);
+        return () => window.removeEventListener('resize', debouncedCheckMobile);
     }, []);
 
     const getImagesByCategory = (category: string | null): string[] => {
@@ -43,16 +45,15 @@ const HeroImage: React.FC = () => {
         }
     };
 
-    const preloadImages = (images: string[]) => {
-        images.forEach((src) => {
-            const img = new Image();
-            img.src = src;
-        });
-    };
-
-    const images = getImagesByCategory(category);
+    const images = useMemo(() => getImagesByCategory(category), [category, isMobile]);
 
     useEffect(() => {
+        const preloadImages = (images: string[]) => {
+            images.forEach((src) => {
+                const img = new Image();
+                img.src = src;
+            });
+        };
         preloadImages(images);
     }, [images]);
 
@@ -95,6 +96,7 @@ const HeroImage: React.FC = () => {
             <img
                 key={`next-${nextImageIndex}`}
                 src={images[nextImageIndex]}
+                loading='lazy'
                 alt="Hero Background Next"
                 className="absolute md:inset-0 md:h-full w-full object-cover"
             />
@@ -114,4 +116,4 @@ const HeroImage: React.FC = () => {
     );
 };
 
-export default HeroImage;
+export default React.memo(HeroImage);

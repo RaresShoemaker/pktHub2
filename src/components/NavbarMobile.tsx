@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import MobileMenu from './Menu/MobileMenu';
 import PktHubLogo from '../assets/PktHubLogo.svg?react';
+import { Link } from 'react-router-dom';
 import _ from 'lodash';
 
 const NavbarMobile: React.FC = () => {
@@ -56,7 +57,9 @@ const NavbarMobile: React.FC = () => {
       `}
     >
       <div>
-        <PktHubLogo />
+        <Link to="/">
+          <PktHubLogo />
+        </Link>
       </div>
       <div>
         <MobileMenu />
