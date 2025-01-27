@@ -9,7 +9,7 @@ interface HeroTextProps {
 
 const HeroText: React.FC<HeroTextProps> = ({ title, description }) => {
 	return (
-		<div className='absolute w-full md:w-fit md:right-10 mt-[350px] md:mt-[350px] z-10'>
+		<div className='absolute w-full lg:w-fit lg:right-10 mt-[350px] md:mt-[350px] z-10'>
 			<div className='h-full w-full flex flex-col gap-2 items-center justify-center text-white'>
 				<h1 className='text-5xl font-bold'>{title}</h1>
 				<div className='md:block hidden'><PacketHubLogoRegular /></div>

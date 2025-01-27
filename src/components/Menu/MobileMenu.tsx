@@ -23,7 +23,7 @@ const MobileMenu = () => {
 
 	const menuItems = [
 		{ title: 'Packet Hub', icon: <HomeIcon />, query: 'home' },
-		{ title: 'Creator Hub', icon: <CreatorsIcon />, query: 'creators'},
+		{ title: 'Creator Hub', icon: <CreatorsIcon />, link: '/creatorhub' },
 		{ title: 'Media', icon: <MediaIcon />, query: 'media' },
 		{ title: 'Music', icon: <MusicIcon />, query: 'music' },
 		{ title: 'Games', icon: <GamesIcon />, query: 'games' },
@@ -47,7 +47,7 @@ const MobileMenu = () => {
 				<div className='flex-1 flex flex-col gap-6 mt-8'>
 					{menuItems.map((item, i) => (
 						<div key={i} onClick={() => setIsOpen(false)}>
-							<MenuButton title={item.title} icon={item.icon} query={item.query} />
+							<MenuButton title={item.title} icon={item.icon} query={item.query} link={item.link}/>
 						</div>
 					))}
 				</div>

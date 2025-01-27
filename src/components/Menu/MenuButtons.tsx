@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { cn } from '../../lib/utils';
-import { Link, useSearchParams, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useTransitionAnimation } from '../../context/TransitionAnimationContext/TransitionAnimationContext';
 
 interface MenuButtonProps {
 	title: string;
@@ -10,13 +11,10 @@ interface MenuButtonProps {
 }
 
 const MenuButton: React.FC<MenuButtonProps> = ({ title, icon, query, link = '' }) => {
-	const [searchParams] = useSearchParams();
-	const location = useLocation();
-	const currentCategory = searchParams.get('category');
+	const { category } = useTransitionAnimation();
+	console.log(category);
 
-	const isSelected = !query
-		? (location.pathname === link || location.pathname === '/' && link === '/home') && !currentCategory
-		: currentCategory === query;
+	const isSelected = category === "" ? query === 'home' : category === query;
 
 	const getImagesByCategory = useCallback((category: string | null): string[] => {
 		switch (category) {
@@ -65,7 +63,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ title, icon, query, link = '' }
 	}, [query, getImagesByCategory]);
 
 	return (
-		<Link to={query ? `/?category=${query}` : link} onMouseEnter={handleMouseEnter}>
+		<Link to={link ? link :  `/?category=${query}`} onMouseEnter={handleMouseEnter}>
 			<div
 				className={cn(
 					'w-full rounded-lg text-white flex gap-2 items-center p-2',

@@ -6,14 +6,7 @@ import PktHubLogo from '../../assets/PktHubLogo.svg';
 import { Link } from 'react-router-dom';
 import { useTransitionAnimation } from '../../context/TransitionAnimationContext/TransitionAnimationContext';
 import { cn } from '../../lib/utils';
-
-const CtaButton = ({ href, label }: { href: string; label: string }) => (
-	<Link to={href} target='_blank'>
-		<button className='rounded-full bg-primary text-white font-medium w-64 h-10' aria-label={label}>
-			{label}
-		</button>
-	</Link>
-);
+import CtaButton from './CtaButton';
 
 const HeroContainer: React.FC = () => {
 	const { category, activeIndex, isTransitioning } = useTransitionAnimation();
@@ -45,31 +38,58 @@ const HeroContainer: React.FC = () => {
 				</div>
 			) : (
 				<>
-					<div className='h-full w-full relative overflow-hidden'>
-						<div className='lg:h-[40%] lg:ml-0 md:h-[35%] md:-ml-[3%]'>
-							<HeroImage />
-						</div>
-						<div className='lg:h-10 relative'>
-							<div
-								className={cn(
-									'md:hidden absolute flex justify-center w-full transition-opacity duration-1000 z-10 mt-2',
-									isTransitioning ? 'opacity-0' : 'opacity-100'
-								)}
-							>
-								<CtaButton href={hrefCta[activeIndex]} label={ctaLabel} />
+					<div className='md:hidden relative max-h-[650px] md:h-[650px] w-full flex flex-col justify-center items-center'>
+						<HeroImage />
+					</div>
+
+					<div className='hidden md:flex lg:hidden h-full max-h-[650px] md:max-h-[650px] w-full flex-col relative'>
+						<HeroImage />
+						<div className='flex absolute w-full'>
+							<div className='h-56 mt-72 relative w-full flex flex-col justify-end'>
+								<div className='-mt-5'>
+									<div className='absolute h-full w-full bg-[#090D23] blur-[54px] z-0' />
+									<div className='absolute h-full w-full bg-[#090D23] blur-[54px] z-0' />
+									<div className='absolute h-full w-full bg-[#090D23] blur-[50px] z-0' />
+									<div className='absolute h-full w-full bg-[#090D23] blur-[25px] z-0 left-20' />
+									<div className='absolute h-full w-full bg-[#090D23] blur-[20px] z-0 right-24' />
+								</div>
+								<div
+									className={cn(
+										'w-full z-40 flex justify-center items-center transition-opacity duration-1000',
+										isTransitioning ? 'opacity-0' : 'opacity-100'
+									)}
+								>
+									<CtaButton href={hrefCta[activeIndex]} label={ctaLabel}/>
+								</div>
 							</div>
-							<div className='relative h-[100px]'>
-								<TransitionGradient />
-							</div>
 						</div>
-						<div
-							className={cn(
-								'hidden absolute w-full bg-red md:flex left-[41%] transition-opacity duration-1000 z-40',
-								isTransitioning ? 'opacity-0' : activeIndex === 0 ? 'opacity-0 hidden' : 'opacity-100',
-								activeIndex === 2 ? 'top-[350px]' : activeIndex === 4 ? 'top-[335px] left-[41%]' : 'top-[300px]'
-							)}
-						>
-							<CtaButton href={hrefCta[activeIndex]} label={ctaLabel} />
+					</div>
+
+					<div className={cn('hidden lg:flex h-full md:max-h-[1000px] w-full flex-col relative')}>
+						<HeroImage />
+						<div className='absolute h-full w-full flex justify-center items-center'>
+						<div className='mt-8'>
+									<div className='absolute h-full w-full bg-[#090D23] blur-[24px] z-0' />
+									<div className='absolute h-full w-full bg-[#090D23] blur-[24px] z-0' />
+									<div className='absolute h-full w-full bg-[#090D23] blur-[30px] z-0' />
+									<div className='absolute h-full w-full bg-[#090D23] blur-[25px] z-0 left-20' />
+									<div className='absolute h-full w-full bg-[#090D23] blur-[20px] z-0 right-24' />
+								</div>
+									<div
+									className={cn(
+										'w-full z-40 flex justify-center items-center transition-opacity duration-1000',
+										isTransitioning ? 'opacity-0' : activeIndex === 0 ? "opacity-0 hidden" : 'opacity-100',
+										activeIndex === 1 && 'mb-64 mr-14',
+										activeIndex === 2 && 'mb-40 mr-28',
+										activeIndex === 3 && 'mb-64 mr-8',
+										activeIndex === 4 && 'mb-52 mr-20',
+									)}
+									>
+									<CtaButton href={hrefCta[activeIndex]} label={ctaLabel}/>
+									</div>
+						</div>
+						<div className='-mt-52'>
+						<TransitionGradient />
 						</div>
 					</div>
 				</>

@@ -4,8 +4,8 @@ import HeroContainer from '../components/Hero/HeroContainer';
 import NavbarMobile from '../components/NavbarMobile';
 import Footer from '../components/Footer';
 import CategoryBgTransition from '../components/Category/CategoryBgTransition';
-import { useSearchParams } from 'react-router-dom';
 import { cn } from '../lib/utils';
+import { useTransitionAnimation } from '../context/TransitionAnimationContext/TransitionAnimationContext';
 
 interface CategoryOverviewLayout {
     children: React.ReactNode;
@@ -13,8 +13,7 @@ interface CategoryOverviewLayout {
 
 const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) => {
     const [hasScrolled, setHasScrolled] = useState(false);
-        const [searchParams] = useSearchParams();
-        const category = React.useMemo(() => searchParams.get('category'), [searchParams]);
+    const {category} = useTransitionAnimation()
 
     const handleScroll = useCallback(() => {
         // Only execute on md screens and above (768px is Tailwind's md breakpoint)
@@ -73,7 +72,7 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                             <div className="overflow-x-hidden z-10 md:z-0 mt-14 md:mt-0">
                                 <div className="flex flex-col">
                                     {/* Spacer */}
-                                    <div className={cn(category !== 'creators' ? "lg:h-[500px]" : "lg:h-[430px]" )} />
+                                    <div className={cn(category !== 'creators' ? "lg:h-[550px]" : "lg:h-[470px]" )} />
 
                                     {/* Content */}
                                     <div className="w-full">
