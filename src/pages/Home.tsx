@@ -2,9 +2,8 @@ import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 import CategoryOverviewLayout from '../layouts/CategoryOverviewLayout';
 import CategoryContainer from '../components/Category/CategoryContainer';
-import CreatorsCategoryContainer from '../components/Creators/CreatorsContainer';
 import { CategoryData } from '../mockdata/CategoryMockData';
-import { CreatorsData } from '../mockdata/CreatorsMockData';
+import SEO from '../components/SEO';
 
 const Home: React.FC = () => {
 	const [searchParams] = useSearchParams();
@@ -17,52 +16,47 @@ const Home: React.FC = () => {
 		return null;
 	}, [category]);
 
-	const creatorsData = React.useMemo(() => {
-		if (category === "creators" && CreatorsData) {
-			return CreatorsData;
-		}
-		return null;
-	}, [category]);
-
 	if (categoryData && !categoryData.squareView) {
 		return (
-			<CategoryOverviewLayout>
-				<CategoryContainer title={categoryData.title} cards={categoryData.data} isFullPage={true} />
-			</CategoryOverviewLayout>
+			<>
+				<SEO
+					title='Packet Hub'
+					description='Packet Hub'
+					keywords='Packet Hub'
+					url='https://hub.pkt.cash/'
+					imgSrc='./PacketaShareLink.png'
+				/>
+				<CategoryOverviewLayout>
+					<CategoryContainer title={categoryData.title} cards={categoryData.data} isFullPage={true} />
+				</CategoryOverviewLayout>
+			</>
 		);
 	}
 
-	if (category === "creators" && creatorsData) {
-    return (
-      <CategoryOverviewLayout>
-        <div className="flex flex-col gap-8">
-          {Object.entries(creatorsData).map(([key, section]) => (
-            <CreatorsCategoryContainer 
-              key={key}
-              title={section.title}
-              cards={section.data}
-            />
-          ))}
-        </div>
-      </CategoryOverviewLayout>
-    );
-  }
-
 	return (
-		<CategoryOverviewLayout>
-			<div className='flex flex-col gap-8'>
-				{Object.entries(CategoryData).map(([key, categoryInfo]) => (
-					<CategoryContainer
-						key={key}
-						title={categoryInfo.title}
-						cards={categoryInfo.data}
-						isFullPage={false}
-						isViewOnly={categoryInfo.isViewOnly}
-						squareView={categoryInfo.squareView}
-					/>
-				))}
-			</div>
-		</CategoryOverviewLayout>
+		<>
+			<SEO
+				title='Packet Hub'
+				description='Packet Hub'
+				keywords='Packet Hub'
+				url='https://hub.pkt.cash/'
+				imgSrc='./PacketaShareLink.png'
+			/>
+			<CategoryOverviewLayout>
+				<div className='flex flex-col gap-8'>
+					{Object.entries(CategoryData).map(([key, categoryInfo]) => (
+						<CategoryContainer
+							key={key}
+							title={categoryInfo.title}
+							cards={categoryInfo.data}
+							isFullPage={false}
+							isViewOnly={categoryInfo.isViewOnly}
+							squareView={categoryInfo.squareView}
+						/>
+					))}
+				</div>
+			</CategoryOverviewLayout>
+		</>
 	);
 };
 

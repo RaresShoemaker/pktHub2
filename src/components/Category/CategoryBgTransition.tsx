@@ -23,7 +23,9 @@ const CategoryBgTransition: React.FC<CategoryBgTransitionProps> = ({ children })
 					'bg-gradient-to-b from-[#008CFF] to-[#3278D4]'
 				];
 			case 'creators':
-				return ['bg-gradient-to-b from-[#090D23] to-[#1D2343]'];
+				return [
+					'bg-gradient-to-b from-[#090D23] to-[#1D2343]',
+				];
 			case 'music':
 				return [
 					'bg-gradient-to-b from-[#0A4677] to-[#3278D4]',
@@ -97,9 +99,7 @@ const CategoryBgTransition: React.FC<CategoryBgTransitionProps> = ({ children })
 				</div>
 			</div>
 
-			<div className='flex flex-col'>
-				{children}
-			</div>
+			<div className='flex flex-col'>{children}</div>
 		</div>
 	);
 };

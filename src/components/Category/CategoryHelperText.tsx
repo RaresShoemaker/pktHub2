@@ -23,7 +23,7 @@ const CategoryHelperText: React.FC<CategoryHelperTextProps> = ({
     )}>
       {!isViewOnly && (
         <Link 
-          to={!squareView ? `/?category=${title.toLowerCase()}` : '/?category=creators'} 
+          to={!squareView ? `/?category=${title.toLowerCase()}` : '/creatorhub'} 
           className='flex gap-1 items-center'
         >
           <p className='font-semibold underline underline-offset-4'>

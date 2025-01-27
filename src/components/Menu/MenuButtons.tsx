@@ -1,21 +1,20 @@
 import React, { useCallback } from 'react';
 import { cn } from '../../lib/utils';
-import { Link, useSearchParams, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useTransitionAnimation } from '../../context/TransitionAnimationContext/TransitionAnimationContext';
 
 interface MenuButtonProps {
 	title: string;
 	icon: React.ReactNode;
 	query?: string;
+	link?: string;
 }
 
-const MenuButton: React.FC<MenuButtonProps> = ({ title, icon, query }) => {
-	const [searchParams] = useSearchParams();
-	const location = useLocation();
-	const currentCategory = searchParams.get('category');
+const MenuButton: React.FC<MenuButtonProps> = ({ title, icon, query, link = '' }) => {
+	const { category } = useTransitionAnimation();
+	console.log(category);
 
-	const isSelected = !query
-		? location.pathname === '/' && !currentCategory
-		: currentCategory === query || (!currentCategory && query === 'home');
+	const isSelected = category === "" ? query === 'home' : category === query;
 
 	const getImagesByCategory = useCallback((category: string | null): string[] => {
 		switch (category) {
@@ -64,7 +63,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ title, icon, query }) => {
 	}, [query, getImagesByCategory]);
 
 	return (
-		<Link to={query ? `/?category=${query}` : '/'} onMouseEnter={handleMouseEnter}>
+		<Link to={link ? link :  `/?category=${query}`} onMouseEnter={handleMouseEnter}>
 			<div
 				className={cn(
 					'w-full rounded-lg text-white flex gap-2 items-center p-2',
