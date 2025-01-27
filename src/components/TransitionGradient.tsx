@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useTransitionAnimation } from '../context/TransitionAnimationContext/TransitionAnimationContext';
 import { debounce } from 'lodash';
+import { cn } from '../lib/utils';
 
 interface TransitionGradientProps {
 	defaultGradient?: string[];
@@ -117,7 +118,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
 			{/* Current gradient layers */}
 			<div
 				key={`current-1-${activeIndex}`}
-				className='absolute w-screen flex-shrink-0 md:bottom-[-215px] md:h-[429px] h-[250px] bottom-[100px]'
+				className={cn('absolute w-screen flex-shrink-0 md:bottom-[-215px] md:h-[429px]', category === "creators" ? ' h-[170px] bottom-[50px]' : "h-[250px] bottom-[100px]")}
 				style={{
 					...baseStyle,
 					background: currentGradient[0],
@@ -127,7 +128,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
 			/>
 			<div
 				key={`current-2-${activeIndex}`}
-				className='absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px] h-[250px] bottom-[50px]'
+				className={cn('absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px]', category === "creators" ? ' h-[170px] bottom-[10px]' : "h-[250px] bottom-[50px]")}
 				style={{
 					...baseStyle,
 					background: currentGradient[1],
@@ -137,7 +138,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
 			/>
 			<div
 				key={`current-3-${activeIndex}`}
-				className='absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px] h-[250px] bottom-[0px]'
+				className={cn('absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px]', category === "creators" ? ' h-[170px] bottom-[0px]' : "h-[250px] bottom-[0px]")}
 				style={{
 					...baseStyle,
 					background: currentGradient[2],
@@ -151,7 +152,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
 				<>
 					<div
 						key={`next-1-${nextIndex}`}
-						className='absolute w-screen flex-shrink-0 md:bottom-[-215px] md:h-[429px] h-[250px] bottom-[100px]'
+						className={cn('absolute w-screen flex-shrink-0 md:bottom-[-215px] md:h-[429px]', category === 'creators' ? 'h-[170px] bottom-[50px]' : 'h-[250px] bottom-[100px]')}
 						style={{
 							...baseStyle,
 							background: nextGradient[0],
@@ -161,7 +162,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
 					/>
 					<div
 						key={`next-2-${nextIndex}`}
-						className='absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px] h-[250px] bottom-[50px]'
+						className={cn('absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px]', category === 'creators' ? 'h-[170px] bottom-[10px]' : 'h-[250px] bottom-[50px]')}
 						style={{
 							...baseStyle,
 							background: nextGradient[1],
@@ -171,7 +172,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
 					/>
 					<div
 						key={`next-3-${nextIndex}`}
-						className='absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px] h-[250px] bottom-[0px]'
+						className={cn('absolute w-screen flex-shrink-0 md:bottom-[-315px] md:h-[429px]', category === 'creators' ? 'h-[170px] bottom-[0px]' : 'h-[250px] bottom-[0px]')}
 						style={{
 							...baseStyle,
 							background: nextGradient[2],

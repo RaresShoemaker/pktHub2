@@ -6,46 +6,57 @@ import { debounce } from 'lodash';
 const HeroImage: React.FC = () => {
     const { activeIndex, isTransitioning, nextIndex, category } = useTransitionAnimation();
     const [isMobile, setIsMobile] = useState(false);
+    const [isTablet, setIsTablet] = useState(false);
 
     useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth < 700);
+        const checkDevice = () => {
+            if(window.innerWidth < 768) {
+                setIsMobile(true);
+                setIsTablet(false);
+            } else if(window.innerWidth < 1024 && window.innerWidth >= 769) {
+                setIsMobile(false);
+                setIsTablet(true);
+            } else {
+                setIsMobile(false);
+                setIsTablet(false);
+            }
         };
 
-        const debouncedCheckMobile = debounce(checkMobile, 200);
-        checkMobile();
+
+        const debouncedCheckMobile = debounce(checkDevice, 200);
+        checkDevice();
         window.addEventListener('resize', debouncedCheckMobile);
         return () => window.removeEventListener('resize', debouncedCheckMobile);
     }, []);
 
     const getImagesByCategory = (category: string | null): string[] => {
-        const mobileSuffix = isMobile ? '-mobile' : '';
+        const suffix = isMobile ? '-mobile' : isTablet && category === "creators" ? '-tablet' : '';
 
         switch (category) {
             case 'home':
-                return [`/Home1${mobileSuffix}.jpg`, `/Home2${mobileSuffix}.jpg`, `/Home3${mobileSuffix}.jpg`];
+                return [`/Home1${suffix}.jpg`, `/Home2${suffix}.jpg`, `/Home3${suffix}.jpg`];
             case 'media':
-                return [`/Media1${mobileSuffix}.jpg`, `/Media2${mobileSuffix}.jpg`, `/Media3${mobileSuffix}.jpg`];
+                return [`/Media1${suffix}.jpg`, `/Media2${suffix}.jpg`, `/Media3${suffix}.jpg`];
             case 'music':
-                return [`/Music1${mobileSuffix}.jpg`, `/Music2${mobileSuffix}.jpg`, `/Music3${mobileSuffix}.jpg`];
+                return [`/Music1${suffix}.jpg`, `/Music2${suffix}.jpg`, `/Music3${suffix}.jpg`];
             case 'games':
-                return [`/Games1${mobileSuffix}.jpg`, `/Games2${mobileSuffix}.jpg`, `/Games3${mobileSuffix}.jpg`];
+                return [`/Games1${suffix}.jpg`, `/Games2${suffix}.jpg`, `/Games3${suffix}.jpg`];
             case 'casino':
-                return [`/Casino1${mobileSuffix}.jpg`, `/Casino2${mobileSuffix}.jpg`, `/Casino3${mobileSuffix}.jpg`];
+                return [`/Casino1${suffix}.jpg`, `/Casino2${suffix}.jpg`, `/Casino3${suffix}.jpg`];
             case 'creators':
-                return [`/Creators1${mobileSuffix}.jpg`, `Creators2${mobileSuffix}.jpg`, `Creators3${mobileSuffix}.jpg`, `Creators4${mobileSuffix}.jpg`, `Creators5${mobileSuffix}.jpg`];
+                return [`/Creators1${suffix}.jpg`, `Creators2${suffix}.jpg`, `Creators3${suffix}.jpg`, `Creators4${suffix}.jpg`, `Creators5${suffix}.jpg`];
             case 'technology':
                 return [
-                    `/Technology1${mobileSuffix}.jpg`,
-                    `/Technology2${mobileSuffix}.jpg`,
-                    `/Technology3${mobileSuffix}.jpg`
+                    `/Technology1${suffix}.jpg`,
+                    `/Technology2${suffix}.jpg`,
+                    `/Technology3${suffix}.jpg`
                 ];
             default:
-                return [`/Home1${mobileSuffix}.jpg`, `/Home2${mobileSuffix}.jpg`, `/Home3${mobileSuffix}.jpg`];
+                return [`/Home1${suffix}.jpg`, `/Home2${suffix}.jpg`, `/Home3${suffix}.jpg`];
         }
     };
 
-    const images = useMemo(() => getImagesByCategory(category), [category, isMobile]);
+    const images = useMemo(() => getImagesByCategory(category), [category, isMobile, isTablet]);
 
     useEffect(() => {
         const preloadImages = (images: string[]) => {
@@ -61,7 +72,7 @@ const HeroImage: React.FC = () => {
 
     if (images.length === 1) {
         return (
-            <div className="relative h-[460px] md:h-full w-full">
+            <div className="md:relative h-[460px] xl:h-screen xl:max-h-[140%] w-full">
                 <img
                     src={images[0]}
                     alt="Hero Background"
@@ -80,7 +91,7 @@ const HeroImage: React.FC = () => {
 
     if (images.length === 1) {
         return (
-            <div className="relative h-[460px] md:h-full w-full">
+            <div className="md:relative h-[460px] xl:h-screen xl:max-h-[140%] w-full">
                 <img
                     src={images[0]}
                     alt="Hero Background"
@@ -91,7 +102,7 @@ const HeroImage: React.FC = () => {
     }
 
     return (
-        <div className="md:relative h-[460px] md:h-full w-full">
+        <div className="md:relative h-[460px] md:h-full xl:h-screen xl:max-h-[140%] w-full">
             {/* Next image (bottom layer) */}
             <img
                 key={`next-${nextImageIndex}`}

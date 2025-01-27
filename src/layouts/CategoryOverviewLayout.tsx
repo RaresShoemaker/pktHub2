@@ -18,7 +18,7 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
 
     const handleScroll = useCallback(() => {
         // Only execute on md screens and above (768px is Tailwind's md breakpoint)
-        if (window.innerWidth < 800) return;
+        if (window.innerWidth < 1024) return;
 
         const scrollPosition = window.scrollY;
 
@@ -59,11 +59,11 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                     <HeroContainer />
                 </div>
                     <div className="pl-4 mb-24">
-                        <div className="grid md:grid-cols-[300px_1fr] md:gap-10">
+                        <div className="grid lg:grid-cols-[300px_1fr] lg:gap-10">
                             {/* Menu section */}
                             <div className="md:block">
                                 <div 
-                                    className={`md:sticky md:top-4 md:max-h-[800px] max-h-[380px] h-screen transition-transform duration-1000 ease-in-out`}
+                                    className={`lg:sticky lg:top-4 lg:max-h-[800px] max-h-[480px] h-screen transition-transform duration-1000 ease-in-out`}
                                 >
                                     <MenuCategory />
                                 </div>
@@ -73,7 +73,7 @@ const CategoryOverviewLayout: React.FC<CategoryOverviewLayout> = ({ children }) 
                             <div className="overflow-x-hidden z-10 md:z-0 mt-14 md:mt-0">
                                 <div className="flex flex-col">
                                     {/* Spacer */}
-                                    <div className={cn(category !== 'creators' ? "md:h-[550px]" : "md:h-[430px]" )} />
+                                    <div className={cn(category !== 'creators' ? "lg:h-[500px]" : "lg:h-[430px]" )} />
 
                                     {/* Content */}
                                     <div className="w-full">

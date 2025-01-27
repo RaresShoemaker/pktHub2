@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect, useCallback, useMemo } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { TransitionAnimationContext } from './TransitionAnimationContext';
 import { transitionReducer, initialState } from './TransitionAnimationReducer';
 import { TRANSITION_ACTIONS, TRANSITION_DURATION, INTERVAL_DURATION } from './constants';
@@ -10,8 +10,9 @@ interface TransitionProviderProps {
 
 export const TransitionAnimationProvider: React.FC<TransitionProviderProps> = ({ children }) => {
     const [searchParams] = useSearchParams();
+    const location = useLocation();
     const [state, dispatch] = useReducer(transitionReducer, initialState);
-    const category = searchParams.get('category');
+    const category = location.pathname.split('/')[1] === 'creatorhub' ? 'creators' : searchParams.get('category') || '';
 
     const nextIndex = useMemo(() => {
         return category === 'creators' ? (state.activeIndex + 1) % 5 : (state.activeIndex + 1) % 3;

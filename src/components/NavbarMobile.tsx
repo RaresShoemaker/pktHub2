@@ -48,7 +48,7 @@ const NavbarMobile: React.FC = () => {
     <div 
       ref={containerRef}
       className={`
-        md:hidden flex w-full sticky top-0 z-50 justify-between items-center px-2 h-20
+        lg:hidden flex w-full sticky top-0 z-50 justify-between items-center px-2 h-20
         transition-all duration-500 ease-in-out transform
         ${visible 
           ? 'translate-y-0 opacity-100' 

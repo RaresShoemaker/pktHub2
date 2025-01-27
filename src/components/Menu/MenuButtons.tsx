@@ -6,16 +6,17 @@ interface MenuButtonProps {
 	title: string;
 	icon: React.ReactNode;
 	query?: string;
+	link?: string;
 }
 
-const MenuButton: React.FC<MenuButtonProps> = ({ title, icon, query }) => {
+const MenuButton: React.FC<MenuButtonProps> = ({ title, icon, query, link = '' }) => {
 	const [searchParams] = useSearchParams();
 	const location = useLocation();
 	const currentCategory = searchParams.get('category');
 
 	const isSelected = !query
-		? location.pathname === '/' && !currentCategory
-		: currentCategory === query || (!currentCategory && query === 'home');
+		? (location.pathname === link || location.pathname === '/' && link === '/home') && !currentCategory
+		: currentCategory === query;
 
 	const getImagesByCategory = useCallback((category: string | null): string[] => {
 		switch (category) {
@@ -64,7 +65,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ title, icon, query }) => {
 	}, [query, getImagesByCategory]);
 
 	return (
-		<Link to={query ? `/?category=${query}` : '/'} onMouseEnter={handleMouseEnter}>
+		<Link to={query ? `/?category=${query}` : link} onMouseEnter={handleMouseEnter}>
 			<div
 				className={cn(
 					'w-full rounded-lg text-white flex gap-2 items-center p-2',
