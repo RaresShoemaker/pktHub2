@@ -149,7 +149,7 @@ const HeroImage: React.FC = () => {
 			{category === 'creators' && isMobile && (
 				<div className='absolute inset-0 w-full h-full flex items-center mt-[450px] md:mt-0'>
 					<div className='h-40 relative w-[130%] flex flex-col items-start justify-center'>
-						<div className='mt-20'>
+						<div className='mt-5'>
 							<div className='absolute h-full w-full bg-[#090D23] blur-[54px] z-0' />
 							<div className='absolute h-full w-full bg-[#090D23] blur-[54px] z-0' />
 							<div className='absolute h-full w-full bg-[#090D23] blur-[50px] z-0' />

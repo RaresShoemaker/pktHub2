@@ -35,8 +35,8 @@ const CategoryContainer: React.FC<CategoryContainerProps> = React.memo(
 		return (
 			<div className={cn('flex flex-col gap-4 w-full', isViewOnly ? 'glass pl-5 py-5' : '')}>
 				{/* Title section */}
-				<div className='flex items-center md:text-2xl text-lg font-semibold gap-1 text-white'>
-					{!isViewOnly &&  <Link to={!squareView ? `/?category=${title.toLowerCase()}` : '/creatorhub'} className='flex items-center gap-1 text-white'>
+				<div className='flex items-center md:text-2xl text-lg font-semibold gap-1 text-white hover:cursor-pointer'>
+					{!isViewOnly &&  <Link to={!squareView ? `/?category=${title.toLowerCase()}` : '/creatorhub'} className='flex items-center gap-1 text-white hover:cursor-pointer'>
 						<p className='font-bold'>{title}</p>
 					</Link>}
 					{

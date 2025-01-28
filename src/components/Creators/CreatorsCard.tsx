@@ -15,7 +15,7 @@ const CreatorsCard: React.FC<CreatorsCardProps> = ({ alt, img, logo, description
 	return (
 		<div className='flex flex-col gap-3'>
 			{/* Image Container */}
-			<div className='relative md:w-64 md:h-60 w-48 h-44'>
+			<div className='relative md:w-64 md:h-60 w-48 h-44 hover:cursor-pointer'>
 				{/* Image */}
 				<Link to={href || '/'} target='_blank'>
 					<div className='rounded-4xl overflow-hidden'>

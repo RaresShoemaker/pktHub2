@@ -34,10 +34,10 @@ const MobileMenu = () => {
 	const MenuContent = () => (
 		<div className='fixed inset-0 bg-[#1B1B1B] z-50 lg:hidden pt-7'>
 			<div className='flex flex-col h-full md:px-5 md:text-xl lg:px-0'>
-				<div className='flex justify-end'>
+				<div className='flex justify-end px-5 md:px-0'>
 					<button
 						onClick={() => setIsOpen(false)}
-						className='-pr-5 text-white hover:text-gray-300 transition-colors'
+						className='md:-pr-5 text-white hover:text-gray-300 transition-colors'
 						aria-label='Close menu'
 					>
 						<X size={24} />

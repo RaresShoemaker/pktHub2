@@ -29,8 +29,8 @@ const HeroContainer: React.FC = () => {
 			{category !== 'creators' ? (
 				<div
 					className={cn(
-						'absolute top-0 left-0 right-0 md:h-[700px] w-full',
-						!category ? 'h-[550px]' : category !== 'home' ? 'h-[470px]' : 'h-[550px]'
+						'absolute top-0 left-0 right-0 md:h-[770px] w-full',
+						!category ? 'min-h-[380px] max-h-[450px] md:max-h-none h-full' : category !== 'home' ? 'min-h-[380px] max-h-[450px] md:max-h-none h-full' : 'min-h-[380px] max-h-[450px] md:max-h-none h-full'
 					)}
 				>
 					<HeroImage />

@@ -24,7 +24,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ alt, logo, logoWhite, href 
 
   return (
     <div className="flex flex-col gap-4">
-      <Link to={href || '/'} target="_blank" className="w-full transition-all duration-200">
+      <Link to={href || '/'} target="_blank" className="w-full transition-all duration-200 hover:cursor-pointer">
         <div
           className="w-full h-[100px] md:h-[120px] bg-white rounded-2xl transition-all duration-200 group relative overflow-hidden"
           style={
