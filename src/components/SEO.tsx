@@ -18,10 +18,10 @@ const SEO:React.FC<SEOProps> = ({
 }) => {
   return (
     <Helmet>
-      <title>Creators Hub</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="og:title" content={title} />
+      <meta name="title" content={title} />
       <meta property="og:type" content="website" />
       <meta name="og:description" content={description} />
       <meta property="og:url" content={url} />
