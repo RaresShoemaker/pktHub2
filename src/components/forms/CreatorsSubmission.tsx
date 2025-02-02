@@ -1,4 +1,4 @@
-import React, { FormEvent, useState, useRef } from 'react';
+import React, { FormEvent, useState, useRef, useEffect } from 'react';
 import { useToast } from '../../context/ToasterBannerContext/hooks';
 import { TOASTER_TYPES } from '../../context/ToasterBannerContext/constants';
 import CustomInput from '../CustomInput';
@@ -14,7 +14,11 @@ interface FormData {
   pkt_domain: string;
 }
 
-const CreatorsSubmissionForm = () => {
+type CreatorsSubmissionFormProps = {
+  handleOnSubmit: (value: boolean) => void;
+}
+
+const CreatorsSubmissionForm:React.FC<CreatorsSubmissionFormProps> = ({ handleOnSubmit }) => {
   const formRef = useRef<HTMLFormElement>(null);
   const jotformRef = useRef<HTMLFormElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -32,6 +36,22 @@ const CreatorsSubmissionForm = () => {
   const { showToast } = useToast();
 
   const FORM_ID = import.meta.env.VITE_JOTFORM_FORM_CREATORS_ID;
+
+   useEffect(() => {
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    const handleIframeLoad = () => {
+      if (isSubmitting) {
+        handleOnSubmit(true);
+        setIsSubmitting(false);
+        resetForm();
+      }
+    };
+
+    iframe.addEventListener('load', handleIframeLoad);
+    return () => iframe.removeEventListener('load', handleIframeLoad);
+  }, [isSubmitting, handleOnSubmit]);
 
   const categoryOptions = [
     { value: 'Movie', label: 'Movie' },
@@ -143,8 +163,6 @@ const CreatorsSubmissionForm = () => {
 
         form.target = 'hidden_iframe';
         form.submit();
-        showToast('You must verify your email to submit', TOASTER_TYPES.INFO, 10000);
-        resetForm();
       }
     } catch (error) {
       console.error('Submission error:', error);
@@ -153,8 +171,6 @@ const CreatorsSubmissionForm = () => {
         TOASTER_TYPES.ERROR,
         3000
       );
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -203,25 +219,11 @@ const CreatorsSubmissionForm = () => {
           value={formData.pkt_domain}
           onChange={handleInputChange}
           infoText={
-						<div className='flex justify-center text-center mt-2 '>
-							<span className='text-white text-base ml-1'>
-								You must claim a PKT Domain to be listed:{' '}
-                <br />
-								<span>
-									Click{' '}
-									<a href='https://docs.pkt.cash/domains/claim-domain/' target='_blank' rel='noreferrer' className='underline underline-offset-2'>
-										HERE
-									</a>
-									{' '}text instructions
-								</span>
-								<br />
-								<span>
-									Click{' '}
-									<a href='https://youtu.be/z6TpwHFE1AM' target='_blank' rel='noreferrer'  className='underline underline-offset-2'>
-										HERE
-									</a>
-									{' '}for video instructions
-								</span>
+						<div className='flex justify-center text-center '>
+							<span className='text-white text-sm'>
+							Choose a Packet domain name. Your Packet domain will bounce to your
+							<br className='hidden md:block' />
+							{' '}Platform Link. Soon you can also choose to host content on your Packet domain.
 							</span>
 						</div>
 					}

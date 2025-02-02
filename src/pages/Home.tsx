@@ -4,6 +4,7 @@ import CategoryOverviewLayout from '../layouts/CategoryOverviewLayout';
 import CategoryContainer from '../components/Category/CategoryContainer';
 import { CategoryData } from '../mockdata/CategoryMockData';
 import SEO from '../components/SEO';
+import PachetHubLogo from '../../public/PacketaShareLink.png'
 
 const Home: React.FC = () => {
 	const [searchParams] = useSearchParams();
@@ -24,7 +25,7 @@ const Home: React.FC = () => {
 					description='Packet Hub'
 					keywords='Packet Hub'
 					url='https://hub.pkt.cash/'
-					imgSrc='./PacketaShareLink.png'
+					imgSrc={PachetHubLogo}
 				/>
 				<CategoryOverviewLayout>
 					<CategoryContainer title={categoryData.title} cards={categoryData.data} isFullPage={true} />
@@ -40,7 +41,7 @@ const Home: React.FC = () => {
 				description='Packet Hub'
 				keywords='Packet Hub'
 				url='https://hub.pkt.cash/'
-				imgSrc='./PacketaShareLink.png'
+				imgSrc={PachetHubLogo}
 			/>
 			<CategoryOverviewLayout>
 				<div className='flex flex-col gap-8'>

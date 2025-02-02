@@ -1,4 +1,4 @@
-import React, { FormEvent, useState, useRef } from 'react';
+import React, { FormEvent, useState, useRef, useEffect } from 'react';
 import { useToast } from '../../context/ToasterBannerContext/hooks';
 import { TOASTER_TYPES } from '../../context/ToasterBannerContext/constants';
 import CustomInput from '../CustomInput';
@@ -14,7 +14,11 @@ interface FormData {
 	pkt_domain: string;
 }
 
-const ChannelSubmissionForm = () => {
+type ChannelSubmissionFormProps = {
+	handleOnSubmit: (value: boolean) => void;
+}
+
+const ChannelSubmissionForm: React.FC<ChannelSubmissionFormProps> = ({handleOnSubmit}) => {
 	const formRef = useRef<HTMLFormElement>(null);
 	const jotformRef = useRef<HTMLFormElement>(null);
 	const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -33,14 +37,28 @@ const ChannelSubmissionForm = () => {
 
 	const FORM_ID = import.meta.env.VITE_JOTFORM_FORM_ID;
 
+		 useEffect(() => {
+			const iframe = iframeRef.current;
+			if (!iframe) return;
+	
+			const handleIframeLoad = () => {
+				if (isSubmitting) {
+					handleOnSubmit(true);
+					setIsSubmitting(false);
+					resetForm();
+				}
+			};
+	
+			iframe.addEventListener('load', handleIframeLoad);
+			return () => iframe.removeEventListener('load', handleIframeLoad);
+		}, [isSubmitting, handleOnSubmit]);
+
 	const categoryOptions = [
 		{ value: 'Media', label: 'Media' },
 		{ value: 'Music', label: 'Music' },
 		{ value: 'Gaming', label: 'Gaming' },
 		{ value: 'Casino', label: 'Casino' },
-		{ value: 'Crypto/Tech', label: 'Crypto/Tech' },
-		{ value: 'AI', label: 'AI' },
-		{ value: 'Meme', label: 'Meme' }
+		{ value: 'Crypto/Tech', label: 'Crypto/Tech' }
 	];
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -98,11 +116,11 @@ const ChannelSubmissionForm = () => {
 		}
 
 		// Validate file type and size
-		const allowedTypes = ['application/pdf', 'image/jpeg', 'image/jpg', 'image/png'];
+		const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png'];
 		const maxSize = 5 * 1024 * 1024; // 5MB in bytes
 
 		if (!allowedTypes.includes(file.type)) {
-			showToast('Only PDF, JPG, JPEG, and PNG files are allowed', TOASTER_TYPES.ERROR, 3000);
+			showToast('Only JPG, JPEG, and PNG files are allowed', TOASTER_TYPES.ERROR, 3000);
 			return false;
 		}
 
@@ -146,8 +164,6 @@ const ChannelSubmissionForm = () => {
 
 				form.target = 'hidden_iframe';
 				form.submit();
-				showToast('You must verify your email to submit', TOASTER_TYPES.INFO, 10000);
-				resetForm();
 			}
 		} catch (error) {
 			console.error('Submission error:', error);
@@ -156,8 +172,6 @@ const ChannelSubmissionForm = () => {
 				TOASTER_TYPES.ERROR,
 				3000
 			);
-		} finally {
-			setIsSubmitting(false);
 		}
 	};
 
@@ -206,25 +220,11 @@ const ChannelSubmissionForm = () => {
 					value={formData.pkt_domain}
 					onChange={handleInputChange}
 					infoText={
-						<div className='flex justify-center text-center mt-2 '>
-							<span className='text-white text-base ml-1'>
-								You must claim a PKT Domain to be listed:{' '}
-                <br />
-								<span>
-									Click{' '}
-									<a href='https://docs.pkt.cash/domains/claim-domain/' target='_blank' rel='noreferrer' className='underline underline-offset-2'>
-										HERE
-									</a>
-									{' '}text instructions
-								</span>
-								<br />
-								<span>
-									Click{' '}
-									<a href='https://youtu.be/z6TpwHFE1AM' target='_blank' rel='noreferrer'  className='underline underline-offset-2'>
-										HERE
-									</a>
-									{' '}for video instructions
-								</span>
+						<div className='flex justify-center text-center '>
+							<span className='text-white text-sm'>
+								Choose a Packet domain name. Your Packet domain will bounce to your
+								<br className='hidden md:block' /> Platform Link. Soon you can also choose to host content on
+								your Packet domain.
 							</span>
 						</div>
 					}
