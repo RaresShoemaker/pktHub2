@@ -6,6 +6,9 @@ import MusicIcon from './MusicIcon.svg?react';
 import TechnologyIcon from './TechnologyIcon.svg?react';
 import CreatorsIcon from './CreatorsIcon.svg?react';
 import CheckCircleIcon from './CheckCircle.svg?react';
+import DiscordIcon from './DiscordIcon.svg?react';
+import TelegramIcon from './TelegramIcon.svg?react';
+import TwitterIcon from './TwitterIcon.svg?react';
 
 export {
   HomeIcon,
@@ -15,5 +18,8 @@ export {
   MusicIcon,
   TechnologyIcon,
   CreatorsIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
+  DiscordIcon,
+  TelegramIcon,
+  TwitterIcon
 }

@@ -79,10 +79,10 @@ const HeroContainer: React.FC = () => {
 									className={cn(
 										'w-full z-40 flex justify-center items-center transition-opacity duration-1000',
 										isTransitioning ? 'opacity-0' : activeIndex === 0 ? "opacity-0 hidden" : 'opacity-100',
-										activeIndex === 1 && 'mb-64 mr-14',
-										activeIndex === 2 && 'mb-40 mr-28',
-										activeIndex === 3 && 'mb-64 mr-8',
-										activeIndex === 4 && 'mb-52 mr-20',
+										activeIndex === 1 && 'mb-64 mr-14 2xl:mt-20',
+										activeIndex === 2 && 'mb-40 mr-28 2xl:mt-28',
+										activeIndex === 3 && 'mb-64 mr-8 2xl:mt-24',
+										activeIndex === 4 && 'mb-52 mr-20 2xl:mt-32',
 									)}
 									>
 									<CtaButton href={hrefCta[activeIndex]} label={ctaLabel}/>
