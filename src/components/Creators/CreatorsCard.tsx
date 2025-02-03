@@ -32,7 +32,7 @@ const CreatorsCard: React.FC<CreatorsCardProps> = ({ alt, img, logo, description
 				<div>
 					<h3 className='text-white text-lg font-semibold md:max-w-64 max-w-48 truncate'>{title}</h3>
 				</div>
-				<div className='h-auto min-h-[36px] w-auto md:max-w-64 max-w-48'>
+				<div className='h-auto min-h-[40px] w-auto md:max-w-64 max-w-48'>
 					<p className='text-sm text-gray-100 line-clamp-2'>{description}</p>
 				</div>
 				<div>{genre && <p className='text-sm font-semibold text-gray-300 line-clamp-2'>{genre}</p>}</div>
