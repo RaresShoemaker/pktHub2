@@ -12,7 +12,6 @@ interface MenuButtonProps {
 
 const MenuButton: React.FC<MenuButtonProps> = ({ title, icon, query, link = '' }) => {
 	const { category } = useTransitionAnimation();
-	console.log(category);
 
 	const isSelected = category === "" ? query === 'home' : category === query;
 

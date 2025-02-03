@@ -7,6 +7,8 @@ import EmiliaPerezImg from './EmiliaPerez.jpg'
 import LastDayOfAmericanCrimeImg from './LastDayOfAmericanCrime.jpg'
 import RagamuffinImg from './Ragamuffin.jpg'
 import OnFireImg from './OnFire.jpg'
+import BillieImg from './Billie.jpg'
+import RemnantsImg from './Remnants.jpg';
 
 export {
   HerculesImg,
@@ -17,5 +19,7 @@ export {
   EmiliaPerezImg,
   LastDayOfAmericanCrimeImg,
   RagamuffinImg,
-  OnFireImg
+  OnFireImg,
+  BillieImg,
+  RemnantsImg,
 }

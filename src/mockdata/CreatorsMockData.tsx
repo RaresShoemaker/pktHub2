@@ -95,6 +95,24 @@ export const CreatorsData: CreatorsDataType = {
 					'A family in a trailer home fights to survive a sudden, raging wildfire - Peter Facinelli',
 				genre: 'Crime Thriller',
 				href: 'https://www.amazon.com/Fire-Peter-Facinelli/dp/B0CHJK71MQ'
+			},
+			{
+				alt: 'Billie-IMG',
+				title: 'Billie',
+				img: FilmImg.BillieImg,
+				description:
+					'A western comedy with a twist.',
+				genre: 'Comedy',
+				href: 'https://youtu.be/SaMWjjfoVYI'
+			},
+			{
+				alt: 'Remnants-IMG',
+				title: 'Remnants',
+				img: FilmImg.RemnantsImg,
+				description:
+					'Remnants is a festival favorite that secured two "Best Film" awards and "Best Director" during its 15 festival run. The film follows three post-apocalyptic survivors as they trek north in search of a safer life.',
+				genre: 'Post-Apocalyptic',
+				href: 'https://www.amazon.com/Remnants-Jack-Roberts/dp/B0CH89QL6C'
 			}
 		]
 	},
@@ -290,6 +308,22 @@ export const CreatorsData: CreatorsDataType = {
 				img: MusicImg.HenryFongImg,
 				description: 'Henry Fong, Knock2, General Degree',
 				href: 'https://open.spotify.com/artist/3nALc9PyUfe6CO3EY9bNhH',
+				genre: 'Music'
+			},
+			{
+				alt: 'BlakeWebber-IMG',
+				title: "Blake Webber",
+				img: MusicImg.BlakeWebberImg,
+				description: 'Comedy. Music. Haters not welcom',
+				href: 'https://open.spotify.com/artist/0chgVFZwiDibt2EHZVZhzN?si=r0cU2cqqRx6sHwNbsYjOTw',
+				genre: 'Music'
+			},
+			{
+				alt: 'GroupSyrup-IMG',
+				title: "Group Syrup",
+				img: MusicImg.GroupSyrupImg,
+				description: 'Rock band based in Lisbon, Portugal',
+				href: 'https://linktr.ee/groupsyrup',
 				genre: 'Music'
 			}
 		]

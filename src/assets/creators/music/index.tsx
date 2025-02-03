@@ -6,6 +6,8 @@ import TravisScottImg from './TravisScott.jpg';
 import DebiTirarMasFotoImg from './DebiTirarMasFoto.jpg'
 import HenryFongImg from './HenryFong.jpg';
 import JincoImg from './Jinco.jpg';
+import BlakeWebberImg from './BlakeWebber.jpg';
+import GroupSyrupImg from './GroupSyrup.jpg';
 
 export {
   ParadiseStateOfMindImg,
@@ -15,5 +17,7 @@ export {
   TravisScottImg,
   DebiTirarMasFotoImg,
   HenryFongImg,
-  JincoImg
+  JincoImg,
+  BlakeWebberImg,
+  GroupSyrupImg
 }

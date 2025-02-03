@@ -88,7 +88,7 @@ const HeroImage: React.FC = () => {
 
 	if (images.length === 1) {
 		return (
-			<div className='md:relative h-[460px] xl:h-screen xl:max-h-[140%] w-full'>
+			<div className='md:relative h-[460px] lg:h-screen w-full'>
 				<img
 					src={images[0]}
 					alt='Hero Background'
@@ -107,7 +107,7 @@ const HeroImage: React.FC = () => {
 
 	if (images.length === 1) {
 		return (
-			<div className='md:relative h-[400px] xl:h-screen xl:max-h-[140%] w-full'>
+			<div className='md:relative h-[400px] lg:h-screen w-full'>
 				<img
 					src={images[0]}
 					alt='Hero Background'
@@ -118,10 +118,9 @@ const HeroImage: React.FC = () => {
 	}
 
 	return (
-		// md:relative h-[400px] md:h-full xl:h-screen xl:max-h-[140%] w-full
 		<div
 			className='
-          relative h-full lg:max-h-[1256px] w-full lg:max-w-screen-2xl 2xl:h-screen 2xl:max-h-[140%]
+          relative h-full lg:max-h-[1256px] w-full lg:max-w-screen-3xl 2xl:h-[130vh] 2xl:max-h-[140%]
         '
 		>
 			{/* Next image (bottom layer) */}

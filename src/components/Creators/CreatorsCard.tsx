@@ -18,7 +18,7 @@ const CreatorsCard: React.FC<CreatorsCardProps> = ({ alt, img, logo, description
 			<div className='relative md:w-64 md:h-60 w-48 h-44 hover:cursor-pointer'>
 				{/* Image */}
 				<Link to={href || '/'} target='_blank'>
-					<div className='rounded-4xl overflow-hidden'>
+					<div className='rounded-4xl overflow-hidden max-w-[192px] max-h-[180px] md:max-w-[256px] md:max-h-[240px]'>
 						{typeof img === 'string' && <img src={img} alt={alt} className='w-full h-full object-cover' />}
 						{typeof img === 'object' && img}
 						{typeof logo === 'string' && <img src={logo} alt={alt} className='w-full h-full object-cover' />}
