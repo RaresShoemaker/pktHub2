@@ -54,17 +54,17 @@ const MenuCategory: React.FC = () => {
 			)}
 			<div className='flex gap-4 mt-4 h-10 mx-auto justify-center items-center'>
 				<div className='hover:cursor-pointer flex justify-center items-center'>
-					<Link to='https://telegram.me/pktcash'>
+					<Link to='https://telegram.me/pktcash' target='_blank'>
 						<TelegramIcon />
 					</Link>
 				</div>
 				<div className='hover:cursor-pointer flex justify-center items-center'>
-					<Link to='https://discord.com/invite/bjJutHm9CN'>
+					<Link to='https://discord.com/invite/bjJutHm9CN' target='_blank'>
 						<DiscordIcon />
 					</Link>
 				</div>
 				<div className='hover:cursor-pointer flex justify-center items-center'>
-					<Link to='https://x.com/pktcash'>
+					<Link to='https://x.com/pktcash' target='_blank'>
 						<TwitterIcon />
 					</Link>
 				</div>
