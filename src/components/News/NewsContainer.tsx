@@ -28,7 +28,7 @@ const NewsContainer: React.FC = () => {
 
   return (
     <div className='min-h-screen w-full md:mt-10 flex flex-col'>
-     <div className='flex gap-5 md:gap-20 pr-4 md:pr-0 text-lg md:text-xl text-white w-full justify-start md:justify-center overflow-x-auto pb-4 whitespace-nowrap scrollbar-hide'>
+     <div className='flex flex-grow gap-5 pr-4 md:pr-0 text-lg md:text-xl text-white w-full justify-start md:justify-center overflow-x-auto pb-4 whitespace-nowrap scrollbar-hide'>
         <button
           className={cn(
             'w-32 text-center text-white/40 hover:text-white hover:font-semibold transition-all duration-100',

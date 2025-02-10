@@ -44,7 +44,7 @@ const HeroImage: React.FC = () => {
 	}, []);
 
 	const getImagesByCategory = (category: string | null): string[] => {
-		const suffix = isMobile ? '-mobile' : isTablet && category === 'creators' ? '-tablet' : '';
+		const suffix = isMobile ? '-mobile' : isTablet && (category === 'creators' || category === 'news') ? '-tablet' : '';
 
 		switch (category) {
 			case 'home':
@@ -58,7 +58,7 @@ const HeroImage: React.FC = () => {
 			case 'casino':
 				return [`/Casino1${suffix}.jpg`, `/Casino2${suffix}.jpg`, `/Casino3${suffix}.jpg`];
 			case 'news':
-				return [`/Casino1${suffix}.jpg`, `/Casino2${suffix}.jpg`, `/Casino3${suffix}.jpg`];
+				return [`/News1${suffix}.jpg`, `/News2${suffix}.jpg`, `/News3${suffix}.jpg`];
 			case 'creators':
 				return [
 					`/Creators1${suffix}.jpg`,
