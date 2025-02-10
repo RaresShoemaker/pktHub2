@@ -9,6 +9,7 @@ import CheckCircleIcon from './CheckCircle.svg?react';
 import DiscordIcon from './DiscordIcon.svg?react';
 import TelegramIcon from './TelegramIcon.svg?react';
 import TwitterIcon from './TwitterIcon.svg?react';
+import NewsIcon from './NewsIcon.svg?react';
 
 export {
   HomeIcon,
@@ -21,5 +22,6 @@ export {
   CheckCircleIcon,
   DiscordIcon,
   TelegramIcon,
-  TwitterIcon
+  TwitterIcon,
+  NewsIcon
 }

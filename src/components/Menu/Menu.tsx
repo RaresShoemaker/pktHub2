@@ -13,7 +13,8 @@ import {
 	GamesIcon,
 	CasinoIcon,
 	TechnologyIcon,
-	CreatorsIcon
+	CreatorsIcon,
+	NewsIcon
 } from '../../assets/icons';
 
 const MenuCategory: React.FC = () => {
@@ -22,6 +23,7 @@ const MenuCategory: React.FC = () => {
 		() => [
 			{ title: 'Packet Hub', icon: <HomeIcon />, query: 'home' },
 			{ title: 'Creator Hub', icon: <CreatorsIcon />, query: 'creators', link: '/creatorhub' },
+			{ title: 'News Hub', icon: <NewsIcon />, query: 'news', link: '/newshub' },
 			{ title: 'Media', icon: <MediaIcon />, query: 'media' },
 			{ title: 'Music', icon: <MusicIcon />, query: 'music' },
 			{ title: 'Games', icon: <GamesIcon />, query: 'games' },

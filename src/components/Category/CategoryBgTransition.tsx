@@ -26,6 +26,12 @@ const CategoryBgTransition: React.FC<CategoryBgTransitionProps> = ({ children })
 				return [
 					'bg-gradient-to-b from-[#090D23] to-[#1D2343]',
 				];
+			case 'news':
+				return [
+					'bg-gradient-to-b from-[#090D23] to-[#1D2343]',
+					'bg-gradient-to-b from-[#090D23] to-[#1D2343]',
+					'bg-gradient-to-b from-[#621816] to-[#1D2343]',
+				];
 			case 'music':
 				return [
 					'bg-gradient-to-b from-[#0A4677] to-[#3278D4]',
