@@ -58,7 +58,7 @@ const HeroImage: React.FC = () => {
 			case 'casino':
 				return [`/Casino1${suffix}.jpg`, `/Casino2${suffix}.jpg`, `/Casino3${suffix}.jpg`];
 			case 'news':
-				return [`/Technology1${suffix}.jpg`, `/Home1${suffix}.jpg`, `/Technology2${suffix}.jpg`];
+				return [`/News1${suffix}.jpg`,`/Technology1${suffix}.jpg`, `/Home1${suffix}.jpg`];
 			case 'creators':
 				return [
 					`/Creators1${suffix}.jpg`,
