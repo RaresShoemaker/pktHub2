@@ -4,7 +4,7 @@ import CategoryOverviewLayout from '../layouts/CategoryOverviewLayout';
 import CategoryContainer from '../components/Category/CategoryContainer';
 import { CategoryData } from '../mockdata/CategoryMockData';
 import SEO from '../components/SEO';
-import PachetHubLogo from '../../public/PacketaShareLink.png'
+import PachetHubLogo from '../assets/PacketaShareLink.png';
 
 const Home: React.FC = () => {
 	const [searchParams] = useSearchParams();

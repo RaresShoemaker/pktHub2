@@ -12,7 +12,20 @@ export const TransitionAnimationProvider: React.FC<TransitionProviderProps> = ({
     const [searchParams] = useSearchParams();
     const location = useLocation();
     const [state, dispatch] = useReducer(transitionReducer, initialState);
-    const category = location.pathname.split('/')[1] === 'creatorhub' ? 'creators' : searchParams.get('category') || '';
+    // const category = location.pathname.split('/')[1] === 'creatorhub' ? 'creators' : searchParams.get('category') || '';
+
+    const category = useMemo(() => {
+        if(location.pathname.split('/')[1] === 'creatorhub') {
+            return 'creators';
+        }
+        if(searchParams.get('category')) {
+            return searchParams.get('category');
+        }
+        if(location.pathname.split('/')[1] === 'newshub') {
+            return 'news';
+        }
+        return '';
+    }, [location.pathname, searchParams])
 
     const nextIndex = useMemo(() => {
         return category === 'creators' ? (state.activeIndex + 1) % 5 : (state.activeIndex + 1) % 3;

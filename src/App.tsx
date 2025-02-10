@@ -1,7 +1,7 @@
 import React, {useEffect, useMemo} from 'react';
 import ReactGA from "react-ga4";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { HomePage, SubmissionPage, CreatorsHubPage } from './pages/index';
+import { HomePage, SubmissionPage, CreatorsHubPage, NewsHubPage } from './pages/index';
 import PageLayout from './layouts/PageLayout';
 import { TransitionAnimationProvider } from './context/TransitionAnimationContext/TransitionAnimationProvider';
 import AnalyticsTracker from './components/AnalyticsTracker';
@@ -36,6 +36,14 @@ const App: React.FC = () => {
 						element={
 							<TransitionAnimationProvider>
 								< CreatorsHubPage/>
+							</TransitionAnimationProvider>
+						}
+					/>
+					<Route
+						path='/newshub'
+						element={
+							<TransitionAnimationProvider>
+								< NewsHubPage/>
 							</TransitionAnimationProvider>
 						}
 					/>

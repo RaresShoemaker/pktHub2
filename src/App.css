@@ -44,3 +44,12 @@
 .custom-gradient {
   background: linear-gradient(180deg, rgba(9, 13, 35, 0.79) 0%, rgba(29, 35, 67, 0.79) 100%);
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
