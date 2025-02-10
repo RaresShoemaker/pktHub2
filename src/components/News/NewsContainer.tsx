@@ -123,7 +123,7 @@ const NewsContainer: React.FC = () => {
          {newsCategory === NewsCategory.TOP_STORIES && (
           <div 
             dangerouslySetInnerHTML={{ 
-              __html: '<rssapp-wall id="tIw28PeZ67ytt9t1"></rssapp-wall>' 
+              __html: '<rssapp-wall id="arnV5TgNGBkCNn2x"></rssapp-wall>' 
             }} 
           />
         )}
