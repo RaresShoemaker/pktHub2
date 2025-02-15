@@ -3,6 +3,7 @@ import CreatorsCategoryContainer from '../components/Creators/CreatorsContainer'
 import CategoryOverviewLayout from '../layouts/CategoryOverviewLayout';
 import { CreatorsData } from '../mockdata/CreatorsMockData';
 import SEO from '../components/SEO';
+import CreatorsStackedLogo from '../assets/PktCreatorStackLogo.png'
 
 const CreatorsHubPage: React.FC = () => {
 	const creatorsData = React.useMemo(() => {
@@ -16,7 +17,7 @@ const CreatorsHubPage: React.FC = () => {
 				description='Creator Hub'
 				keywords='Creator Hub'
 				url='https://hub.pkt.cash/creatorhub'
-				imgSrc='./CreatorHub.png'
+				imgSrc={CreatorsStackedLogo}
 			/>
 			<CategoryOverviewLayout>
 				<div className='flex flex-col gap-8'>

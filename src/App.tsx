@@ -9,7 +9,6 @@ import AnalyticsTracker from './components/AnalyticsTracker';
 const App: React.FC = () => {
 	const TRACKING_ID = useMemo(() => import.meta.env.VITE_TRACKING_ID_GA, []);
 
-	 // Initialize GA only once when the app loads
 	 useEffect(() => {
     ReactGA.initialize(TRACKING_ID);
   }, [TRACKING_ID]);

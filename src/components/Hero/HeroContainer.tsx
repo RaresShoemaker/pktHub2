@@ -168,9 +168,9 @@ const HeroContainer: React.FC = () => {
 								className={cn(
 									'w-full z-40 flex justify-center items-center transition-opacity duration-1000',
 									isTransitioning ? 'opacity-0' : 'opacity-100',
-									activeIndex === 0 && 'mb-52 mr-[5%] 2xl:mt-24',
-									activeIndex === 1 && 'mb-52 mr-[5%] 2xl:mt-24',
-									activeIndex === 2 && 'mb-52 mr-[5%] 2xl:mt-24'
+									activeIndex === 0 && 'mb-52 mr-[5%] 2xl:mt-36',
+									activeIndex === 1 && 'mb-52 mr-[5%] 2xl:mt-36',
+									activeIndex === 2 && 'mb-52 mr-[5%] 2xl:mt-36'
 								)}
 							>
 								<CtaButton href={newsHrefCta[activeIndex]} label='Read Story' />
