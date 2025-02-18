@@ -2,8 +2,7 @@ import React, { useMemo } from 'react';
 import MenuButton from './MenuButtons';
 import { Link } from 'react-router-dom';
 import CreatorHubLogo from '../../assets/CreatorHubMenuLogo.svg?react';
-// import PacketHubLogo from '../../assets/PacketHubMenuLogo.svg?react';
-import PktTvLogo from '../../assets/PktTvLogo.svg?react';
+import PacketHubLogo from '../../assets/PacketHubMenuLogo.svg?react';
 import NewsHubLogo from '../../assets/NewsHubLogo.svg?react';
 import { useTransitionAnimation } from '../../context/TransitionAnimationContext/TransitionAnimationContext';
 import { DiscordIcon, TwitterIcon, TelegramIcon } from '../../assets/icons';
@@ -59,7 +58,7 @@ const MenuCategory: React.FC = () => {
 			{category !== 'creators' && category !== 'news' && (
 				<div className='mt-28 mx-auto'>
 					<div className='w-[195px]'>
-						<PktTvLogo className='w-full' />
+						<PacketHubLogo className='w-full' />
 					</div>
 				</div>
 			)}
