@@ -35,6 +35,21 @@ export const CategoryData: CategoryDataType = {
 		title: `What's Hot`,
 		data: [
 			{
+				alt: 'FoxWallet',
+				href: 'https://foxwallet.com/en',
+				logo: <TechnologyIcons.FoxWalletLogoRegular />,
+			},
+			{
+				alt: 'DeHub',
+				href: 'https://dehub.io/',
+				logo: <GamesIcons.DehubLogoRegular />
+			},
+			{
+				alt: 'Assetux',
+				href: 'https://assetux.com',
+				logo: <TechnologyIcons.AssetuxLogoRegular />,
+			},
+			{
 				alt: 'Gala Games',
 				href: 'https://www.gala.games/',
 				logo: <GamesIcons.GalaGamesLogoRegular />,
@@ -75,6 +90,16 @@ export const CategoryData: CategoryDataType = {
 		title: `Discover`,
 		data: [
 			{
+				alt: 'Tetrad Protocol',
+				href: 'www.tetradprotocol.com',
+				logo: <TechnologyIcons.TetradLogoRegular />,
+			},
+			{
+				alt: 'DeHub',
+				href: 'https://dehub.io/',
+				logo: <GamesIcons.DehubLogoRegular />
+			},
+			{
 				alt: 'Sharpnel',
 				href: 'https://www.shrapnel.com/',
 				logo: <GamesIcons.SharpnelLogoRegular />,
@@ -96,6 +121,11 @@ export const CategoryData: CategoryDataType = {
 				alt: 'Apeflix',
 				href: 'https://www.apeflix.io/',
 				logo: <MediaIcons.ApeflixLogoRegular />
+			},
+			{
+				alt: 'FoxWallet',
+				href: 'https://foxwallet.com/en',
+				logo: <TechnologyIcons.FoxWalletLogoRegular />,
 			},
 			{
 				alt: 'Tune.fm',
@@ -495,6 +525,11 @@ export const CategoryData: CategoryDataType = {
 				logo: <GamesIcons.BloktopiaLogoRegular />
 			},
 			{
+				alt: 'DeHub',
+				href: 'https://dehub.io/',
+				logo: <GamesIcons.DehubLogoRegular />
+			},
+			{
 				alt: 'Chain Monsters',
 				href: 'https://chainmonsters.com/',
 				logo: <GamesIcons.ChainMonstersLogoRegular />
@@ -729,9 +764,19 @@ export const CategoryData: CategoryDataType = {
 				logoWhite: <TechnologyIcons.ArbitrumLogoWhite />
 			},
 			{
+				alt: 'Tetrad Protocol',
+				href: 'www.tetradprotocol.com',
+				logo: <TechnologyIcons.TetradLogoRegular />,
+			},
+			{
 				alt: 'Sui',
 				href: 'https://sui.io//',
 				logo: <TechnologyIcons.SuiLogoRegular />,
+			},
+			{
+				alt: 'Arculus',
+				href: 'https://www.getarculus.com/',
+				logo: <TechnologyIcons.ArculusLogoRegular />,
 			},
 			{
 				alt: 'Polygon (MATIC)',
@@ -745,10 +790,20 @@ export const CategoryData: CategoryDataType = {
 				logoWhite: <TechnologyIcons.AvalancheLogoWhite />
 			},
 			{
+				alt: 'FoxWallet',
+				href: 'https://foxwallet.com/en',
+				logo: <TechnologyIcons.FoxWalletLogoRegular />,
+			},
+			{
 				alt: 'Chainlink (LINK)',
 				href: 'https://chain.link/',
 				logo: <TechnologyIcons.ChainLinkLogoRegular />,
 				logoWhite: <TechnologyIcons.ChainLinkLogoWhite />
+			},
+			{
+				alt: 'Assetux',
+				href: 'https://assetux.com',
+				logo: <TechnologyIcons.AssetuxLogoRegular />,
 			},
 			{
 				alt: 'Internet Computer (ICP)',

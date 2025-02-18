@@ -21,6 +21,10 @@ import CosmosLogoRegular from './CosmosLogoRegular.svg?react';
 import BaseLogoRegular from './BaseLogoRegular.svg?react';
 import SuiLogoRegular from './SuiLogoRegular.svg?react';
 import PolygonLogoRegular from './PolygonLogoRegular.svg?react';
+import FoxWalletLogoRegular from './FoxWalletLogoRegular.svg?react';
+import TetradLogoRegular from './TetradLogoRegular.svg?react';
+import AssetuxLogoRegular from './AssetuxLogoRegular.svg?react';
+import ArculusLogoRegular from './ArculusLogoRegular.svg?react';
 
 //white version
 import AkashLogoWhite from './AkashLogoWhite.svg?react';
@@ -64,6 +68,9 @@ export {
   BaseLogoRegular,
   SuiLogoRegular,
   PolygonLogoRegular,
+  FoxWalletLogoRegular,
+  TetradLogoRegular,
+  AssetuxLogoRegular,
 
   AkashLogoWhite,
   ArbitrumLogoWhite,
@@ -81,4 +88,6 @@ export {
   UniswapLogoWhite,
   CosmosLogoWhite,
   BaseLogoWhite,
+
+  ArculusLogoRegular
 }

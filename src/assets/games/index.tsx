@@ -15,6 +15,7 @@ import SharpnelLogoRegular from './SharpnelLogoRegular.svg?react';
 import SplinterlandsLogoRegular from './SplinterlandsLogoRegular.svg?react';
 import StarAtlasLogoRegular from './StarAtlasLogoRegular.svg?react';
 import SuperverseLogoRegular from './SuperverseLogoRegular.svg?react';
+import DehubLogoRegular from './DehubLogoRegular.svg?react';
 
 import AxieInfinityLogoWhite from './AxieInfinityLogoWhite.svg?react';
 import CryptoKittiesLogoWhite from './CryptoKittiesLogoWhite.svg?react';
@@ -48,6 +49,7 @@ export {
     SplinterlandsLogoRegular,
     StarAtlasLogoRegular,
     SuperverseLogoRegular,
+    DehubLogoRegular,
 
     AxieInfinityLogoWhite,
     CryptoKittiesLogoWhite,
