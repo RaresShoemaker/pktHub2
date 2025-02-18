@@ -112,6 +112,11 @@ export const CategoryData: CategoryDataType = {
 				logoWhite: <MediaIcons.VabbleLogoWhite />
 			},
 			{
+				alt: 'Arculus',
+				href: 'https://www.getarculus.com/',
+				logo: <TechnologyIcons.ArculusLogoRegular />,
+			},
+			{
 				alt: 'Ritestream',
 				href: 'https://www.ritestream.io/',
 				logo: <MediaIcons.RitestreamLogoRegular />,
