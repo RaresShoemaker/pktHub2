@@ -290,6 +290,11 @@ export const CategoryData: CategoryDataType = {
 				logo: <MediaIcons.ApeflixLogoRegular />
 			},
 			{
+				alt: 'KNEKT TV',
+				href: 'https://knekt.tv/',
+				logo: <MediaIcons.KnektTvLogoRegular />,
+			},
+			{
 				alt: 'Disney Plus',
 				href: 'https://www.disneyplus.com',
 				logo: <MediaIcons.DisneyLogoRegular />,
