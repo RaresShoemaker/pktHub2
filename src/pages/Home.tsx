@@ -23,10 +23,11 @@ const Home: React.FC = () => {
 			<>
 				<SEO
 					title='Packet Hub'
-					description='Packet Hub'
-					keywords='Packet Hub'
-					url='https://hub.pkt.cash/'
+					description='PKT Network is a fully decentralized media network. Anyone can distribute media content with global accessibility, censorship-resistance and built-in payments.'
+					keywords='packet hub, content platform, media, entertainment'
+					url='https://hub.pkt.tv/'
 					imgSrc={PktHubLogoStacked}
+					siteName='Packet Hub'
 				/>
 				<CategoryOverviewLayout>
 					<CategoryContainer title={categoryData.title} cards={categoryData.data} isFullPage={true} />

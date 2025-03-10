@@ -3,7 +3,7 @@ import CreatorsCategoryContainer from '../components/Creators/CreatorsContainer'
 import CategoryOverviewLayout from '../layouts/CategoryOverviewLayout';
 import { CreatorsData } from '../mockdata/CreatorsMockData';
 import SEO from '../components/SEO';
-import CreatorsStackedLogo from '../assets/PktCreatorStackLogo.png'
+import CreatorsStackedLogo from '../assets/PktCreatorStackLogo.png';
 
 const CreatorsHubPage: React.FC = () => {
 	const creatorsData = React.useMemo(() => {
@@ -14,10 +14,11 @@ const CreatorsHubPage: React.FC = () => {
 		<>
 			<SEO
 				title='Creator Hub'
-				description='Creator Hub'
-				keywords='Creator Hub'
-				url='https://hub.pkt.cash/creatorhub'
+				description='PKT Network is a fully decentralized media network. Anyone can distribute media content with global accessibility, censorship-resistance and built-in payments.'
+				keywords='packet hub, content platform, media, entertainment, creators'
+				url='https://hub.pkt.tv/creatorhub'
 				imgSrc={CreatorsStackedLogo}
+				siteName='Packet Hub'
 			/>
 			<CategoryOverviewLayout>
 				<div className='flex flex-col gap-8'>

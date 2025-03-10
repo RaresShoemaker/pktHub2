@@ -13,12 +13,12 @@ const HeroContainer: React.FC = () => {
 
 	const hrefCta = useMemo(
 		() => [
+			'https://open.spotify.com/track/1Kz9YvJS3n09Om0aWHKlXP?si=6fea329b5cf54513&nd=1&dlsi=06489473b7e34f00',
 			'https://www.youtube.com/watch?v=pr_nVsfoUm8',
 			'https://podcasts.apple.com/us/podcast/the-charlie-shrem-show/id1462346183',
 			'https://www.amazon.com/gp/video/detail/amzn1.dv.gti.7d23bc05-bf4e-4427-ac47-79d0d3c0142e?autoplay=0&ref_=atv_cf_strg_wb',
 			'https://watch.amazon.com/detail?gti=amzn1.dv.gti.ef87b53e-6595-4fc4-b949-3789a8a39672',
 			'https://www.amazon.com/Fire-Peter-Facinelli/dp/B0CHJK71MQ',
-			'https://open.spotify.com/track/1Kz9YvJS3n09Om0aWHKlXP?si=6fea329b5cf54513&nd=1&dlsi=06489473b7e34f00'
 		],
 		[]
 	);
@@ -32,7 +32,7 @@ const HeroContainer: React.FC = () => {
 		[]
 	);
 
-	const ctaLabel = useMemo(() => (activeIndex === 1 ? 'Listen Now' : activeIndex === 5 ? 'Stream Now' : 'Watch Now'), [activeIndex]);
+	const ctaLabel = useMemo(() => (activeIndex === 2 ? 'Listen Now' : activeIndex === 0 ? 'Stream Now' : 'Watch Now'), [activeIndex]);
 
 	return (
 		<>
@@ -94,12 +94,12 @@ const HeroContainer: React.FC = () => {
 							<div
 								className={cn(
 									'w-full z-40 flex justify-center items-center transition-opacity duration-1000',
-									isTransitioning ? 'opacity-0' : activeIndex === 0 ? 'opacity-0 hidden' : 'opacity-100',
+									isTransitioning ? 'opacity-0' : activeIndex === 1 ? 'opacity-0 hidden' : 'opacity-100',
 									activeIndex === 1 && 'mb-64 mr-14 2xl:mt-20',
 									activeIndex === 2 && 'mb-40 mr-28 2xl:mt-28',
 									activeIndex === 3 && 'mb-64 mr-8 2xl:mt-24',
 									activeIndex === 4 && 'mb-52 mr-20 2xl:mt-32',
-									activeIndex === 5 && 'mb-80 2xl:mb-56 2xl:mr-40 mr-32'
+									activeIndex === 0 && 'mb-80 2xl:mb-56 2xl:mr-40 mr-32'
 								)}
 							>
 								<CtaButton href={hrefCta[activeIndex]} label={ctaLabel} />
@@ -148,7 +148,7 @@ const HeroContainer: React.FC = () => {
 										isTransitioning ? 'opacity-0' : 'opacity-100'
 									)}
 								>
-									<div className='z-40 absolute h-full w-full flex justify-center items-center mb-44'>
+									<div className='z-40 absolute h-full w-full flex justify-center items-center mb-36'>
 										<CtaButton href={newsHrefCta[activeIndex]} label='Read Story' />
 									</div>
 								</div>

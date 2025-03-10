@@ -22,7 +22,7 @@ const HeroImage: React.FC = () => {
 		[]
 	);
 
-	const ctaLabel = useMemo(() => (activeIndex === 1 ? 'Listen Now' : activeIndex === 5 ? "Stream Now" : "Watch Now"), [activeIndex]);
+	const ctaLabel = useMemo(() => (activeIndex === 2 ? 'Listen Now' : activeIndex === 0 ? "Stream Now" : "Watch Now"), [activeIndex]);
 
 	useEffect(() => {
 		const checkDevice = () => {
@@ -62,12 +62,12 @@ const HeroImage: React.FC = () => {
 				return [`/News1${suffix}.jpg`, `/News2${suffix}.jpg`, `/News3${suffix}.jpg`];
 			case 'creators':
 				return [
-					`/Creators1${suffix}.jpg`,
+					`Creators6${suffix}.jpg`,
+					`Creators1${suffix}.jpg`,
 					`Creators2${suffix}.jpg`,
 					`Creators3${suffix}.jpg`,
 					`Creators4${suffix}.jpg`,
 					`Creators5${suffix}.jpg`,
-					`Creators6${suffix}.jpg`
 				];
 			case 'technology':
 				return [`/Technology1${suffix}.jpg`, `/Technology2${suffix}.jpg`, `/Technology3${suffix}.jpg`];
