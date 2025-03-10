@@ -16,12 +16,13 @@ const HeroImage: React.FC = () => {
 			'https://podcasts.apple.com/us/podcast/the-charlie-shrem-show/id1462346183',
 			'https://www.amazon.com/gp/video/detail/amzn1.dv.gti.7d23bc05-bf4e-4427-ac47-79d0d3c0142e?autoplay=0&ref_=atv_cf_strg_wb',
 			'https://watch.amazon.com/detail?gti=amzn1.dv.gti.ef87b53e-6595-4fc4-b949-3789a8a39672',
-			'https://www.amazon.com/Fire-Peter-Facinelli/dp/B0CHJK71MQ'
+			'https://www.amazon.com/Fire-Peter-Facinelli/dp/B0CHJK71MQ',
+			'https://open.spotify.com/track/1Kz9YvJS3n09Om0aWHKlXP?si=6fea329b5cf54513&nd=1&dlsi=06489473b7e34f00'
 		],
 		[]
 	);
 
-	const ctaLabel = useMemo(() => (activeIndex === 1 ? 'Listen Now' : 'Watch Now'), [activeIndex]);
+	const ctaLabel = useMemo(() => (activeIndex === 1 ? 'Listen Now' : activeIndex === 5 ? "Stream Now" : "Watch Now"), [activeIndex]);
 
 	useEffect(() => {
 		const checkDevice = () => {
@@ -65,7 +66,8 @@ const HeroImage: React.FC = () => {
 					`Creators2${suffix}.jpg`,
 					`Creators3${suffix}.jpg`,
 					`Creators4${suffix}.jpg`,
-					`Creators5${suffix}.jpg`
+					`Creators5${suffix}.jpg`,
+					`Creators6${suffix}.jpg`
 				];
 			case 'technology':
 				return [`/Technology1${suffix}.jpg`, `/Technology2${suffix}.jpg`, `/Technology3${suffix}.jpg`];

@@ -35,21 +35,6 @@ export const CategoryData: CategoryDataType = {
 		title: `What's Hot`,
 		data: [
 			{
-				alt: 'FoxWallet',
-				href: 'https://foxwallet.com/en',
-				logo: <TechnologyIcons.FoxWalletLogoRegular />,
-			},
-			{
-				alt: 'DeHub',
-				href: 'https://dehub.io/',
-				logo: <GamesIcons.DehubLogoRegular />
-			},
-			{
-				alt: 'Assetux',
-				href: 'https://assetux.com',
-				logo: <TechnologyIcons.AssetuxLogoRegular />,
-			},
-			{
 				alt: 'Gala Games',
 				href: 'https://www.gala.games/',
 				logo: <GamesIcons.GalaGamesLogoRegular />,
@@ -90,6 +75,16 @@ export const CategoryData: CategoryDataType = {
 		title: `Discover`,
 		data: [
 			{
+				alt: 'KNEKT TV',
+				href: 'https://knekt.tv/',
+				logo: <MediaIcons.KnektTvLogoRegular />,
+			},
+			{
+				alt: 'FIO',
+				href: '	https://fio.net/',
+				logo: <TechnologyIcons.FioLogoRegular />,
+			},
+			{
 				alt: 'Tetrad Protocol',
 				href: 'www.tetradprotocol.com',
 				logo: <TechnologyIcons.TetradLogoRegular />,
@@ -98,18 +93,6 @@ export const CategoryData: CategoryDataType = {
 				alt: 'DeHub',
 				href: 'https://dehub.io/',
 				logo: <GamesIcons.DehubLogoRegular />
-			},
-			{
-				alt: 'Sharpnel',
-				href: 'https://www.shrapnel.com/',
-				logo: <GamesIcons.SharpnelLogoRegular />,
-				logoWhite: <GamesIcons.SharpnelLogoWhite />
-			},
-			{
-				alt: 'Vabble',
-				href: 'https://www.vabble.com/',
-				logo: <MediaIcons.VabbleLogoRegular />,
-				logoWhite: <MediaIcons.VabbleLogoWhite />
 			},
 			{
 				alt: 'Arculus',
@@ -755,6 +738,11 @@ export const CategoryData: CategoryDataType = {
 				href: 'https://ripple.com/',
 				logo: <TechnologyIcons.RippleLogoRegular />,
 				logoWhite: <TechnologyIcons.RippleLogoWhite />
+			},
+			{
+				alt: 'FIO',
+				href: '	https://fio.net/',
+				logo: <TechnologyIcons.FioLogoRegular />,
 			},
 			{
 				alt: 'Ethereum (ETH)',

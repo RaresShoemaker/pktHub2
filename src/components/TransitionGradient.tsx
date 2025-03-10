@@ -52,6 +52,7 @@ const TransitionGradient: React.FC<TransitionGradientProps> = () => {
 					['#090D23', '#090D23', '#090D23'],
 					['#090D23', '#090D23', '#090D23'],
 					['#090D23', '#090D23', '#090D23'],
+					['#090D23', '#090D23', '#090D23'],
 					['#090D23', '#090D23', '#090D23']
 				];
 				case 'news':

@@ -25,6 +25,7 @@ import FoxWalletLogoRegular from './FoxWalletLogoRegular.svg?react';
 import TetradLogoRegular from './TetradLogoRegular.svg?react';
 import AssetuxLogoRegular from './AssetuxLogoRegular.svg?react';
 import ArculusLogoRegular from './ArculusLogoRegular.svg?react';
+import FioLogoRegular from './FioLogoRegular.svg?react';
 
 //white version
 import AkashLogoWhite from './AkashLogoWhite.svg?react';
@@ -71,6 +72,7 @@ export {
   FoxWalletLogoRegular,
   TetradLogoRegular,
   AssetuxLogoRegular,
+  FioLogoRegular,
 
   AkashLogoWhite,
   ArbitrumLogoWhite,

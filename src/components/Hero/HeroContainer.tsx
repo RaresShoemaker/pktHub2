@@ -17,7 +17,8 @@ const HeroContainer: React.FC = () => {
 			'https://podcasts.apple.com/us/podcast/the-charlie-shrem-show/id1462346183',
 			'https://www.amazon.com/gp/video/detail/amzn1.dv.gti.7d23bc05-bf4e-4427-ac47-79d0d3c0142e?autoplay=0&ref_=atv_cf_strg_wb',
 			'https://watch.amazon.com/detail?gti=amzn1.dv.gti.ef87b53e-6595-4fc4-b949-3789a8a39672',
-			'https://www.amazon.com/Fire-Peter-Facinelli/dp/B0CHJK71MQ'
+			'https://www.amazon.com/Fire-Peter-Facinelli/dp/B0CHJK71MQ',
+			'https://open.spotify.com/track/1Kz9YvJS3n09Om0aWHKlXP?si=6fea329b5cf54513&nd=1&dlsi=06489473b7e34f00'
 		],
 		[]
 	);
@@ -31,7 +32,7 @@ const HeroContainer: React.FC = () => {
 		[]
 	);
 
-	const ctaLabel = useMemo(() => (activeIndex === 1 ? 'Listen Now' : 'Watch Now'), [activeIndex]);
+	const ctaLabel = useMemo(() => (activeIndex === 1 ? 'Listen Now' : activeIndex === 5 ? 'Stream Now' : 'Watch Now'), [activeIndex]);
 
 	return (
 		<>
@@ -97,7 +98,8 @@ const HeroContainer: React.FC = () => {
 									activeIndex === 1 && 'mb-64 mr-14 2xl:mt-20',
 									activeIndex === 2 && 'mb-40 mr-28 2xl:mt-28',
 									activeIndex === 3 && 'mb-64 mr-8 2xl:mt-24',
-									activeIndex === 4 && 'mb-52 mr-20 2xl:mt-32'
+									activeIndex === 4 && 'mb-52 mr-20 2xl:mt-32',
+									activeIndex === 5 && 'mb-80 2xl:mb-56 2xl:mr-40 mr-32'
 								)}
 							>
 								<CtaButton href={hrefCta[activeIndex]} label={ctaLabel} />
@@ -162,6 +164,7 @@ const HeroContainer: React.FC = () => {
 								<div className='absolute h-full w-full bg-[#090D23] blur-[24px] z-0' />
 								<div className='absolute h-full w-full bg-[#090D23] blur-[30px] z-0' />
 								<div className='absolute h-full w-full bg-[#090D23] blur-[25px] z-0 left-20' />
+								<div className='absolute h-full w-full bg-[#090D23] blur-[20px] z-0 right-24' />
 								<div className='absolute h-full w-full bg-[#090D23] blur-[20px] z-0 right-24' />
 							</div>
 							<div

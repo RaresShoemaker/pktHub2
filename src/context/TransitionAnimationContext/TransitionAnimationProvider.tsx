@@ -28,7 +28,7 @@ export const TransitionAnimationProvider: React.FC<TransitionProviderProps> = ({
     }, [location.pathname, searchParams])
 
     const nextIndex = useMemo(() => {
-        return category === 'creators' ? (state.activeIndex + 1) % 5 : (state.activeIndex + 1) % 3;
+        return category === 'creators' ? (state.activeIndex + 1) % 6 : (state.activeIndex + 1) % 3;
     }, [category, state.activeIndex]);
 
     const transition = useCallback(() => {
