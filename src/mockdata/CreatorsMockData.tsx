@@ -120,6 +120,33 @@ export const CreatorsData: CreatorsDataType = {
 		title: 'TV',
 		data: [
 			{
+				alt: 'Pip and Pop-IMG',
+				title: 'Pip and Pop',
+				img: TvImg.PipAndPopImg,
+				description:
+					'Pip and Pop is a darkly whimsical animated series by Kissing Party that explores mental health, resilience, and friendship through dry humor and existential themes. Pip, an anxious and imaginative little creature, navigates a surreal world with the steady support of Pop, his wise but simple companion. Their adventures are both unsettling and heartfelt, blending eerie visuals with quiet, deadpan humor.',
+				href: '	https://www.instagram.com/pipandpopshow/',
+				genre: 'TV'
+			},
+			{
+				alt: 'KLONDOR-IMG',
+				title: 'KLONDOR',
+				img: TvImg.KlondorImg,
+				description:
+					'In the first episode of Klondor, Eric and Steph are just hanging out when Steph notices something on her foot—Klondor, a tiny parasite. Turns out, Eric and Klondor have met before, and what unfolds is a weirdly romantic meet-cute between them, with Klondor taking center stage while Steph stays silent in the background.',
+				href: 'https://www.youtube.com/watch?v=PpKJL8knbLw&t=24s&ab_channel=KissingParty',
+				genre: 'TV'
+			},
+			{
+				alt: 'Wishing Well - By Kissing Party-IMG',
+				title: 'Wishing Well - By Kissing Party',
+				img: TvImg.WishingWellImg,
+				description:
+					'Mark and Marc found a wishing well. Turns out it actually makes your wishes come true. They ahve weird wishes.',
+				href: 'https://www.instagram.com/reel/C_doX_EP-Ng/',
+				genre: 'TV'
+			},
+			{
 				alt: 'EveryoneIsDoingGreat-IMG',
 				title: 'Everyone Is Doing Great',
 				img: TvImg.EveryoneIsDoingGreatImg,

@@ -5,6 +5,9 @@ import ThePatMcAffeImg from './ThePatMcAffe.jpg';
 import ThePenguinImg from './ThePenguin.jpg';
 import TheBearImg from './TheBear.jpg';
 import AmericanPrimevalImg from './AmericanPrimeval.jpg';
+import PipAndPopImg from './PipAndPopImage.png'
+import KlondorImg from './KLONDOR.png'
+import WishingWellImg from './WishingWellImage.png';
 
 export {
   BeastGamesImg,
@@ -13,5 +16,8 @@ export {
   ThePatMcAffeImg,
   ThePenguinImg,
   TheBearImg,
-  AmericanPrimevalImg
+  AmericanPrimevalImg,
+  PipAndPopImg,
+  KlondorImg,
+  WishingWellImg
 }
