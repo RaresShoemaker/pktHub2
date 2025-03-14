@@ -125,7 +125,7 @@ export const CreatorsData: CreatorsDataType = {
 				img: TvImg.PipAndPopImg,
 				description:
 					'Pip and Pop is a darkly whimsical animated series by Kissing Party that explores mental health, resilience, and friendship through dry humor and existential themes. Pip, an anxious and imaginative little creature, navigates a surreal world with the steady support of Pop, his wise but simple companion. Their adventures are both unsettling and heartfelt, blending eerie visuals with quiet, deadpan humor.',
-				href: '	https://www.instagram.com/pipandpopshow/',
+				href: 'https://www.instagram.com/pipandpopshow/',
 				genre: 'TV'
 			},
 			{
