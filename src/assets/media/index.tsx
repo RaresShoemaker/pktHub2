@@ -20,6 +20,7 @@ import VabbleLogoRegular from './VabbleLogoRegular.svg?react';
 import YtbLogoRegular from './YtbLogoRegular.svg?react';
 import ApeflixLogoRegular from './ApeflixLogoRegular.svg?react';
 import KnektTvLogoRegular from './KnektTvLogoRegular.svg?react';
+import IndikinRegular from './IndikinRegularLogo.svg?react';
 
 
 import AcornLogoWhite from './AcornLogoWhite.svg?react';
@@ -66,6 +67,7 @@ export {
   VabbleLogoRegular,
   YtbLogoRegular,
   KnektTvLogoRegular,
+  IndikinRegular,
 
   AcornLogoWhite,
   AmzPrimeLogoWhite,

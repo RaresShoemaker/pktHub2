@@ -244,6 +244,11 @@ export const CategoryData: CategoryDataType = {
 		title: 'Media',
 		data: [
 			{
+				alt: 'Indikin',
+				href: 'https://indikin.com/',
+				logo: <MediaIcons.IndikinRegular />,
+			},
+			{
 				alt: 'Vabble',
 				href: 'https://www.vabble.com/',
 				logo: <MediaIcons.VabbleLogoRegular />,
