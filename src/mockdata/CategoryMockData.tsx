@@ -77,7 +77,7 @@ export const CategoryData: CategoryDataType = {
 			{
 				alt: 'Indikin',
 				href: 'https://indikin.com/',
-				logo: <MediaIcons.IndikinRegular />,
+				logo: <MediaIcons.IndiKinLogo />,
 			},
 			{
 				alt: 'KNEKT TV',
@@ -236,7 +236,7 @@ export const CategoryData: CategoryDataType = {
 			{
 				alt: 'Indikin',
 				href: 'https://indikin.com/',
-				logo: <MediaIcons.IndikinRegular />,
+				logo: <MediaIcons.IndiKinLogo />,
 			},
 			{
 				alt: 'Vabble',

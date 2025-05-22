@@ -20,8 +20,6 @@ import VabbleLogoRegular from './VabbleLogoRegular.svg?react';
 import YtbLogoRegular from './YtbLogoRegular.svg?react';
 import ApeflixLogoRegular from './ApeflixLogoRegular.svg?react';
 import KnektTvLogoRegular from './KnektTvLogoRegular.svg?react';
-import IndikinRegular from './IndikinLogoRegular.svg?react';
-
 
 import AcornLogoWhite from './AcornLogoWhite.svg?react';
 import AmzPrimeLogoWhite from './AmzPrimeLogoWhite.svg?react';
@@ -43,6 +41,8 @@ import SlingLogoWhite from './SlingLogoWhite.svg?react';
 import TubiLogoWhite from './TubiLogoWhite.svg?react';
 import VabbleLogoWhite from './VabbleLogoWhite.svg?react';
 import YtbLogoWhite from './YtbLogoWhite.svg?react';
+
+import IndiKinLogo from './IndiKinLogoRegular.svg?react';
 
 export {
   AcornLogoRegular,
@@ -67,7 +67,7 @@ export {
   VabbleLogoRegular,
   YtbLogoRegular,
   KnektTvLogoRegular,
-  IndikinRegular,
+  IndiKinLogo,
 
   AcornLogoWhite,
   AmzPrimeLogoWhite,
