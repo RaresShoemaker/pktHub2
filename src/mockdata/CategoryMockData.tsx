@@ -75,6 +75,11 @@ export const CategoryData: CategoryDataType = {
 		title: `Discover`,
 		data: [
 			{
+				alt: 'Indikin',
+				href: 'https://indikin.com/',
+				logo: <MediaIcons.IndikinRegular />,
+			},
+			{
 				alt: 'KNEKT TV',
 				href: 'https://knekt.tv/',
 				logo: <MediaIcons.KnektTvLogoRegular />,
@@ -83,16 +88,6 @@ export const CategoryData: CategoryDataType = {
 				alt: 'FIO',
 				href: '	https://fio.net/',
 				logo: <TechnologyIcons.FioLogoRegular />,
-			},
-			{
-				alt: 'Tetrad Protocol',
-				href: 'www.tetradprotocol.com',
-				logo: <TechnologyIcons.TetradLogoRegular />,
-			},
-			{
-				alt: 'DeHub',
-				href: 'https://dehub.io/',
-				logo: <GamesIcons.DehubLogoRegular />
 			},
 			{
 				alt: 'Arculus',
@@ -109,11 +104,6 @@ export const CategoryData: CategoryDataType = {
 				alt: 'Apeflix',
 				href: 'https://www.apeflix.io/',
 				logo: <MediaIcons.ApeflixLogoRegular />
-			},
-			{
-				alt: 'FoxWallet',
-				href: 'https://foxwallet.com/en',
-				logo: <TechnologyIcons.FoxWalletLogoRegular />,
 			},
 			{
 				alt: 'Tune.fm',
